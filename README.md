@@ -189,7 +189,7 @@ rede-intelectual-mc859/
 ├── visualization/
 │   └── render_graph.py        # renderização com setas + Louvain
 ├── data/
-│   └── README.md              # ponteiro para o Mendeley Data
+│   └── README.md              # ponteiros: Mendeley Data + Databus + Drive
 └── docs/
     ├── metricas.txt
     └── figuras/
