@@ -1,0 +1,12 @@
+=== MÉTRICAS DA REDE INTELECTUAL ===
+
+Vértices (V): 326,270
+Arestas (E): 426,617
+Grau médio: 2.6151
+Grau médio de entrada/saída: 1.3076
+Maior grau de entrada: 4,068
+Maior grau de saída: 237
+
+Componentes fortemente conexas (SCCs): 325,240
+Maior SCC: 840 vértices
+SCCs unitárias (tamanho 1): 325,127 (99.97%)

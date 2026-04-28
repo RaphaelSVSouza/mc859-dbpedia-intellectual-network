@@ -1,0 +1,26 @@
+# --- Dados grandes (hospedados no Mendeley Data, fora deste repo) ---
+*.bz2
+*.gz
+*.nt
+*.gexf
+*.graphml
+
+# --- Saídas locais de analise_graph.py ---
+# As versões em docs/ ENTRAM no repo; as soltas, não.
+metricas.txt
+!docs/metricas.txt
+
+grafico_*.png
+!docs/figuras/grafico_*.png
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Editores / SO ---
+.DS_Store
+.vscode/
+.idea/
+*.swp

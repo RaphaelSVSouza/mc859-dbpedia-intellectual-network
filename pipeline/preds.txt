@@ -1,0 +1,11 @@
+ontology/influencedBy>
+ontology/influenced>
+ontology/doctoralAdvisor>
+ontology/doctoralStudent>
+ontology/academicAdvisor>
+ontology/almaMater>
+ontology/knownFor>
+ontology/notableWork>
+ontology/field>
+ontology/religion>
+ontology/ideology>
