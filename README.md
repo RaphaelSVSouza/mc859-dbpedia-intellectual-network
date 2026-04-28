@@ -209,17 +209,17 @@ Se este trabalho for útil em pesquisa ou ensino, por favor cite o dataset:
 
 ```bibtex
 @dataset{souza_felix_2026_rede_intelectual,
-  author    = {Souza, Raphael Salles Vitor de and F{\'e}lix, Lucas},
+  author    = {Souza, Raphael Salles Vitor de and Félix, Lucas},
   title     = {Rede Intelectual: subgrafo direcionado da DBpedia
-               (mappingbased-objects, lang=en) com 11 predicados tem{\'a}ticos},
+               (mappingbased-objects, lang=en) com 11 predicados temáticos},
   year      = {2026},
   publisher = {Mendeley Data},
   version   = {V1},
   doi       = {[a ser preenchido]},
-  note      = {Disciplina MC859 — Projeto em Teoria da Computa{\c c}{\~a}o, UNICAMP.
+  note      = {Disciplina MC859 — Projeto em Teoria da Computação, UNICAMP.
                Predicados: influenced, doctoralStudent, academicStudent,
                almaMater, knownFor, notableWork, field, religion, ideology
-               (com reorienta{\c c}{\~a}o de influencedBy, doctoralAdvisor
+               (com reorientação de influencedBy, doctoralAdvisor
                e academicAdvisor).}
 }
 ```
