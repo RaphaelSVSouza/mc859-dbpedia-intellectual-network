@@ -1,0 +1,7 @@
+networkx>=3.0
+matplotlib>=3.7
+python-igraph>=0.10
+neo4j>=5.0
+rdflib>=6.0
+tqdm>=4.0
+python-dotenv>=1.0

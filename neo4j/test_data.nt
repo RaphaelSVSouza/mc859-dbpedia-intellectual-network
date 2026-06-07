@@ -1,0 +1,5 @@
+<http://dbpedia.org/resource/Albert_Einstein> <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Niels_Bohr> .
+<http://dbpedia.org/resource/Albert_Einstein> <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Richard_Feynman> .
+<http://dbpedia.org/resource/Niels_Bohr> <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Werner_Heisenberg> .
+<http://dbpedia.org/resource/Isaac_Newton> <http://dbpedia.org/ontology/influenced> <http://dbpedia.org/resource/Albert_Einstein> .
+<http://dbpedia.org/resource/Marie_Curie> <http://dbpedia.org/ontology/doctoralStudent> <http://dbpedia.org/resource/Irene_Joliot-Curie> .

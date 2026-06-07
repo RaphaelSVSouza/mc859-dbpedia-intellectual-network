@@ -1,0 +1,1425 @@
+source_id	source_label	rel_type	target_id	target_label	rank	score	found
+90	Plutarch	INFLUENCED	28885	Shakespeare	460	0.000066	1
+91	Sextus Empiricus	INFLUENCED	42855	Nassim Nicholas Taleb	117	0.000253	1
+110	Henry David Thoreau	INFLUENCED	9718	B. F. Skinner	N/A	N/A	0
+184	Afghans in Germany	RELIGION	11667	Judaism	N/A	N/A	0
+299	African Party for the Independence of Guinea and Cape Verde  African Party for the Independence of Guinea and C  1	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+299	African Party for the Independence of Guinea and Cape Verde  African Party for the Independence of Guinea and C  1	IDEOLOGY	10319	Communism	N/A	N/A	0
+332	Afrikan Spir	INFLUENCED	339	William James	N/A	N/A	0
+333	Friedrich Nietzsche	INFLUENCED	311	Hans Vaihinger	N/A	N/A	0
+333	Friedrich Nietzsche	INFLUENCED	5009	Émile Armand	N/A	N/A	0
+333	Friedrich Nietzsche	INFLUENCED	22614	Stanley Cavell	N/A	N/A	0
+333	Friedrich Nietzsche	INFLUENCED	22641	Judith Butler	156	0.000332	1
+333	Friedrich Nietzsche	INFLUENCED	39975	Peter Kropotkin	N/A	N/A	0
+333	Friedrich Nietzsche	INFLUENCED	40505	Joxe Azurmendi	371	0.000099	1
+333	Friedrich Nietzsche	INFLUENCED	85822	Peter Rollins	312	0.000129	1
+333	Friedrich Nietzsche	INFLUENCED	113845	Sheldon Wolin	161	0.000313	1
+339	William James	INFLUENCED	9294	Josiah Royce	N/A	N/A	0
+339	William James	INFLUENCED	9716	Alfred North Whitehead	221	0.000141	1
+339	William James	INFLUENCED	32004	Émile Durkheim	491	0.000056	1
+339	William James	INFLUENCED	32014	George Santayana	N/A	N/A	0
+370	Afro-Caribbean people	RELIGION	12209	Baháʼí Faith	N/A	N/A	0
+416	Afro-Romanians	RELIGION	282	Traditional African religions	N/A	N/A	0
+894	Agreement for Change	IDEOLOGY	895	Bolivarianism	N/A	N/A	0
+894	Agreement for Change	IDEOLOGY	10325	Reformism	N/A	N/A	0
+920	AGROunia	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+946	Agustín García Calvo	INFLUENCED	11908	Muhammad Iqbal	N/A	N/A	0
+946	Agustín García Calvo	INFLUENCED	15119	Ayn Rand	N/A	N/A	0
+947	Albert Camus	INFLUENCED	3897	Alan N. Shapiro	N/A	N/A	0
+949	Georges Bataille	INFLUENCED	120556	Jean-Luc Nancy	58	0.000660	1
+950	Gilles Deleuze	INFLUENCED	3093	Levi Bryant	7	0.004040	1
+950	Gilles Deleuze	INFLUENCED	4639	Michel Onfray	123	0.000034	1
+950	Gilles Deleuze	INFLUENCED	61465	Reza Negarestani	5	0.004608	1
+950	Gilles Deleuze	INFLUENCED	113829	Franson Manjali	114	0.000034	1
+951	Jacques Derrida	INFLUENCED	36765	Jean-Luc Marion	N/A	N/A	0
+951	Jacques Derrida	INFLUENCED	99693	Simon Glendinning	N/A	N/A	0
+952	Jean-Paul Sartre	INFLUENCED	3092	Jacques Rancière	276	0.000070	1
+952	Jean-Paul Sartre	INFLUENCED	5511	Che Guevara	N/A	N/A	0
+952	Jean-Paul Sartre	INFLUENCED	25570	Arthur Danto	N/A	N/A	0
+952	Jean-Paul Sartre	INFLUENCED	37672	Axel Honneth	162	0.000183	1
+952	Jean-Paul Sartre	INFLUENCED	113830	Frithjof Bergmann	N/A	N/A	0
+953	Karl Jaspers	INFLUENCED	954	Martin Heidegger	N/A	N/A	0
+953	Karl Jaspers	INFLUENCED	8596	Alexandre Kojève	431	0.000006	1
+953	Karl Jaspers	INFLUENCED	16945	Gabriel Marcel	N/A	N/A	0
+953	Karl Jaspers	INFLUENCED	113848	Walter Kaufmann (philosopher)	N/A	N/A	0
+954	Martin Heidegger	INFLUENCED	950	Gilles Deleuze	142	0.000459	1
+954	Martin Heidegger	INFLUENCED	952	Jean-Paul Sartre	252	0.000143	1
+954	Martin Heidegger	INFLUENCED	8602	Giorgio Agamben	157	0.000377	1
+954	Martin Heidegger	INFLUENCED	22769	Cornelius Castoriadis	226	0.000171	1
+954	Martin Heidegger	INFLUENCED	31986	Alberto Buela	N/A	N/A	0
+954	Martin Heidegger	INFLUENCED	34193	Ady Jean-Gardy	N/A	N/A	0
+954	Martin Heidegger	INFLUENCED	46945	Predrag Finci	389	0.000064	1
+954	Martin Heidegger	INFLUENCED	60133	Herbert Marcuse	N/A	N/A	0
+954	Martin Heidegger	INFLUENCED	79368	Robert Brandom	210	0.000193	1
+955	Michel Foucault	INFLUENCED	3092	Jacques Rancière	N/A	N/A	0
+955	Michel Foucault	INFLUENCED	30063	Catherine Malabou	N/A	N/A	0
+955	Michel Foucault	INFLUENCED	37672	Axel Honneth	233	0.000012	1
+955	Michel Foucault	INFLUENCED	106788	Félix Guattari	199	0.000034	1
+1340	Young Egypt Party (1933)	RELIGION	10153	Sunni Islam	N/A	N/A	0
+2879	Averroes	INFLUENCED	2882	Maimonides	N/A	N/A	0
+2879	Averroes	INFLUENCED	37386	Giordano Bruno  Giordano Bruno  1	75	0.000183	1
+2881	Leo Strauss	INFLUENCED	8608	Raymond Aron	198	0.000077	1
+2881	Leo Strauss	INFLUENCED	32081	Richard McKeon	N/A	N/A	0
+2882	Maimonides	INFLUENCED	40493	Emil Fackenheim	39	0.001112	1
+2891	Al-Ghazali	INFLUENCED	2893	René Descartes	25	0.000961	1
+2893	René Descartes	INFLUENCED	29453	Jacques-Bénigne Bossuet	110	0.000473	1
+2893	René Descartes	INFLUENCED	34224	Léon Brunschvicg	318	0.000133	1
+3085	Alain Badiou	INFLUENCED	3086	Duane Rousselle	27	0.001046	1
+3085	Alain Badiou	INFLUENCED	3092	Jacques Rancière	N/A	N/A	0
+3099	Slavoj Žižek	INFLUENCED	66343	Renata Salecl	N/A	N/A	0
+3401	Alan Chin (artist)	FIELD	10883	Sculpture	N/A	N/A	0
+3801	Alan M. Taylor  Alan M. Taylor  1	FIELD	3803	Financial economics	N/A	N/A	0
+3801	Alan M. Taylor  Alan M. Taylor  1	FIELD	13096	International economics	N/A	N/A	0
+3897	Alan N. Shapiro	ALMAMATER	10802	Cornell University	N/A	N/A	0
+3898	Jean Baudrillard	INFLUENCED	31010	Nick Land	N/A	N/A	0
+4112	Alan Turing	ALMAMATER	10361	Princeton University	N/A	N/A	0
+4112	Alan Turing	INFLUENCED	16222	Heinrich Scholz	N/A	N/A	0
+4301	Alasdair MacIntyre	INFLUENCED	3140	Alain de Benoist	N/A	N/A	0
+4449	Theodor W. Adorno	INFLUENCED	30171	Mark Fisher	24	0.002394	1
+4523	Hugo Grotius	INFLUENCED	16958	John Locke	25	0.002175	1
+4523	Hugo Grotius	INFLUENCED	27733	Gottfried Wilhelm Leibniz	280	0.000141	1
+4523	Hugo Grotius	INFLUENCED	32015	Giambattista Vico	63	0.000689	1
+4523	Hugo Grotius	INFLUENCED	32036	Jean-Jacques Rousseau	23	0.002503	1
+4733	Karl Popper	INFLUENCED	30165	Dimitris Dimitrakos	N/A	N/A	0
+5308	Albert W. Tucker	INFLUENCED	5309	David Gale	N/A	N/A	0
+5390	Alberta Social Credit Party	IDEOLOGY	14261	Agrarianism	N/A	N/A	0
+5620	Nicholas of Cusa	INFLUENCED	32016	Giovanni Pico della Mirandola	N/A	N/A	0
+5620	Nicholas of Cusa	INFLUENCED	37386	Giordano Bruno  Giordano Bruno  1	38	0.001548	1
+5738	Aristotle	INFLUENCED	2878	Avempace	N/A	N/A	0
+5738	Aristotle	INFLUENCED	2884	Rémi Brague	455	0.000098	1
+5738	Aristotle	INFLUENCED	2893	René Descartes	217	0.000368	1
+5738	Aristotle	INFLUENCED	3092	Jacques Rancière	N/A	N/A	0
+5738	Aristotle	INFLUENCED	4309	Tibor Machan	319	0.000166	1
+5738	Aristotle	INFLUENCED	8601	Francis Fukuyama	54	0.000791	1
+5738	Aristotle	INFLUENCED	14059	Ibn al-Haytham	308	0.000183	1
+5738	Aristotle	INFLUENCED	15146	Immanuel Kant	329	0.000158	1
+5738	Aristotle	INFLUENCED	15164	Martha Nussbaum	N/A	N/A	0
+5738	Aristotle	INFLUENCED	15505	Adelard of Bath	N/A	N/A	0
+5738	Aristotle	INFLUENCED	16173	Barry Smith (ontologist)	N/A	N/A	0
+5738	Aristotle	INFLUENCED	16954	Jacques Maritain	271	0.000220	1
+5738	Aristotle	INFLUENCED	21187	John Philoponus	263	0.000228	1
+5738	Aristotle	INFLUENCED	31003	Franz Brentano	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32003	Emanuele Tesauro	402	0.000117	1
+5738	Aristotle	INFLUENCED	32007	Félix Ravaisson-Mollien	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32010	Friedrich Wilhelm Joseph Schelling	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32016	Giovanni Pico della Mirandola	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32054	Louis de Bonald	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32065	Murray Bookchin	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32071	Peter Geach	N/A	N/A	0
+5738	Aristotle	INFLUENCED	32097	Tara Smith (philosopher)	89	0.000726	1
+5738	Aristotle	INFLUENCED	32108	Vladimir Solovyov (philosopher)	N/A	N/A	0
+5931	Rust (programming language)	INFLUENCED	14493	Nim (programming language)	N/A	N/A	0
+6414	Nikolai Berdyaev	INFLUENCED	29905	Ljubodrag Simonović	N/A	N/A	0
+7203	Charles Sanders Peirce	INFLUENCED	44139	C. I. Lewis	195	0.000145	1
+7490	Richard Dawkins	ALMAMATER	10681	Doctor of Philosophy	N/A	N/A	0
+7606	Emma Goldman	INFLUENCED	59692	John Zerzan	20	0.002580	1
+7609	Friedrich Engels	INFLUENCED	5509	Mario Bunge	N/A	N/A	0
+7609	Friedrich Engels	INFLUENCED	30163	Chris Harman	207	0.000069	1
+7610	Isaiah Berlin	INFLUENCED	71230	Richard Rorty	59	0.000241	1
+7613	Leon Trotsky	INFLUENCED	111711	Raya Dunayevskaya	N/A	N/A	0
+7616	Sigmund Freud	INFLUENCED	1196	Hamid Dabashi	291	0.000114	1
+7616	Sigmund Freud	INFLUENCED	16341	Werner Sombart	N/A	N/A	0
+7616	Sigmund Freud	INFLUENCED	30166	Domenico Losurdo	N/A	N/A	0
+7616	Sigmund Freud	INFLUENCED	54686	Sabina Spielrein	418	0.000058	1
+7616	Sigmund Freud	INFLUENCED	54967	Carl Schmitt	N/A	N/A	0
+7616	Sigmund Freud	INFLUENCED	59701	Pierre Teilhard de Chardin	N/A	N/A	0
+7616	Sigmund Freud	INFLUENCED	130147	Melanie Klein	216	0.000180	1
+7617	Vladimir Lenin	INFLUENCED	30159	Alex Callinicos	16	0.007514	1
+7911	Plotinus	INFLUENCED	82907	Gemistos Plethon	N/A	N/A	0
+7984	John Ruskin	INFLUENCED	101154	Roger Scruton	128	0.000042	1
+8045	Alexander Rinnooy Kan	ALMAMATER	10549	Leiden University	N/A	N/A	0
+8265	Charles Taylor (philosopher)	INFLUENCED	3140	Alain de Benoist	N/A	N/A	0
+8265	Charles Taylor (philosopher)	INFLUENCED	61656	Kwame Anthony Appiah	N/A	N/A	0
+8274	Ralph Waldo Emerson	INFLUENCED	333	Friedrich Nietzsche	N/A	N/A	0
+8596	Alexandre Kojève	INFLUENCED	952	Jean-Paul Sartre	N/A	N/A	0
+8596	Alexandre Kojève	INFLUENCED	8600	Boris Groys	197	0.000138	1
+8596	Alexandre Kojève	INFLUENCED	8603	Jacques Lacan	70	0.000492	1
+8602	Giorgio Agamben	INFLUENCED	3087	Vincenzo Di Nicola	N/A	N/A	0
+8603	Jacques Lacan	INFLUENCED	695	Paul B. Preciado	59	0.000453	1
+8603	Jacques Lacan	INFLUENCED	14893	François Laruelle	76	0.000307	1
+8603	Jacques Lacan	INFLUENCED	22641	Judith Butler	41	0.002145	1
+8603	Jacques Lacan	INFLUENCED	92638	Renaud Barbaras	N/A	N/A	0
+8603	Jacques Lacan	INFLUENCED	99686	Bracha L. Ettinger	279	0.000005	1
+8605	Louis Althusser	INFLUENCED	3099	Slavoj Žižek	37	0.000708	1
+8605	Louis Althusser	INFLUENCED	30159	Alex Callinicos	N/A	N/A	0
+8606	Maurice Blanchot	INFLUENCED	113843	Sarah Kofman	50	0.000470	1
+8607	Maurice Merleau-Ponty	INFLUENCED	952	Jean-Paul Sartre	N/A	N/A	0
+8607	Maurice Merleau-Ponty	INFLUENCED	4636	Anthony Steinbock	53	0.000723	1
+8607	Maurice Merleau-Ponty	INFLUENCED	25570	Arthur Danto	N/A	N/A	0
+8607	Maurice Merleau-Ponty	INFLUENCED	145796	Iris Marion Young	192	0.000053	1
+8608	Raymond Aron	INFLUENCED	8598	Allan Bloom	N/A	N/A	0
+8611	Alexandre Koyré	INFLUENCED	8615	Thomas Kuhn	7	0.009061	1
+8940	Alexis de Tocqueville	INFLUENCED	2881	Leo Strauss	N/A	N/A	0
+8943	José Ortega y Gasset	INFLUENCED	22735	Enrique Dussel	29	0.001275	1
+9022	Bertrand Russell	INFLUENCED	4637	Christopher Hitchens	116	0.000521	1
+9022	Bertrand Russell	INFLUENCED	5313	Marvin Minsky	348	0.000110	1
+9022	Bertrand Russell	INFLUENCED	19364	Moritz Schlick	N/A	N/A	0
+9271	Jean Piaget	INFLUENCED	8615	Thomas Kuhn	N/A	N/A	0
+9332	Gottlob Frege	INFLUENCED	9727	Donald Davidson (philosopher)	158	0.000106	1
+9359	Jean-Marie Guyau	INFLUENCED	9294	Josiah Royce	N/A	N/A	0
+9668	Gary Becker	ALMAMATER	10361	Princeton University	N/A	N/A	0
+9668	Gary Becker	INFLUENCED	116137	Steven Levitt	11	0.012042	1
+9716	Alfred North Whitehead	INFLUENCED	4162	Alan Watts	N/A	N/A	0
+9716	Alfred North Whitehead	INFLUENCED	9022	Bertrand Russell	N/A	N/A	0
+9716	Alfred North Whitehead	INFLUENCED	9736	Isabelle Stengers	54	0.001195	1
+9721	Bruno Latour	INFLUENCED	51591	Ian Hacking	N/A	N/A	0
+9727	Donald Davidson (philosopher)	INFLUENCED	71230	Richard Rorty	N/A	N/A	0
+9727	Donald Davidson (philosopher)	INFLUENCED	87927	Fred Newman (philosopher)	N/A	N/A	0
+9729	Eric Voegelin	INFLUENCED	2881	Leo Strauss	283	0.000000	1
+9729	Eric Voegelin	INFLUENCED	8608	Raymond Aron	59	0.000025	1
+9915	Alfred Tarski	INFLUENCED	9751	Willard Van Orman Quine	N/A	N/A	0
+9915	Alfred Tarski	INFLUENCED	9939	Rudolf Carnap	N/A	N/A	0
+10016	Hermann Lotze	INFLUENCED	105114	James Ward (psychologist)	76	0.000519	1
+10378	Pakistanis	RELIGION	14286	Zoroastrianism	N/A	N/A	0
+10475	Vilfredo Pareto	INFLUENCED	9665	Alfred Marshall	N/A	N/A	0
+10475	Vilfredo Pareto	INFLUENCED	196072	Oskar R. Lange	N/A	N/A	0
+10661	Murray Rothbard	FIELD	11806	Political philosophy	N/A	N/A	0
+10761	Ludwig Wittgenstein	INFLUENCED	11107	P. F. Strawson	449	0.000055	1
+10761	Ludwig Wittgenstein	INFLUENCED	32043	John McDowell	183	0.000573	1
+10761	Ludwig Wittgenstein	INFLUENCED	43530	Raymond Geuss	345	0.000090	1
+10761	Ludwig Wittgenstein	INFLUENCED	44158	John Searle	275	0.000155	1
+10761	Ludwig Wittgenstein	INFLUENCED	46946	William H. Poteat	N/A	N/A	0
+11107	P. F. Strawson	INFLUENCED	68145	Pierre Bourdieu	N/A	N/A	0
+11294	Aaron Director	INFLUENCED	11298	Milton Friedman	N/A	N/A	0
+11298	Milton Friedman	INFLUENCED	9668	Gary Becker	72	0.000361	1
+11298	Milton Friedman	INFLUENCED	11301	Steven N. S. Cheung	N/A	N/A	0
+11298	Milton Friedman	INFLUENCED	15126	David D. Friedman	47	0.002526	1
+11298	Milton Friedman	INFLUENCED	15166	Mookie Tenembaum	4	0.003600	1
+11690	Hyman Minsky	ALMAMATER	10449	Harvard University	N/A	N/A	0
+11882	Python (programming language)	INFLUENCED	14493	Nim (programming language)	167	0.000000	1
+12451	Ibn Arabi  Ibn ʿArabī  1	INFLUENCED	13922	Abu al-Hasan al-Shushtari	N/A	N/A	0
+12451	Ibn Arabi  Ibn ʿArabī  1	INFLUENCED	18562	Seyyed Hossein Nasr	3	0.003558	1
+13109	Abertzale Sozialista Komiteak	IDEOLOGY	13112	Workers' self-management	N/A	N/A	0
+13113	Abertzaleen Batasuna	IDEOLOGY	13115	Basque nationalism	N/A	N/A	0
+13599	Alexander von Humboldt	INFLUENCED	15090	Charles Darwin	N/A	N/A	0
+13622	Baruch Spinoza	INFLUENCED	9022	Bertrand Russell	3	0.002973	1
+13622	Baruch Spinoza	INFLUENCED	15138	Georg Wilhelm Friedrich Hegel	152	0.000252	1
+13622	Baruch Spinoza	INFLUENCED	30171	Mark Fisher	120	0.000303	1
+13622	Baruch Spinoza	INFLUENCED	31990	Arthur Schopenhauer	160	0.000242	1
+13622	Baruch Spinoza	INFLUENCED	40489	Christian Wolff (philosopher)	N/A	N/A	0
+13622	Baruch Spinoza	INFLUENCED	40502	Jane Bennett (political theorist)	N/A	N/A	0
+13622	Baruch Spinoza	INFLUENCED	40504	Joseph Dietzgen	N/A	N/A	0
+13622	Baruch Spinoza	INFLUENCED	40505	Joxe Azurmendi	373	0.000101	1
+13833	Søren Kierkegaard	INFLUENCED	952	Jean-Paul Sartre	215	0.000167	1
+13833	Søren Kierkegaard	INFLUENCED	3090	Ghislain Deslandes	400	0.000066	1
+13833	Søren Kierkegaard	INFLUENCED	8600	Boris Groys	178	0.000207	1
+13833	Søren Kierkegaard	INFLUENCED	32072	Peter Kreeft	90	0.000510	1
+13833	Søren Kierkegaard	INFLUENCED	111872	Martin Buber	229	0.000157	1
+13833	Søren Kierkegaard	INFLUENCED	113848	Walter Kaufmann (philosopher)	N/A	N/A	0
+13833	Søren Kierkegaard	INFLUENCED	114835	Jean Wahl	163	0.000220	1
+14103	Avicenna	INFLUENCED	2882	Maimonides	N/A	N/A	0
+14103	Avicenna	INFLUENCED	19440	Francisco Suárez	N/A	N/A	0
+14103	Avicenna	INFLUENCED	28545	Duns Scotus  John Duns Scotus  1	N/A	N/A	0
+14103	Avicenna	INFLUENCED	28546	Giles of Rome	N/A	N/A	0
+14436	Action for the Republic (Catalonia)	IDEOLOGY	10410	Feminism	N/A	N/A	0
+14471	Montesquieu	INFLUENCED	32004	Émile Durkheim	120	0.000354	1
+14471	Montesquieu	INFLUENCED	70306	Jules Michelet	N/A	N/A	0
+14472	Actúa	IDEOLOGY	10313	Ecologism	N/A	N/A	0
+14485	Ada (programming language)	INFLUENCED	14488	D (programming language)	26	0.001038	1
+14485	Ada (programming language)	INFLUENCED	14501	Verilog	221	0.000000	1
+14486	C++	INFLUENCED	14498	Seed7	75	0.000361	1
+14490	Eiffel (programming language)	INFLUENCED	14488	D (programming language)	43	0.000971	1
+14490	Eiffel (programming language)	INFLUENCED	14492	Java (programming language)	46	0.000948	1
+14492	Java (programming language)	INFLUENCED	30782	Kotlin (programming language)	2	0.004894	1
+14497	Ruby (programming language)	INFLUENCED	52594	Crystal (programming language)	26	0.001846	1
+14784	Friedrich Hayek	INFLUENCED	32602	José Guilherme Merquior	295	0.000006	1
+14784	Friedrich Hayek	INFLUENCED	37890	Walter Block	108	0.000268	1
+14784	Friedrich Hayek	INFLUENCED	110987	James M. Buchanan	137	0.000085	1
+14786	Karl Marx	INFLUENCED	160	Frantz Fanon	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	536	Gillian Rose	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	952	Jean-Paul Sartre	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	7986	Lev Vygotsky	271	0.000246	1
+14786	Karl Marx	INFLUENCED	8596	Alexandre Kojève	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	22735	Enrique Dussel	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	29647	Cornel West	317	0.000148	1
+14786	Karl Marx	INFLUENCED	30163	Chris Harman	262	0.000296	1
+14786	Karl Marx	INFLUENCED	30168	Giovanni Arrighi	261	0.000306	1
+14786	Karl Marx	INFLUENCED	59700	Peter Singer	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	78590	David Gordon (economist)  David Gordon  1	305	0.000167	1
+14786	Karl Marx	INFLUENCED	98791	György Lukács	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	102460	Otto Neurath	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	113846	Stanisław Brzozowski (writer)	N/A	N/A	0
+14786	Karl Marx	INFLUENCED	120626	Georges Friedmann	465	0.000067	1
+14893	François Laruelle	INFLUENCED	3097	Ray Brassier	N/A	N/A	0
+15090	Charles Darwin	INFLUENCED	110	Henry David Thoreau	N/A	N/A	0
+15090	Charles Darwin	INFLUENCED	4639	Michel Onfray	N/A	N/A	0
+15090	Charles Darwin	INFLUENCED	19593	Elizabeth Grosz	403	0.000052	1
+15090	Charles Darwin	INFLUENCED	59692	John Zerzan	130	0.000318	1
+15114	Adam Smith	INFLUENCED	10198	Juan Bautista Alberdi	94	0.000458	1
+15114	Adam Smith	INFLUENCED	14785	Jean Charles Léonard de Sismondi	N/A	N/A	0
+15114	Adam Smith	INFLUENCED	15137	Friedrich von Hayek	235	0.000132	1
+15114	Adam Smith	INFLUENCED	15138	Georg Wilhelm Friedrich Hegel	182	0.000174	1
+15114	Adam Smith	INFLUENCED	15152	Joan Robinson	205	0.000163	1
+15114	Adam Smith	INFLUENCED	15163	Mark Skousen	N/A	N/A	0
+15114	Adam Smith	INFLUENCED	15165	Max Stirner	115	0.000324	1
+15114	Adam Smith	INFLUENCED	15169	Noam Chomsky	254	0.000122	1
+15114	Adam Smith	INFLUENCED	15175	Russ Roberts	202	0.000165	1
+15114	Adam Smith	INFLUENCED	15176	Shirzad Peik Herfeh	166	0.000186	1
+15115	Amartya Sen	INFLUENCED	15164	Martha Nussbaum	N/A	N/A	0
+15118	Auguste Comte	INFLUENCED	32005	Étienne Gilson	N/A	N/A	0
+15119	Ayn Rand	INFLUENCED	4944	Butler D. Shaffer	N/A	N/A	0
+15122	Carl Menger	INFLUENCED	15119	Ayn Rand	N/A	N/A	0
+15122	Carl Menger	INFLUENCED	15140	George Reisman	54	0.000659	1
+15122	Carl Menger	INFLUENCED	54804	Ludwig von Mises	22	0.002860	1
+15127	David Hume	INFLUENCED	9021	Alexius Meinong	N/A	N/A	0
+15127	David Hume	INFLUENCED	15114	Adam Smith	N/A	N/A	0
+15127	David Hume	INFLUENCED	15166	Mookie Tenembaum	129	0.000323	1
+15129	David Ricardo	INFLUENCED	15140	George Reisman	24	0.002176	1
+15135	Frédéric Bastiat	INFLUENCED	15140	George Reisman	25	0.000847	1
+15136	Friedrich Heinrich Jacobi	INFLUENCED	40503	Johann Gottlieb Fichte	N/A	N/A	0
+15138	Georg Wilhelm Friedrich Hegel	INFLUENCED	5713	Sebastian Rödl	N/A	N/A	0
+15138	Georg Wilhelm Friedrich Hegel	INFLUENCED	8603	Jacques Lacan	339	0.000125	1
+15138	Georg Wilhelm Friedrich Hegel	INFLUENCED	52830	Wilfrid Sellars	N/A	N/A	0
+15138	Georg Wilhelm Friedrich Hegel	INFLUENCED	117792	Tom Rockmore	N/A	N/A	0
+15143	Henry George	INFLUENCED	4943	Albert Jay Nock	46	0.001594	1
+15143	Henry George	INFLUENCED	80602	Franz Oppenheimer	N/A	N/A	0
+15143	Henry George	INFLUENCED	113895	Walter Rauschenbusch	N/A	N/A	0
+15143	Henry George	INFLUENCED	131682	William Vickrey	N/A	N/A	0
+15144	Henry Hazlitt	INFLUENCED	44115	Hans-Hermann Hoppe	41	0.000398	1
+15144	Henry Hazlitt	INFLUENCED	103351	Lew Rockwell	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	3094	Mladen Dolar	211	0.000499	1
+15146	Immanuel Kant	INFLUENCED	3095	Peter Hallward	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	4449	Theodor W. Adorno	301	0.000199	1
+15146	Immanuel Kant	INFLUENCED	8596	Alexandre Kojève	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	9271	Jean Piaget	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	10619	Derek Parfit	214	0.000460	1
+15146	Immanuel Kant	INFLUENCED	15136	Friedrich Heinrich Jacobi	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	15138	Georg Wilhelm Friedrich Hegel	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	42008	R. G. Collingwood	388	0.000133	1
+15146	Immanuel Kant	INFLUENCED	42782	Gottlob Frege  Gottlob Frege  1	218	0.000392	1
+15146	Immanuel Kant	INFLUENCED	44139	C. I. Lewis	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	65875	Karl Leonhard Reinhold	314	0.000188	1
+15146	Immanuel Kant	INFLUENCED	70957	James F. Conant	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	98791	György Lukács	270	0.000238	1
+15146	Immanuel Kant	INFLUENCED	113830	Frithjof Bergmann	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	117792	Tom Rockmore	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	128654	John Rawls	N/A	N/A	0
+15146	Immanuel Kant	INFLUENCED	135307	Louis Arnaud Reid	N/A	N/A	0
+15150	Jean-Baptiste Say	INFLUENCED	15177	Thomas Hodgskin	N/A	N/A	0
+15150	Jean-Baptiste Say	INFLUENCED	54803	Ludwig von Mises  Ludwig von Mises  1	N/A	N/A	0
+15152	Joan Robinson	INFLUENCED	163233	Philip Pilkington	15	0.003212	1
+15154	John Maynard Keynes	INFLUENCED	9667	Attilio Celant	214	0.000061	1
+15154	John Maynard Keynes	INFLUENCED	14784	Friedrich Hayek	N/A	N/A	0
+15154	John Maynard Keynes	INFLUENCED	15147	J. Bradford DeLong	N/A	N/A	0
+15154	John Maynard Keynes	INFLUENCED	71429	Costas Lapavitsas	N/A	N/A	0
+15154	John Maynard Keynes	INFLUENCED	109332	Wynne Godley	10	0.002404	1
+15154	John Maynard Keynes	INFLUENCED	121219	Richard Kahn, Baron Kahn	N/A	N/A	0
+15156	John Stuart Mill	INFLUENCED	15173	Robert Sugden (economist)	N/A	N/A	0
+15156	John Stuart Mill	INFLUENCED	43257	Bernard Gert	N/A	N/A	0
+15156	John Stuart Mill	INFLUENCED	80605	Max Hirsch (economist)	N/A	N/A	0
+15157	Joseph de Maistre	INFLUENCED	54975	Chris Ferrara	147	0.000217	1
+15157	Joseph de Maistre	INFLUENCED	175581	Pierre Guillaume Frédéric le Play	168	0.000147	1
+15161	Léon Walras	INFLUENCED	10475	Vilfredo Pareto	N/A	N/A	0
+15161	Léon Walras	INFLUENCED	121378	Gérard Debreu	33	0.001806	1
+15165	Max Stirner	INFLUENCED	946	Agustín García Calvo	N/A	N/A	0
+15165	Max Stirner	INFLUENCED	29938	Mário Ferreira dos Santos	234	0.000076	1
+15165	Max Stirner	INFLUENCED	34220	Julius Bahnsen	N/A	N/A	0
+15165	Max Stirner	INFLUENCED	34232	Philipp Mainländer	N/A	N/A	0
+15165	Max Stirner	INFLUENCED	59692	John Zerzan	151	0.000168	1
+15165	Max Stirner	INFLUENCED	60137	Raoul Vaneigem	N/A	N/A	0
+15169	Noam Chomsky	INFLUENCED	1780	Edward Said	N/A	N/A	0
+15169	Noam Chomsky	INFLUENCED	4122	Stevan Harnad	N/A	N/A	0
+15172	Pierre-Joseph Proudhon	INFLUENCED	7604	Alexander Herzen	N/A	N/A	0
+15179	Thomas Robert Malthus	INFLUENCED	136289	Herman Daly	226	0.000132	1
+15539	Smalltalk	INFLUENCED	14485	Ada (programming language)	143	0.000191	1
+15539	Smalltalk	INFLUENCED	52586	PHP	91	0.000570	1
+15762	Adi Dravida	RELIGION	10155	Islam	N/A	N/A	0
+15762	Adi Dravida	RELIGION	14303	Jainism	N/A	N/A	0
+15772	Adi Shankara	RELIGION	10417	Hinduism	N/A	N/A	0
+16051	Carl Jung	INFLUENCED	54692	Fritjof Capra	55	0.001050	1
+16052	Franz Boas	INFLUENCED	9815	Claude Lévi-Strauss	N/A	N/A	0
+16172	Adolf Reinach	INFLUENCED	16174	Dietrich von Hildebrand	38	0.000251	1
+16341	Werner Sombart	INFLUENCED	15160	Karl Polanyi	N/A	N/A	0
+16936	Algernon Sidney  Algernon Sidney  1	INFLUENCED	16956	John Adams	N/A	N/A	0
+16936	Algernon Sidney  Algernon Sidney  1	INFLUENCED	16964	Russell Kirk	128	0.000265	1
+16941	Edward Gibbon	INFLUENCED	15159	Julian Simon	229	0.000224	1
+16945	Gabriel Marcel	INFLUENCED	101156	Walker Percy	N/A	N/A	0
+16951	Isaac Newton	INFLUENCED	16958	John Locke	N/A	N/A	0
+16957	John Henry Newman	INFLUENCED	16175	Edith Stein	16	0.003361	1
+16958	John Locke	INFLUENCED	4734	Keith Lewin	435	0.000067	1
+16958	John Locke	INFLUENCED	15177	Thomas Hodgskin	157	0.000223	1
+16958	John Locke	INFLUENCED	39977	William Godwin	53	0.001383	1
+16965	Thomas Jefferson	INFLUENCED	15120	Benjamin Tucker	195	0.000029	1
+17013	C (programming language)	INFLUENCED	11882	Python (programming language)	98	0.000226	1
+17013	C (programming language)	INFLUENCED	52585	Objective-C	286	0.000000	1
+17013	C (programming language)	INFLUENCED	52622	ZPE Programming Environment	91	0.000278	1
+17014	CLU (programming language)	INFLUENCED	14485	Ada (programming language)	48	0.001015	1
+17026	Pascal (programming language)	INFLUENCED	5930	Limbo (programming language)	N/A	N/A	0
+17026	Pascal (programming language)	INFLUENCED	30830	Wolfram Language	279	0.000010	1
+17026	Pascal (programming language)	INFLUENCED	180058	Oberon (programming language)	89	0.000363	1
+17031	Simula	INFLUENCED	15539	Smalltalk	N/A	N/A	0
+17031	Simula	INFLUENCED	17014	CLU (programming language)	N/A	N/A	0
+17036	C (programming language)  C  1	INFLUENCED	5930	Limbo (programming language)	249	0.000000	1
+17036	C (programming language)  C  1	INFLUENCED	14492	Java (programming language)	53	0.000726	1
+17045	Modula-2	INFLUENCED	14498	Seed7	39	0.000926	1
+17051	Dylan (programming language)	INFLUENCED	3511	Julia (programming language)	13	0.002555	1
+17055	Mesa (programming language)	INFLUENCED	17045	Modula-2	N/A	N/A	0
+17057	Modula-3	INFLUENCED	14493	Nim (programming language)	144	0.000080	1
+17664	Lisp (programming language)	INFLUENCED	11882	Python (programming language)	92	0.001015	1
+17664	Lisp (programming language)	INFLUENCED	17014	CLU (programming language)	N/A	N/A	0
+17664	Lisp (programming language)	INFLUENCED	17024	ISWIM	N/A	N/A	0
+17664	Lisp (programming language)	INFLUENCED	147172	ML (programming language)	N/A	N/A	0
+17878	Hispanic and Latino Americans	RELIGION	185	Irreligion	N/A	N/A	0
+17878	Hispanic and Latino Americans	RELIGION	366	Agnosticism	N/A	N/A	0
+18481	All-African People's Revolutionary Party	IDEOLOGY	302	Black nationalism	N/A	N/A	0
+18501	All-Polish Youth	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+18501	All-Polish Youth	IDEOLOGY	18508	National Catholicism	N/A	N/A	0
+19025	Alliance for Brazil	IDEOLOGY	19026	Anti-globalism	N/A	N/A	0
+19065	Alliance for Peace and Freedom	IDEOLOGY	16037	Opposition to immigration	N/A	N/A	0
+19077	Alliance for the Homeland	IDEOLOGY	273	Economic nationalism	N/A	N/A	0
+19103	Alliance of European National Movements	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+19103	Alliance of European National Movements	IDEOLOGY	18514	Ultranationalism	N/A	N/A	0
+19136	Alliance Towards Reforms	IDEOLOGY	10206	Big tent	N/A	N/A	0
+19136	Alliance Towards Reforms	IDEOLOGY	19137	Iraqi nationalism	N/A	N/A	0
+19216	Perl	INFLUENCED	69269	CoffeeScript	26	0.000930	1
+19216	Perl	INFLUENCED	127033	Groovy (programming language)	49	0.000421	1
+19363	Heinrich Rickert	INFLUENCED	32051	Kitaro Nishida	190	0.000208	1
+19363	Heinrich Rickert	INFLUENCED	44049	Walter Benjamin	13	0.002953	1
+19365	Oswald Spengler	INFLUENCED	5480	Alberto Edwards	N/A	N/A	0
+19365	Oswald Spengler	INFLUENCED	10761	Ludwig Wittgenstein	N/A	N/A	0
+19365	Oswald Spengler	INFLUENCED	29938	Mário Ferreira dos Santos	N/A	N/A	0
+19440	Francisco Suárez	INFLUENCED	25230	Grotius	N/A	N/A	0
+19440	Francisco Suárez	INFLUENCED	32083	Rodrigo de Arriaga	N/A	N/A	0
+19445	Alonzo Church	ALMAMATER	10361	Princeton University	N/A	N/A	0
+19867	Alvin Hansen	INFLUENCED	19873	John Hicks	N/A	N/A	0
+19872	James Tobin	INFLUENCED	20428	Inge Kaul	N/A	N/A	0
+19874	Paul Samuelson	FIELD	3804	Macroeconomics	N/A	N/A	0
+19875	Robert Solow	ALMAMATER	10681	Doctor of Philosophy	N/A	N/A	0
+20094	Amaiur (1979 coalition)	IDEOLOGY	10313	Ecologism	N/A	N/A	0
+20746	American Nazi Party	IDEOLOGY	20747	White supremacy	N/A	N/A	0
+20757	American Republican Party (1843)  American Republican Party  1	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+20777	Americans	RELIGION	20782	Sikhism in the United States	N/A	N/A	0
+21187	John Philoponus	INFLUENCED	2940	Al-Kindi	N/A	N/A	0
+21193	Origen	INFLUENCED	59701	Pierre Teilhard de Chardin	N/A	N/A	0
+21193	Origen	INFLUENCED	133856	Nikolay Lossky	N/A	N/A	0
+22194	Anatolia Party	IDEOLOGY	14610	Environmentalism	N/A	N/A	0
+22330	Protagoras	INFLUENCED	31574	Plato	N/A	N/A	0
+22331	Socrates	INFLUENCED	4733	Karl Popper	295	0.000117	1
+22331	Socrates	INFLUENCED	15124	Charles Maurras	149	0.000256	1
+22331	Socrates	INFLUENCED	16954	Jacques Maritain	148	0.000265	1
+22331	Socrates	INFLUENCED	32054	Louis de Bonald	323	0.000107	1
+22335	Pythagoras	INFLUENCED	58198	Clement of Alexandria	37	0.001497	1
+22365	And-Jëf/African Party for Democracy and Socialism	IDEOLOGY	22366	Maoism	N/A	N/A	0
+22388	Andalusian Party	IDEOLOGY	14414	Federalism	N/A	N/A	0
+22614	Stanley Cavell	INFLUENCED	32742	Arnold Davidson	N/A	N/A	0
+22769	Cornelius Castoriadis	INFLUENCED	6325	Claude Lefort	N/A	N/A	0
+22835	Jacques Ellul	INFLUENCED	29903	Guy Debord	102	0.000133	1
+22835	Jacques Ellul	INFLUENCED	32805	Ivan Illich	N/A	N/A	0
+22835	Jacques Ellul	INFLUENCED	98924	Robert K. Merton	N/A	N/A	0
+22983	John Selden	INFLUENCED	333	Friedrich Nietzsche	150	0.000248	1
+22983	John Selden	INFLUENCED	15146	Immanuel Kant	69	0.000633	1
+22983	John Selden	INFLUENCED	32036	Jean-Jacques Rousseau	25	0.002000	1
+23012	Marsilio Ficino	INFLUENCED	32016	Giovanni Pico della Mirandola	N/A	N/A	0
+23440	Ernst Mach	INFLUENCED	4716	Albert Einstein	28	0.001675	1
+23440	Ernst Mach	INFLUENCED	102459	Ludwig Boltzmann	N/A	N/A	0
+23440	Ernst Mach	INFLUENCED	102460	Otto Neurath	N/A	N/A	0
+23573	Sendhil Mullainathan	KNOWNFOR	13179	Development economics	N/A	N/A	0
+25231	Jean Bodin	INFLUENCED	4523	Hugo Grotius	N/A	N/A	0
+26119	Anglo-Indian people	RELIGION	10417	Hinduism	N/A	N/A	0
+27621	Annam (French protectorate)	RELIGION	14298	Taoism	N/A	N/A	0
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	950	Gilles Deleuze	94	0.000538	1
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	9332	Gottlob Frege	N/A	N/A	0
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	40489	Christian Wolff (philosopher)	N/A	N/A	0
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	42782	Gottlob Frege  Gottlob Frege  1	N/A	N/A	0
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	43137	Bernard Bolzano	N/A	N/A	0
+27733	Gottfried Wilhelm Leibniz	INFLUENCED	44173	Norbert Wiener	N/A	N/A	0
+28543	Anselm of Canterbury	INFLUENCED	28548	William of Ockham	22	0.002250	1
+28548	William of Ockham	INFLUENCED	15166	Mookie Tenembaum	173	0.000169	1
+28729	Francis Hutcheson (philosopher)	INFLUENCED	15151	Jeremy Bentham	38	0.000614	1
+28885	Shakespeare	INFLUENCED	13833	Søren Kierkegaard	N/A	N/A	0
+29357	Jeffersonian democracy	IDEOLOGY	20728	American nationalism	N/A	N/A	0
+29399	Anticapitalist Left (Italy)	IDEOLOGY	19653	Eco-socialism	N/A	N/A	0
+29399	Anticapitalist Left (Italy)	IDEOLOGY	19663	Marxism	N/A	N/A	0
+29420	Antiimperialist Action Front – Suxxali Reew Mi	IDEOLOGY	10319	Communism	N/A	N/A	0
+29422	Cicero	INFLUENCED	15127	David Hume	56	0.000749	1
+29422	Cicero	INFLUENCED	28729	Francis Hutcheson (philosopher)	N/A	N/A	0
+29438	Diogenes	INFLUENCED	15165	Max Stirner	66	0.000450	1
+29438	Diogenes	INFLUENCED	61656	Kwame Anthony Appiah	N/A	N/A	0
+29453	Jacques-Bénigne Bossuet	INFLUENCED	15157	Joseph de Maistre	17	0.006027	1
+29454	Nicolas Malebranche	INFLUENCED	27733	Gottfried Wilhelm Leibniz	N/A	N/A	0
+29454	Nicolas Malebranche	INFLUENCED	32036	Jean-Jacques Rousseau	88	0.000456	1
+29454	Nicolas Malebranche	INFLUENCED	79070	Lisa Shapiro	344	0.000097	1
+29505	Maine de Biran	INFLUENCED	32007	Félix Ravaisson-Mollien	55	0.000847	1
+29903	Guy Debord	INFLUENCED	3898	Jean Baudrillard	95	0.000022	1
+30173	Richard D. Wolff	ALMAMATER	10400	Stanford University	N/A	N/A	0
+30206	Antonio Labriola  Antonio Labriola  1	INFLUENCED	30208	Georges Sorel	N/A	N/A	0
+30208	Georges Sorel	INFLUENCED	44049	Walter Benjamin	N/A	N/A	0
+30208	Georges Sorel	INFLUENCED	98791	György Lukács	N/A	N/A	0
+30835	Self (programming language)	INFLUENCED	14464	Io (programming language)	17	0.007226	1
+30942	Apuleius	INFLUENCED	30946	C. S. Lewis	N/A	N/A	0
+30944	Augustine	INFLUENCED	5743	John Scotus Eriugena  John Scotus Eriugena  1	N/A	N/A	0
+30944	Augustine	INFLUENCED	15773	Ananda Coomaraswamy	425	0.000065	1
+30944	Augustine	INFLUENCED	29504	Juan Donoso Cortés	N/A	N/A	0
+30944	Augustine	INFLUENCED	31007	Karl Rahner	43	0.001252	1
+30944	Augustine	INFLUENCED	32072	Peter Kreeft	131	0.000334	1
+31000	Aquinas	INFLUENCED	15124	Charles Maurras	90	0.000391	1
+31000	Aquinas	INFLUENCED	19440	Francisco Suárez	34	0.001901	1
+31000	Aquinas	INFLUENCED	23012	Marsilio Ficino	N/A	N/A	0
+31000	Aquinas	INFLUENCED	31010	Nick Land	364	0.000050	1
+31003	Franz Brentano	INFLUENCED	954	Martin Heidegger	50	0.000622	1
+31003	Franz Brentano	INFLUENCED	15122	Carl Menger	N/A	N/A	0
+31004	G. E. M. Anscombe	INFLUENCED	87932	Michael Dummett	81	0.000455	1
+31010	Nick Land	INFLUENCED	30171	Mark Fisher	N/A	N/A	0
+31011	Philippa Foot	INFLUENCED	32043	John McDowell	13	0.001911	1
+31092	Arab Socialist Ba'ath Party – Iraq Region	IDEOLOGY	19137	Iraqi nationalism	N/A	N/A	0
+31107	Arab Socialist Union (Egypt)	IDEOLOGY	2971	Pan-Arabism	N/A	N/A	0
+31108	Arab Socialist Union (Iraq)	IDEOLOGY	2968	Arab nationalism	N/A	N/A	0
+31115	Arab-Berber	RELIGION	10155	Islam	N/A	N/A	0
+31115	Arab-Berber	RELIGION	11667	Judaism	N/A	N/A	0
+31313	Arcesilaus	INFLUENCED	31314	Carneades	N/A	N/A	0
+31317	Philo of Larissa	INFLUENCED	29421	Antiochus of Ascalon	N/A	N/A	0
+31574	Plato	INFLUENCED	946	Agustín García Calvo	N/A	N/A	0
+31574	Plato	INFLUENCED	5620	Nicholas of Cusa	182	0.000415	1
+31574	Plato	INFLUENCED	8600	Boris Groys	428	0.000106	1
+31574	Plato	INFLUENCED	14972	Roger Bacon	278	0.000187	1
+31574	Plato	INFLUENCED	23012	Marsilio Ficino	169	0.000638	1
+31574	Plato	INFLUENCED	31990	Arthur Schopenhauer	178	0.000435	1
+31574	Plato	INFLUENCED	32004	Émile Durkheim	210	0.000301	1
+31574	Plato	INFLUENCED	32010	Friedrich Wilhelm Joseph Schelling	N/A	N/A	0
+31574	Plato	INFLUENCED	32015	Giambattista Vico	185	0.000395	1
+31574	Plato	INFLUENCED	32031	Ion Dragoumis	N/A	N/A	0
+31574	Plato	INFLUENCED	32064	Mortimer J. Adler	N/A	N/A	0
+31574	Plato	INFLUENCED	34603	Julius Evola	177	0.000438	1
+31574	Plato	INFLUENCED	46945	Predrag Finci	N/A	N/A	0
+31971	Epicurus	INFLUENCED	9359	Jean-Marie Guyau	N/A	N/A	0
+31971	Epicurus	INFLUENCED	32073	Pierre Gassendi	213	0.000181	1
+31971	Epicurus	INFLUENCED	34213	Irvin D. Yalom	268	0.000148	1
+31978	Philo	INFLUENCED	36764	Jean-Louis Chrétien	N/A	N/A	0
+31990	Arthur Schopenhauer	INFLUENCED	335	Leo Tolstoy	N/A	N/A	0
+31990	Arthur Schopenhauer	INFLUENCED	956	Rainer Maria Rilke	161	0.000275	1
+31990	Arthur Schopenhauer	INFLUENCED	32014	George Santayana	N/A	N/A	0
+31990	Arthur Schopenhauer	INFLUENCED	34241	Wilhelm Dilthey	N/A	N/A	0
+31997	Damaris Cudworth Masham	INFLUENCED	15127	David Hume	8	0.004179	1
+31997	Damaris Cudworth Masham	INFLUENCED	15146	Immanuel Kant	25	0.001907	1
+32004	Émile Durkheim	INFLUENCED	32104	Traian Brăileanu	N/A	N/A	0
+32004	Émile Durkheim	INFLUENCED	96517	Robert Dentler	N/A	N/A	0
+32005	Étienne Gilson	INFLUENCED	31012	Rafael Gambra Ciudad	N/A	N/A	0
+32005	Étienne Gilson	INFLUENCED	37450	Henry Corbin	N/A	N/A	0
+32010	Friedrich Wilhelm Joseph Schelling	INFLUENCED	954	Martin Heidegger	84	0.000476	1
+32010	Friedrich Wilhelm Joseph Schelling	INFLUENCED	7203	Charles Sanders Peirce	430	0.000091	1
+32010	Friedrich Wilhelm Joseph Schelling	INFLUENCED	7616	Sigmund Freud	65	0.000704	1
+32010	Friedrich Wilhelm Joseph Schelling	INFLUENCED	13599	Alexander von Humboldt	N/A	N/A	0
+32010	Friedrich Wilhelm Joseph Schelling	INFLUENCED	15138	Georg Wilhelm Friedrich Hegel	N/A	N/A	0
+32012	George Boole  George Boole  1	INFLUENCED	15154	John Maynard Keynes	277	0.000052	1
+32015	Giambattista Vico	INFLUENCED	30207	Benedetto Croce	N/A	N/A	0
+32015	Giambattista Vico	INFLUENCED	32057	Marshall McLuhan	43	0.001281	1
+32015	Giambattista Vico	INFLUENCED	122469	Hegel	N/A	N/A	0
+32026	Herbert Spencer	INFLUENCED	19564	Georges Vacher de Lapouge	N/A	N/A	0
+32026	Herbert Spencer	INFLUENCED	32004	Émile Durkheim	65	0.000828	1
+32032	J. L. Austin	INFLUENCED	22614	Stanley Cavell	N/A	N/A	0
+32032	J. L. Austin	INFLUENCED	22641	Judith Butler	81	0.000216	1
+32036	Jean-Jacques Rousseau	INFLUENCED	952	Jean-Paul Sartre	160	0.000229	1
+32036	Jean-Jacques Rousseau	INFLUENCED	3095	Peter Hallward	382	0.000098	1
+32036	Jean-Jacques Rousseau	INFLUENCED	10219	Hiroki Azuma	499	0.000065	1
+32036	Jean-Jacques Rousseau	INFLUENCED	14784	Friedrich Hayek	162	0.000228	1
+32036	Jean-Jacques Rousseau	INFLUENCED	15157	Joseph de Maistre	153	0.000249	1
+32036	Jean-Jacques Rousseau	INFLUENCED	22769	Cornelius Castoriadis	212	0.000169	1
+32036	Jean-Jacques Rousseau	INFLUENCED	40497	Friedrich Schleiermacher	117	0.000329	1
+32036	Jean-Jacques Rousseau	INFLUENCED	128654	John Rawls	N/A	N/A	0
+32054	Louis de Bonald	INFLUENCED	15118	Auguste Comte	188	0.000157	1
+32061	Michael Oakeshott	INFLUENCED	34216	John Gray (philosopher)	N/A	N/A	0
+32061	Michael Oakeshott	INFLUENCED	46942	Luiz Felipe Pondé	283	0.000004	1
+32071	Peter Geach	INFLUENCED	31004	G. E. M. Anscombe	N/A	N/A	0
+32073	Pierre Gassendi	INFLUENCED	15127	David Hume	43	0.000858	1
+32076	Porphyry (philosopher)	INFLUENCED	30944	Augustine	N/A	N/A	0
+32077	Posidonius	INFLUENCED	36183	Seneca the Younger	N/A	N/A	0
+32081	Richard McKeon	INFLUENCED	9022	Bertrand Russell	N/A	N/A	0
+32083	Rodrigo de Arriaga	INFLUENCED	2893	René Descartes	8	0.015712	1
+32083	Rodrigo de Arriaga	INFLUENCED	27733	Gottfried Wilhelm Leibniz	9	0.007126	1
+32092	Simone Weil	INFLUENCED	114600	Iris Murdoch	N/A	N/A	0
+32101	Thomas Cajetan	INFLUENCED	31002	Francisco de Vitoria	N/A	N/A	0
+32102	Thomas Hobbes	INFLUENCED	13622	Baruch Spinoza	414	0.000072	1
+32102	Thomas Hobbes	INFLUENCED	15176	Shirzad Peik Herfeh	152	0.000208	1
+32102	Thomas Hobbes	INFLUENCED	37674	Rainer Forst	231	0.000144	1
+32773	Niklas Luhmann	INFLUENCED	53701	Jürgen Habermas	N/A	N/A	0
+32781	Ludwig Feuerbach	INFLUENCED	333	Friedrich Nietzsche	142	0.000312	1
+32781	Ludwig Feuerbach	INFLUENCED	7616	Sigmund Freud	104	0.000502	1
+32781	Ludwig Feuerbach	INFLUENCED	33549	Bruno Bauer	164	0.000271	1
+32781	Ludwig Feuerbach	INFLUENCED	40498	Georgi Plekhanov	16	0.002122	1
+32781	Ludwig Feuerbach	INFLUENCED	40504	Joseph Dietzgen	N/A	N/A	0
+32805	Ivan Illich	INFLUENCED	47254	Bob Black	13	0.003723	1
+32947	Jean-Marie Dufour	FIELD	22060	Finance	N/A	N/A	0
+33549	Bruno Bauer	INFLUENCED	15165	Max Stirner	N/A	N/A	0
+34208	Gilbert Ryle	INFLUENCED	32032	J. L. Austin	N/A	N/A	0
+34208	Gilbert Ryle	INFLUENCED	44142	Daniel Dennett	84	0.000403	1
+34211	Henri Bergson	INFLUENCED	16954	Jacques Maritain	N/A	N/A	0
+34211	Henri Bergson	INFLUENCED	114835	Jean Wahl	173	0.000215	1
+34211	Henri Bergson	INFLUENCED	135307	Louis Arnaud Reid	N/A	N/A	0
+34217	Jorge Luis Borges	INFLUENCED	950	Gilles Deleuze	N/A	N/A	0
+34223	L. E. J. Brouwer	ALMAMATER	11150	University of Amsterdam	N/A	N/A	0
+34227	Max Horkheimer	INFLUENCED	60133	Herbert Marcuse	73	0.000662	1
+34241	Wilhelm Dilthey	INFLUENCED	34227	Max Horkheimer	N/A	N/A	0
+34241	Wilhelm Dilthey	INFLUENCED	117833	Georg Simmel	214	0.000214	1
+35513	Asian Americans in California	RELIGION	4331	Protestantism in the United States	N/A	N/A	0
+35518	Asian Americans	RELIGION	20782	Sikhism in the United States	N/A	N/A	0
+35524	Asian Brazilians	RELIGION	14483	Druze	N/A	N/A	0
+35530	Asian Caribbean	RELIGION	15763	Sikhism	N/A	N/A	0
+35534	Asian immigration to Hawaii	RELIGION	4331	Protestantism in the United States	N/A	N/A	0
+35534	Asian immigration to Hawaii	RELIGION	20779	Islam in the United States	N/A	N/A	0
+35543	Asian-Americans in Maryland	RELIGION	240	Irreligion in the United States	N/A	N/A	0
+35627	Askatasuna	IDEOLOGY	10172	Socialism	N/A	N/A	0
+36183	Seneca the Younger	INFLUENCED	137279	Marcus Aurelius	N/A	N/A	0
+36421	Marx	INFLUENCED	30208	Georges Sorel	N/A	N/A	0
+36519	Ferdinand de Saussure	INFLUENCED	8605	Louis Althusser	157	0.000158	1
+36519	Ferdinand de Saussure	INFLUENCED	9815	Claude Lévi-Strauss	89	0.000344	1
+36519	Ferdinand de Saussure	INFLUENCED	68147	Roland Barthes	86	0.000358	1
+36519	Ferdinand de Saussure	INFLUENCED	101156	Walker Percy	N/A	N/A	0
+36745	Augustine of Hippo	INFLUENCED	16954	Jacques Maritain	245	0.000168	1
+36745	Augustine of Hippo	INFLUENCED	31997	Damaris Cudworth Masham	N/A	N/A	0
+36745	Augustine of Hippo	INFLUENCED	32015	Giambattista Vico	57	0.000780	1
+36745	Augustine of Hippo	INFLUENCED	32092	Simone Weil	236	0.000197	1
+36745	Augustine of Hippo	INFLUENCED	32101	Thomas Cajetan	N/A	N/A	0
+36745	Augustine of Hippo	INFLUENCED	32105	Valerianus Magnus	400	0.000080	1
+36756	Michel de Montaigne	INFLUENCED	15127	David Hume	133	0.000235	1
+36756	Michel de Montaigne	INFLUENCED	32036	Jean-Jacques Rousseau	103	0.000335	1
+36756	Michel de Montaigne	INFLUENCED	46941	Blaise Pascal	N/A	N/A	0
+36757	Miguel de Unamuno	INFLUENCED	40505	Joxe Azurmendi	N/A	N/A	0
+36761	Erich Przywara	INFLUENCED	92402	Roman Ingarden	17	0.002896	1
+36762	Héloïse	INFLUENCED	15508	Peter Abelard	N/A	N/A	0
+36840	William Stanley Jevons	ALMAMATER	10601	University College London	N/A	N/A	0
+36840	William Stanley Jevons	INFLUENCED	9665	Alfred Marshall	N/A	N/A	0
+37392	Thomas Aquinas	INFLUENCED	2881	Leo Strauss	128	0.000355	1
+37392	Thomas Aquinas	INFLUENCED	13654	Alvin Plantinga	110	0.000451	1
+37392	Thomas Aquinas	INFLUENCED	29057	Anthony Kenny	74	0.000964	1
+37634	JavaScript	INFLUENCED	14457	Haxe	30	0.002626	1
+37636	Lua (programming language)	INFLUENCED	14464	Io (programming language)	121	0.000002	1
+38336	Leszek Kołakowski	INFLUENCED	4637	Christopher Hitchens	N/A	N/A	0
+38342	B. R. Ambedkar	ALMAMATER	10600	London School of Economics	N/A	N/A	0
+38342	B. R. Ambedkar	ALMAMATER	10681	Doctor of Philosophy	N/A	N/A	0
+39152	Tadashi Nagano	ALMAMATER	15389	University of Tokyo	N/A	N/A	0
+39195	Bangladeshis	RELIGION	10417	Hinduism	N/A	N/A	0
+39968	Baron d'Holbach	INFLUENCED	333	Friedrich Nietzsche	43	0.000814	1
+39968	Baron d'Holbach	INFLUENCED	15127	David Hume	176	0.000159	1
+39975	Peter Kropotkin	INFLUENCED	59692	John Zerzan	40	0.001035	1
+40018	Charles Tilly	ALMAMATER	10449	Harvard University	N/A	N/A	0
+40018	Charles Tilly	INFLUENCED	61706	Mustafa Emirbayer	N/A	N/A	0
+40489	Christian Wolff (philosopher)	INFLUENCED	13833	Søren Kierkegaard	33	0.001411	1
+40497	Friedrich Schleiermacher	INFLUENCED	113893	Johann Eduard Erdmann	N/A	N/A	0
+40503	Johann Gottlieb Fichte	INFLUENCED	40497	Friedrich Schleiermacher	234	0.000146	1
+40503	Johann Gottlieb Fichte	INFLUENCED	65213	Wilhelm von Humboldt	N/A	N/A	0
+40503	Johann Gottlieb Fichte	INFLUENCED	113849	Zaki al-Arsuzi	N/A	N/A	0
+40507	Michel Serres	INFLUENCED	9721	Bruno Latour	34	0.000088	1
+40757	Basque Nationalist Party	IDEOLOGY	13115	Basque nationalism	N/A	N/A	0
+40759	Basque Nationalist Republican Party	IDEOLOGY	10297	Social liberalism	N/A	N/A	0
+40803	Basta! (coalition)  Enough!  1	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+40816	Joseph Schumpeter	FIELD	16644	Econometrics	N/A	N/A	0
+40816	Joseph Schumpeter	INFLUENCED	9935	Kenneth Arrow	156	0.000044	1
+40816	Joseph Schumpeter	INFLUENCED	34081	William Baumol	257	0.000002	1
+40816	Joseph Schumpeter	INFLUENCED	89834	Robert Higgs	85	0.000310	1
+41040	Dante Alighieri	INFLUENCED	11908	Muhammad Iqbal	N/A	N/A	0
+41611	Ben Bot	ALMAMATER	10449	Harvard University	N/A	N/A	0
+42042	Gustave Le Bon	ALMAMATER	12163	University of Paris	N/A	N/A	0
+42042	Gustave Le Bon	INFLUENCED	60969	G. Sorel	N/A	N/A	0
+42463	T. H. Green	INFLUENCED	40513	Samuel Alexander	20	0.001100	1
+42463	T. H. Green	INFLUENCED	61455	John Dewey	N/A	N/A	0
+42781	Edmund Husserl	INFLUENCED	954	Martin Heidegger	134	0.000311	1
+42781	Edmund Husserl	INFLUENCED	3098	Simon Critchley	191	0.000181	1
+42781	Edmund Husserl	INFLUENCED	9939	Rudolf Carnap	N/A	N/A	0
+42781	Edmund Husserl	INFLUENCED	52830	Wilfrid Sellars	326	0.000085	1
+42925	Benteng people	RELIGION	27623	Confucianism	N/A	N/A	0
+43017	Bergson	INFLUENCED	43019	Mario Christian Meyer	N/A	N/A	0
+43137	Bernard Bolzano	INFLUENCED	4733	Karl Popper	22	0.001834	1
+43152	Julius Axelrod	ALMAMATER	10604	City College of New York	N/A	N/A	0
+43393	Marquis de Sade	INFLUENCED	8606	Maurice Blanchot	24	0.001487	1
+43523	Bernard Williams	INFLUENCED	22614	Stanley Cavell	N/A	N/A	0
+43531	Robert B. Pippin	INFLUENCED	79368	Robert Brandom	19	0.001018	1
+43531	Robert B. Pippin	INFLUENCED	114839	Terry Pinkard	N/A	N/A	0
+43905	Bert Rodriguez	FIELD	10746	Photography	N/A	N/A	0
+43905	Bert Rodriguez	FIELD	10883	Sculpture	N/A	N/A	0
+44115	Hans-Hermann Hoppe	INFLUENCED	103512	Robert P. Murphy	N/A	N/A	0
+44139	C. I. Lewis	INFLUENCED	52828	Susan Haack	N/A	N/A	0
+44152	Hilary Putnam	INFLUENCED	4307	Rahel Jaeggi	N/A	N/A	0
+44152	Hilary Putnam	INFLUENCED	135494	John Worrall (philosopher)	N/A	N/A	0
+44155	James Joyce	INFLUENCED	951	Jacques Derrida	N/A	N/A	0
+44177	Saul Kripke	INFLUENCED	9933	Jesús Padilla Gálvez	N/A	N/A	0
+44177	Saul Kripke	INFLUENCED	19449	David Kaplan (philosopher)	N/A	N/A	0
+44185	Vienna Circle	INFLUENCED	4733	Karl Popper	N/A	N/A	0
+45187	Heraclitus	INFLUENCED	34220	Julius Bahnsen	N/A	N/A	0
+45187	Heraclitus	INFLUENCED	137279	Marcus Aurelius	54	0.001059	1
+46465	Birimdik	IDEOLOGY	19012	Russophilia	N/A	N/A	0
+46860	Black Riders Liberation Party	IDEOLOGY	14450	Anti-fascism	N/A	N/A	0
+46941	Blaise Pascal	INFLUENCED	536	Gillian Rose	N/A	N/A	0
+46943	Max Scheler	INFLUENCED	59697	Mikhail Bakhtin	N/A	N/A	0
+46943	Max Scheler	INFLUENCED	128114	Ortega y Gasset	N/A	N/A	0
+46944	Pierre Duhem	INFLUENCED	135494	John Worrall (philosopher)	85	0.000217	1
+47078	Bloc des gauches	IDEOLOGY	20752	Anti-clericalism	N/A	N/A	0
+47115	Blue and White Front	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+49289	Brazil of Hope	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+49300	Brazilian diaspora	RELIGION	437	Pentecostalism	N/A	N/A	0
+49300	Brazilian diaspora	RELIGION	35525	Japanese new religions	N/A	N/A	0
+49335	Brazilian Integralist Front	IDEOLOGY	19027	Brazilian nationalism	N/A	N/A	0
+49339	Brazilian Labour Party (historical)	IDEOLOGY	10262	Populism	N/A	N/A	0
+49341	Brazilian Labour Renewal Party	IDEOLOGY	31093	Militarism	N/A	N/A	0
+49344	Brazilian Social Democracy Party  Brazilian Social Democracy Party  1	IDEOLOGY	10297	Social liberalism	N/A	N/A	0
+49344	Brazilian Social Democracy Party  Brazilian Social Democracy Party  1	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+49357	Brazilians in Portugal	RELIGION	185	Irreligion	N/A	N/A	0
+49364	Brazilians	RELIGION	10417	Hinduism	N/A	N/A	0
+50054	UCBLogo	INFLUENCED	15539	Smalltalk	N/A	N/A	0
+50692	Britannica Party	IDEOLOGY	50686	British fascism	N/A	N/A	0
+50732	British Indians	RELIGION	10385	Christianity	N/A	N/A	0
+50732	British Indians	RELIGION	11667	Judaism	N/A	N/A	0
+50746	British National Party (1960)	IDEOLOGY	14423	White nationalism	N/A	N/A	0
+50772	British Union of Fascists	IDEOLOGY	4467	Monarchism	N/A	N/A	0
+50839	Kirchnerism	IDEOLOGY	10226	Progressivism	7	0.004656	1
+50853	Broad Front UNEN	IDEOLOGY	19949	Third Way	N/A	N/A	0
+50914	Bronisław Malinowski	INFLUENCED	15160	Karl Polanyi	N/A	N/A	0
+51157	Bruce Conner	FIELD	10745	Collage	N/A	N/A	0
+51157	Bruce Conner	FIELD	10746	Photography	N/A	N/A	0
+51527	Karl Kautsky	INFLUENCED	182721	Konrad Lorenz	N/A	N/A	0
+51955	François Quesnay	INFLUENCED	110359	Michał Kalecki	N/A	N/A	0
+51956	Nagarjuna	INFLUENCED	9741	Ken Wilber	N/A	N/A	0
+52052	Building the Left–Socialist Alternative	IDEOLOGY	10313	Ecologism	N/A	N/A	0
+52052	Building the Left–Socialist Alternative	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+52580	C Sharp (programming language)	INFLUENCED	52639	F Sharp (programming language)  F%23  1	105	0.000055	1
+52609	OCaml	INFLUENCED	105060	Flix (programming language)	28	0.001752	1
+52826	Nelson Goodman	INFLUENCED	9749	W. V. O. Quine	N/A	N/A	0
+52826	Nelson Goodman	INFLUENCED	44152	Hilary Putnam	77	0.000326	1
+52830	Wilfrid Sellars	INFLUENCED	9034	Roderick Chisholm	N/A	N/A	0
+53701	Jürgen Habermas	INFLUENCED	37673	Nancy Fraser	22	0.004440	1
+53867	Canarian Assembly	IDEOLOGY	902	Canarian nationalism	N/A	N/A	0
+53867	Canarian Assembly	IDEOLOGY	14610	Environmentalism	N/A	N/A	0
+54009	Cantonese people	RELIGION	35519	Chinese folk religion	N/A	N/A	0
+54044	Cao Yu (artist)	FIELD	10376	Painting	N/A	N/A	0
+54244	Caribbean people	RELIGION	281	Rastafari	N/A	N/A	0
+54244	Caribbean people	RELIGION	282	Traditional African religions	N/A	N/A	0
+54244	Caribbean people	RELIGION	14298	Taoism	N/A	N/A	0
+54244	Caribbean people	RELIGION	27623	Confucianism	N/A	N/A	0
+54244	Caribbean people	RELIGION	35519	Chinese folk religion	N/A	N/A	0
+54551	Robert Nozick	INFLUENCED	15181	Thomas Sowell	N/A	N/A	0
+54551	Robert Nozick	INFLUENCED	37887	Michael Huemer	N/A	N/A	0
+54551	Robert Nozick	INFLUENCED	103351	Lew Rockwell	N/A	N/A	0
+54693	Henry Murray	INFLUENCED	13685	Abraham Maslow	N/A	N/A	0
+54800	Friedrich von Wieser	ALMAMATER	13762	University of Vienna	N/A	N/A	0
+54803	Ludwig von Mises  Ludwig von Mises  1	INFLUENCED	15144	Henry Hazlitt	100	0.000287	1
+54804	Ludwig von Mises	INFLUENCED	9729	Eric Voegelin	N/A	N/A	0
+54804	Ludwig von Mises	INFLUENCED	91708	Ed Crane (politician)	164	0.000007	1
+54804	Ludwig von Mises	INFLUENCED	113720	Fritz Machlup	N/A	N/A	0
+54967	Carl Schmitt	INFLUENCED	54972	Avital Ronell	56	0.000978	1
+55010	Carl Shapiro	INFLUENCED	55011	Hal Varian	N/A	N/A	0
+55011	Hal Varian	ALMAMATER	10450	University of California, Berkeley	N/A	N/A	0
+55031	Kurt Koffka	INFLUENCED	7986	Lev Vygotsky	15	0.001935	1
+55031	Kurt Koffka	INFLUENCED	8607	Maurice Merleau-Ponty	434	0.000000	1
+55031	Kurt Koffka	INFLUENCED	93509	Edward C. Tolman	12	0.001935	1
+56236	Carole Feuerman	FIELD	10708	Video art	N/A	N/A	0
+56538	William Shakespeare	INFLUENCED	8274	Ralph Waldo Emerson	N/A	N/A	0
+56869	Cartel des Gauches	IDEOLOGY	20752	Anti-clericalism	N/A	N/A	0
+58185	Celso Furtado	ALMAMATER	12163	University of Paris	N/A	N/A	0
+58185	Celso Furtado	FIELD	10486	Economics	N/A	N/A	0
+58289	Centre Party (Germany)	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+58294	Centre Party (New South Wales)	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+58302	Centre Union	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+58302	Centre Union	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+58304	Centrism (Italy)	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+58993	Change 2005	IDEOLOGY	10206	Big tent	N/A	N/A	0
+59354	Charles Baudelaire	INFLUENCED	34233	Renzo Novatore	N/A	N/A	0
+60130	Charles Fourier	INFLUENCED	47254	Bob Black	4	0.006140	1
+60130	Charles Fourier	INFLUENCED	60133	Herbert Marcuse	269	0.000048	1
+60139	Thorstein Veblen	INFLUENCED	68110	Louis Blanc	N/A	N/A	0
+60969	G. Sorel	INFLUENCED	20064	Antonio Gramsci	N/A	N/A	0
+61325	Charles Renouvier	INFLUENCED	34224	Léon Brunschvicg	213	0.000110	1
+61455	John Dewey	INFLUENCED	43530	Raymond Geuss	197	0.000122	1
+61455	John Dewey	INFLUENCED	113845	Sheldon Wolin	161	0.000143	1
+61458	Karl-Otto Apel	INFLUENCED	117884	Vittorio Hösle	N/A	N/A	0
+62461	Chavismo	IDEOLOGY	10233	Anti-imperialism	N/A	N/A	0
+62461	Chavismo	IDEOLOGY	10281	Left-wing populism	N/A	N/A	0
+63625	Chinese Australians	RELIGION	27623	Confucianism	N/A	N/A	0
+63628	Chinese Caribbeans	RELIGION	10204	Buddhism	N/A	N/A	0
+63635	Chinese diaspora in France	RELIGION	27623	Confucianism	N/A	N/A	0
+63651	Chinese Indonesians	RELIGION	14221	Roman Catholic	N/A	N/A	0
+63681	Chinese people in the United Arab Emirates	RELIGION	10155	Islam	N/A	N/A	0
+63681	Chinese people in the United Arab Emirates	RELIGION	14138	Protestantism	N/A	N/A	0
+65213	Wilhelm von Humboldt	INFLUENCED	8943	José Ortega y Gasset	112	0.000286	1
+65363	Christian Social Party (Austria)	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+65371	Christian Social People's Service	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+65393	Christian Union – Reformed Political Party	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+65434	Christian-Democratic People's Party (Moldova)	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+65875	Karl Leonhard Reinhold	INFLUENCED	113736	Jakob Friedrich Fries	N/A	N/A	0
+65925	F. H. Bradley	INFLUENCED	9716	Alfred North Whitehead	20	0.002473	1
+65990	Fumio Hayashi	ALMAMATER	10449	Harvard University	N/A	N/A	0
+67307	Civic 10	IDEOLOGY	35777	E-democracy	N/A	N/A	0
+67318	Civic Community	IDEOLOGY	1697	Constitutionalism	N/A	N/A	0
+67378	Civil Revolution	IDEOLOGY	523	Political corruption	N/A	N/A	0
+67378	Civil Revolution	IDEOLOGY	10319	Communism	N/A	N/A	0
+67391	Civilized Alliance (Iraq)	IDEOLOGY	10183	Liberalism	N/A	N/A	0
+67391	Civilized Alliance (Iraq)	IDEOLOGY	10325	Reformism	N/A	N/A	0
+67795	Frank Knight	INFLUENCED	11298	Milton Friedman	12	0.005108	1
+68028	Georges Canguilhem	INFLUENCED	950	Gilles Deleuze	15	0.002264	1
+68105	Euclid	INFLUENCED	14059	Ibn al-Haytham	24	0.000985	1
+68143	Marshall Sahlins	INFLUENCED	9677	Pierre Clastres	N/A	N/A	0
+68145	Pierre Bourdieu	INFLUENCED	61706	Mustafa Emirbayer	N/A	N/A	0
+68147	Roland Barthes	INFLUENCED	3898	Jean Baudrillard	18	0.000975	1
+68560	Haskell (programming language)	INFLUENCED	69269	CoffeeScript	64	0.000234	1
+68561	Haskell	INFLUENCED	5931	Rust (programming language)	10	0.004719	1
+68561	Haskell	INFLUENCED	69270	LiveScript (programming language)	40	0.001863	1
+69012	Katarina Juselius	FIELD	16644	Econometrics	N/A	N/A	0
+69015	Søren Johansen	FIELD	13102	Statistics	N/A	N/A	0
+69202	Coalition of Socialist Forces	IDEOLOGY	10319	Communism	N/A	N/A	0
+69812	Commitment to Galicia	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+69842	Common Lisp	INFLUENCED	3511	Julia (programming language)	34	0.001438	1
+69912	Communist Movement of Aragon	IDEOLOGY	19662	Antimilitarism	N/A	N/A	0
+69917	Communist Movement of the Valencian Country	IDEOLOGY	69165	Valencian nationalism	N/A	N/A	0
+70012	Communist Party of Great Britain (Marxist–Leninist)  Communist Party of Great Britain Marxist–Leninist  1	IDEOLOGY	300	Marxism–Leninism	N/A	N/A	0
+70012	Communist Party of Great Britain (Marxist–Leninist)  Communist Party of Great Britain Marxist–Leninist  1	IDEOLOGY	18523	Anti-revisionism	N/A	N/A	0
+70016	Communist Party of Greece	IDEOLOGY	18525	Stalinism	N/A	N/A	0
+70016	Communist Party of Greece	IDEOLOGY	19115	Hard Euroscepticism	N/A	N/A	0
+70125	Communist Party of the Peoples of Spain	IDEOLOGY	162	Marxism-Leninism	N/A	N/A	0
+70265	Concertación (Paraguay)	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+70542	Conservative Ascension Party	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+70812	Constituent Unity	IDEOLOGY	19949	Third Way	N/A	N/A	0
+70836	Constitutional Union (Morocco)	IDEOLOGY	11613	Liberal conservatism	N/A	N/A	0
+70881	Convergence and Union	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+70915	Cooper (artist)	FIELD	15626	Performance art	N/A	N/A	0
+70956	Cora Diamond	INFLUENCED	32043	John McDowell	8	0.002128	1
+71349	Corriente Roja	IDEOLOGY	10410	Feminism	N/A	N/A	0
+71488	County of Edessa	RELIGION	71490	Syriac Orthodoxy	N/A	N/A	0
+71497	County of Jaffa and Ascalon	RELIGION	71490	Syriac Orthodoxy	N/A	N/A	0
+71516	Course of Freedom	IDEOLOGY	10249	Anti-establishment	N/A	N/A	0
+71516	Course of Freedom	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+71834	Zeno of Citium  Zeno of Citium  1	INFLUENCED	31995	Chrysippus	15	0.005161	1
+71860	Creemos	IDEOLOGY	14405	Regionalism (politics)	N/A	N/A	0
+72575	Logo (programming language)	INFLUENCED	579	Scratch (programming language)	3	0.018290	1
+72575	Logo (programming language)	INFLUENCED	199957	Squeak	53	0.000150	1
+72809	Czech Pirate Party	IDEOLOGY	10251	Participatory democracy	N/A	N/A	0
+73164	Da'am Workers Party	IDEOLOGY	10319	Communism	N/A	N/A	0
+74510	Dani Rodrik	ALMAMATER	10361	Princeton University	N/A	N/A	0
+75995	Danny Matthys	FIELD	10747	Video	N/A	N/A	0
+76044	Niccolò Machiavelli	INFLUENCED	6325	Claude Lefort	160	0.000254	1
+76044	Niccolò Machiavelli	INFLUENCED	117837	Max Weber	N/A	N/A	0
+78284	David F. Swensen	INFLUENCED	11083	Yale University	N/A	N/A	0
+79559	Jeffrey Sachs	ALMAMATER	10449	Harvard University	N/A	N/A	0
+80603	Knut Wicksell	INFLUENCED	11298	Milton Friedman	N/A	N/A	0
+80603	Knut Wicksell	INFLUENCED	15154	John Maynard Keynes	51	0.000503	1
+80606	Piero Sraffa	INFLUENCED	15152	Joan Robinson	27	0.000514	1
+80606	Piero Sraffa	INFLUENCED	20443	Robin Hahnel	16	0.000917	1
+80606	Piero Sraffa	INFLUENCED	44097	Bertram Schefold	365	0.000040	1
+80606	Piero Sraffa	INFLUENCED	203578	Luigi Pasinetti	41	0.000386	1
+82881	Demerara	RELIGION	282	Traditional African religions	N/A	N/A	0
+82881	Demerara	RELIGION	10385	Christianity	N/A	N/A	0
+82998	Democratic Alliance (Venezuela)	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+83059	Democratic Defense	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+83059	Democratic Defense	IDEOLOGY	35771	Greek nationalism	N/A	N/A	0
+83068	Democratic Force (Romania)	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+83077	Democratic Front (Peru)	IDEOLOGY	10325	Reformism	N/A	N/A	0
+83089	Democratic Justice Party  Democratic Justice Party  1	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+83089	Democratic Justice Party  Democratic Justice Party  1	IDEOLOGY	83090	Korean nationalism	N/A	N/A	0
+83098	Democratic Labour Party (Trinidad and Tobago)	IDEOLOGY	13895	Muslim	N/A	N/A	0
+83101	Democratic League (Catalonia)	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+83323	Democratic Republican Union	IDEOLOGY	10325	Reformism	N/A	N/A	0
+83368	Democratic Union (Israel)	IDEOLOGY	14407	Green politics	N/A	N/A	0
+83368	Democratic Union (Israel)	IDEOLOGY	31055	Two-state solution	N/A	N/A	0
+83403	Democratic Unity Roundtable	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+83410	Democrats (Croatia)	IDEOLOGY	10267	Pro-Europeanism	N/A	N/A	0
+83416	Democrats for a Strong Bulgaria	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+83420	Democrats in Norway	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+83426	Pyrrho	INFLUENCED	5740	Galen	N/A	N/A	0
+83427	Timon of Phlius	INFLUENCED	91	Sextus Empiricus	1	0.052833	1
+83547	Étienne Bonnot de Condillac	INFLUENCED	29504	Juan Donoso Cortés	47	0.000836	1
+84542	Derzhava (Russian party)	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+84542	Derzhava (Russian party)	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+84571	Descartes	INFLUENCED	27733	Gottfried Wilhelm Leibniz	448	0.000036	1
+84571	Descartes	INFLUENCED	32004	Émile Durkheim	91	0.000261	1
+84700	Deutscher Verband	IDEOLOGY	4317	National liberalism	N/A	N/A	0
+84700	Deutscher Verband	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+85790	Dieter Roth	FIELD	12555	Installation art	N/A	N/A	0
+86713	Pamyat	IDEOLOGY	232038	Orthodox nationalism	N/A	N/A	0
+89970	Dravidian peoples	RELIGION	11667	Judaism	N/A	N/A	0
+89970	Dravidian peoples	RELIGION	14303	Jainism	N/A	N/A	0
+90516	Hannah Arendt	INFLUENCED	4304	Lauren Swayne Barthold	249	0.000008	1
+90516	Hannah Arendt	INFLUENCED	22721	Julia Kristeva	456	0.000001	1
+90516	Hannah Arendt	INFLUENCED	32065	Murray Bookchin	204	0.000018	1
+90516	Hannah Arendt	INFLUENCED	117883	Seyla Benhabib	374	0.000003	1
+92479	Jacques Drèze	FIELD	13102	Statistics	N/A	N/A	0
+92609	Emmanuel Levinas	INFLUENCED	19592	Alphonso Lingis	497	0.000002	1
+92609	Emmanuel Levinas	INFLUENCED	32805	Ivan Illich	N/A	N/A	0
+92609	Emmanuel Levinas	INFLUENCED	44152	Hilary Putnam	N/A	N/A	0
+92609	Emmanuel Levinas	INFLUENCED	48151	Richard Kearney	33	0.001462	1
+92609	Emmanuel Levinas	INFLUENCED	99693	Simon Glendinning	N/A	N/A	0
+92624	John D. Caputo	INFLUENCED	85822	Peter Rollins	N/A	N/A	0
+92635	Paul Ricœur	INFLUENCED	61663	Ronald A. Kuipers	120	0.000105	1
+92937	Niklaus Wirth	KNOWNFOR	180058	Oberon (programming language)	N/A	N/A	0
+92952	Eduard Bomhoff	ALMAMATER	10549	Leiden University	N/A	N/A	0
+93969	Edward J. Nell	ALMAMATER	10361	Princeton University	N/A	N/A	0
+94800	Mark Lepper	ALMAMATER	10400	Stanford University	N/A	N/A	0
+94800	Mark Lepper	DOCTORALSTUDENT	21340	Thomas Gilovich	N/A	N/A	0
+95198	Eelco van Kleffens	ALMAMATER	10549	Leiden University	N/A	N/A	0
+95198	Eelco van Kleffens	ALMAMATER	11149	Master of Laws	N/A	N/A	0
+95447	Racket (programming language)	INFLUENCED	17063	Scheme (programming language)	N/A	N/A	0
+95913	Elco Brinkman	ALMAMATER	11147	Bachelor of Laws	N/A	N/A	0
+96457	Kentaro Yano (mathematician)	INFLUENCED	39150	Bang-Yen Chen	2	0.108375	1
+97061	Epictetus	INFLUENCED	46941	Blaise Pascal	N/A	N/A	0
+97629	Elkarrekin Podemos	IDEOLOGY	10410	Feminism	N/A	N/A	0
+98790	Georg Lukács	INFLUENCED	92626	Karel Kosík	N/A	N/A	0
+98791	György Lukács	INFLUENCED	22769	Cornelius Castoriadis	227	0.000034	1
+98791	György Lukács	INFLUENCED	37672	Axel Honneth	266	0.000016	1
+98791	György Lukács	INFLUENCED	76326	Fredric Jameson	398	0.000007	1
+98794	Jacob Marschak	DOCTORALSTUDENT	110160	Franco Modigliani	N/A	N/A	0
+98924	Robert K. Merton	ALMAMATER	10681	Doctor of Philosophy	N/A	N/A	0
+99691	Paul Ricoeur	INFLUENCED	3090	Ghislain Deslandes	278	0.000000	1
+99691	Paul Ricoeur	INFLUENCED	9728	Edward S. Casey	N/A	N/A	0
+99877	Emtidad Movement	IDEOLOGY	10325	Reformism	N/A	N/A	0
+99883	En Comú Podem	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+99967	Engels	INFLUENCED	32020	Gustavo Bueno	N/A	N/A	0
+100372	Xenophanes	INFLUENCED	45187	Heraclitus	N/A	N/A	0
+101324	Karl Barth	INFLUENCED	4301	Alasdair MacIntyre	101	0.000440	1
+101324	Karl Barth	INFLUENCED	36765	Jean-Luc Marion	17	0.001115	1
+101752	Erlang (programming language)	INFLUENCED	5929	Go (programming language)	80	0.000011	1
+101752	Erlang (programming language)	INFLUENCED	52637	Clojure	48	0.000140	1
+102438	Paul Natorp	INFLUENCED	101324	Karl Barth	368	0.000072	1
+102438	Paul Natorp	INFLUENCED	113685	Sergei Rubinstein	N/A	N/A	0
+102858	España 2000	IDEOLOGY	921	Protectionism	N/A	N/A	0
+102858	España 2000	IDEOLOGY	19026	Anti-globalism	N/A	N/A	0
+102862	Espazo Ecosocialista Galego	IDEOLOGY	10410	Feminism	N/A	N/A	0
+103307	Ethnic National Union	IDEOLOGY	36	Third Position	N/A	N/A	0
+103307	Ethnic National Union	IDEOLOGY	31189	Ethnic nationalism	N/A	N/A	0
+103310	Ethnocacerism	IDEOLOGY	37274	Revolutionary nationalism	N/A	N/A	0
+103321	Étienne Balibar	INFLUENCED	90458	Duncan K. Foley	N/A	N/A	0
+103338	Rothbard	INFLUENCED	53055	Paul Gottfried	N/A	N/A	0
+103339	Rousseau	INFLUENCED	85770	Richard Velkley	N/A	N/A	0
+103348	Étienne de La Boétie	INFLUENCED	103338	Rothbard	N/A	N/A	0
+103353	Montaigne	INFLUENCED	8597	Allan Bloom  Allan Bloom  1	170	0.000008	1
+104082	Euronat	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+104082	Euronat	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+104082	Euronat	IDEOLOGY	16036	Neo-fascism	N/A	N/A	0
+104178	Euskal Herritarrok	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+104178	Euskal Herritarrok	IDEOLOGY	13115	Basque nationalism	N/A	N/A	0
+104776	Everybody's Hungary Movement	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+105206	F. W. J. Schelling	INFLUENCED	9729	Eric Voegelin	72	0.000507	1
+105243	Karl Korsch	INFLUENCED	7608	Frankfurt School	N/A	N/A	0
+105558	Falange Auténtica	IDEOLOGY	50776	National syndicalism	N/A	N/A	0
+105888	Farmers' movement	IDEOLOGY	5386	Grassroots democracy	N/A	N/A	0
+105893	Farmers' Party (Netherlands)	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+106007	Fatah	IDEOLOGY	2969	Arab socialism	N/A	N/A	0
+106007	Fatah	IDEOLOGY	10233	Anti-imperialism	N/A	N/A	0
+106007	Fatah	IDEOLOGY	14473	Secularism	N/A	N/A	0
+106071	Fatherland Front (Austria)	IDEOLOGY	18511	Political Catholicism	N/A	N/A	0
+106071	Fatherland Front (Austria)	IDEOLOGY	49338	Catholic social teaching	N/A	N/A	0
+106394	Federal Democratic Republican Party	IDEOLOGY	47079	Radicalism (historical)	N/A	N/A	0
+106571	Franz Kafka	INFLUENCED	951	Jacques Derrida	15	0.001802	1
+107533	FET y de las JONS	IDEOLOGY	2978	Fascism	N/A	N/A	0
+107533	FET y de las JONS	IDEOLOGY	18508	National Catholicism	N/A	N/A	0
+107533	FET y de las JONS	IDEOLOGY	31093	Militarism	N/A	N/A	0
+107567	Fianna Fáil	IDEOLOGY	18489	Irish nationalism	N/A	N/A	0
+107668	Filipino Mestizos	RELIGION	1876	Shinto	N/A	N/A	0
+107668	Filipino Mestizos	RELIGION	10155	Islam	N/A	N/A	0
+107673	Filipinos in Alaska	RELIGION	20781	Religion in the United States	N/A	N/A	0
+107709	Filipinos in the New York metropolitan area	RELIGION	240	Irreligion in the United States	N/A	N/A	0
+108470	For the Future of Montenegro	IDEOLOGY	341	Cultural conservatism	N/A	N/A	0
+108470	For the Future of Montenegro	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+108470	For the Future of Montenegro	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+108492	Force and Determination (Hungary)	IDEOLOGY	108493	Hungarian nationalism	N/A	N/A	0
+108529	Radicales K	IDEOLOGY	10228	Social democracy	6	0.004656	1
+108627	Pim Fortuyn List	IDEOLOGY	4317	National liberalism	N/A	N/A	0
+110048	Leibniz	INFLUENCED	70306	Jules Michelet	N/A	N/A	0
+110160	Franco Modigliani	INFLUENCED	110162	William A. Barnett	N/A	N/A	0
+110359	Michał Kalecki	FIELD	3804	Macroeconomics	N/A	N/A	0
+110363	Henri Lefebvre	INFLUENCED	952	Jean-Paul Sartre	N/A	N/A	0
+110367	François Ruffin  Picardie Debout  1	IDEOLOGY	273	Economic nationalism	N/A	N/A	0
+110367	François Ruffin  Picardie Debout  1	IDEOLOGY	19653	Eco-socialism	N/A	N/A	0
+110404	Second French Empire	RELIGION	10153	Sunni Islam	N/A	N/A	0
+110404	Second French Empire	RELIGION	13047	Lutheranism	N/A	N/A	0
+110850	Henry Calvert Simons	FIELD	10486	Economics	N/A	N/A	0
+110986	George Stigler	ALMAMATER	10674	Northwestern University	N/A	N/A	0
+110987	James M. Buchanan	ALMAMATER	11411	University of Chicago	N/A	N/A	0
+110989	Green Party (United States)	IDEOLOGY	19653	Eco-socialism	N/A	N/A	0
+111872	Martin Buber	INFLUENCED	92630	Ludwig Binswanger	N/A	N/A	0
+111872	Martin Buber	INFLUENCED	113848	Walter Kaufmann (philosopher)	N/A	N/A	0
+113315	Free and Independent Faction	IDEOLOGY	14414	Federalism	N/A	N/A	0
+113398	Freedom Alliance (Finland)	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+113418	Freedom Movement of Iran	IDEOLOGY	31747	Iranian nationalism	N/A	N/A	0
+113549	French Social Party	IDEOLOGY	10262	Populism	N/A	N/A	0
+113549	French Social Party	IDEOLOGY	14271	Corporatism	N/A	N/A	0
+113560	Freud	INFLUENCED	9205	Dimitrije Mitrinović	N/A	N/A	0
+113560	Freud	INFLUENCED	30208	Georges Sorel	N/A	N/A	0
+113621	Hermann Cohen	INFLUENCED	111872	Martin Buber	70	0.000737	1
+113624	Friedrich Albert Lange	INFLUENCED	333	Friedrich Nietzsche	N/A	N/A	0
+113967	Vladimir Jankélévitch	INFLUENCED	951	Jacques Derrida	11	0.000870	1
+114285	Front of Islamic Revolution Stability  Front of Islamic Revolution Stability  1	IDEOLOGY	19094	Guardianship of the Islamic Jurist	N/A	N/A	0
+114490	Future of Åland	IDEOLOGY	10321	Separatism	N/A	N/A	0
+114508	Fuzhou people	RELIGION	185	Irreligion	N/A	N/A	0
+114534	Fyodor Dostoyevsky	INFLUENCED	10219	Hiroki Azuma	415	0.000002	1
+114832	G. W. F. Hegel	INFLUENCED	113938	Karl Christian Friedrich Krause	N/A	N/A	0
+114835	Jean Wahl	INFLUENCED	952	Jean-Paul Sartre	33	0.001341	1
+114836	Kuno Fischer	INFLUENCED	42782	Gottlob Frege  Gottlob Frege  1	N/A	N/A	0
+114837	Nicolai Hartmann	INFLUENCED	127985	Ludwig von Bertalanffy	N/A	N/A	0
+115123	Robert E. Park	INFLUENCED	98908	Florian Znaniecki	N/A	N/A	0
+115605	Galician Movement for Socialism	IDEOLOGY	35765	Galician independence	N/A	N/A	0
+116137	Steven Levitt	FIELD	23917	Microeconomics	N/A	N/A	0
+117335	New York State Democratic Committee	IDEOLOGY	10297	Social liberalism	N/A	N/A	0
+117765	Georg Herold	FIELD	10708	Video art	N/A	N/A	0
+117765	Georg Herold	FIELD	10883	Sculpture	N/A	N/A	0
+117833	Georg Simmel	INFLUENCED	117837	Max Weber	N/A	N/A	0
+117833	Georg Simmel	INFLUENCED	117838	Peter Blau	N/A	N/A	0
+117837	Max Weber	INFLUENCED	8604	Juan José Sebreli	150	0.000202	1
+117837	Max Weber	INFLUENCED	9874	Ludwig Lachmann	308	0.000074	1
+117837	Max Weber	INFLUENCED	98791	György Lukács	203	0.000146	1
+117837	Max Weber	INFLUENCED	113845	Sheldon Wolin	119	0.000283	1
+118061	Humberto Maturana	INFLUENCED	32773	Niklas Luhmann	N/A	N/A	0
+119836	Imre Lakatos	INFLUENCED	4301	Alasdair MacIntyre	N/A	N/A	0
+121219	Richard Kahn, Baron Kahn	INFLUENCED	15152	Joan Robinson	27	0.000421	1
+121798	German Freedom Party	IDEOLOGY	14409	Classical liberalism	N/A	N/A	0
+121813	German National People's Party	IDEOLOGY	14138	Protestantism	N/A	N/A	0
+121823	German People's Party (1868)	IDEOLOGY	876	Parliamentarism	N/A	N/A	0
+121895	Geroa Bai	IDEOLOGY	14610	Environmentalism	N/A	N/A	0
+122006	Theodor Adorno	INFLUENCED	44049	Walter Benjamin	26	0.000982	1
+122194	Ghanaian Indian	RELIGION	185	Irreligion	N/A	N/A	0
+122469	Hegel	INFLUENCED	4636	Anthony Steinbock	N/A	N/A	0
+122469	Hegel	INFLUENCED	13833	Søren Kierkegaard	N/A	N/A	0
+122469	Hegel	INFLUENCED	51527	Karl Kautsky	371	0.000039	1
+122469	Hegel	INFLUENCED	133856	Nikolay Lossky	N/A	N/A	0
+122622	Gibraltarians	RELIGION	10536	Anglicanism	N/A	N/A	0
+124765	Good Party	IDEOLOGY	11613	Liberal conservatism	N/A	N/A	0
+125266	Xenophon	INFLUENCED	76044	Niccolò Machiavelli	N/A	N/A	0
+125362	Gottfried Leibniz	INFLUENCED	32010	Friedrich Wilhelm Joseph Schelling	48	0.001024	1
+125362	Gottfried Leibniz	INFLUENCED	40504	Joseph Dietzgen	N/A	N/A	0
+125377	Wilhelm Wundt	INFLUENCED	19347	Kazimierz Twardowski	N/A	N/A	0
+125377	Wilhelm Wundt	INFLUENCED	59591	George Herbert Mead	N/A	N/A	0
+126117	Green Left Party	IDEOLOGY	14473	Secularism	N/A	N/A	0
+126156	Green Party of Hawaii	IDEOLOGY	14407	Green politics	N/A	N/A	0
+126562	Heinz von Foerster	INFLUENCED	22733	Andrey Korotayev	N/A	N/A	0
+126562	Heinz von Foerster	INFLUENCED	32773	Niklas Luhmann	21	0.003358	1
+126809	Grenada United Labour Party	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+127658	Nicholas Kaldor	INFLUENCED	20425	Andy Sumner	N/A	N/A	0
+127658	Nicholas Kaldor	INFLUENCED	44097	Bertram Schefold	21	0.001242	1
+127658	Nicholas Kaldor	INFLUENCED	58186	Luiz Carlos Bresser-Pereira	N/A	N/A	0
+127982	Gustav Fechner	INFLUENCED	339	William James	22	0.001441	1
+127985	Ludwig von Bertalanffy	INFLUENCED	54692	Fritjof Capra	N/A	N/A	0
+127985	Ludwig von Bertalanffy	INFLUENCED	145988	Kenneth E. Boulding	N/A	N/A	0
+128081	Gustav von Schmoller	INFLUENCED	16341	Werner Sombart	N/A	N/A	0
+128654	John Rawls	INFLUENCED	15164	Martha Nussbaum	252	0.000001	1
+128654	John Rawls	INFLUENCED	53701	Jürgen Habermas	119	0.000121	1
+128922	H. Spencer	INFLUENCED	15122	Carl Menger	N/A	N/A	0
+129346	Hirofumi Uzawa	ALMAMATER	15389	University of Tokyo	N/A	N/A	0
+129346	Hirofumi Uzawa	INFLUENCED	136292	Joseph Stiglitz	N/A	N/A	0
+129880	Han Chinese	RELIGION	35519	Chinese folk religion	N/A	N/A	0
+129880	Han Chinese	RELIGION	63676	Chinese Buddhism	N/A	N/A	0
+130147	Melanie Klein	INFLUENCED	22721	Julia Kristeva	N/A	N/A	0
+132361	Harry Gordon Johnson	ALMAMATER	10485	University of Cambridge	N/A	N/A	0
+133264	Hatnua	IDEOLOGY	19949	Third Way	N/A	N/A	0
+135217	Henk Bleker	ALMAMATER	22877	Vrije Universiteit Amsterdam	N/A	N/A	0
+136298	Philip Wicksteed	INFLUENCED	10661	Murray Rothbard	18	0.002258	1
+136300	Silvio Gesell	INFLUENCED	15154	John Maynard Keynes	14	0.004344	1
+137280	Parmenides	INFLUENCED	5738	Aristotle	17	0.003581	1
+137280	Parmenides	INFLUENCED	99852	Empedocles	N/A	N/A	0
+137332	Richard Cyert	INFLUENCED	44151	Herbert A. Simon	N/A	N/A	0
+137332	Richard Cyert	INFLUENCED	63219	Oliver E. Williamson	N/A	N/A	0
+137645	Nietzsche	INFLUENCED	4309	Tibor Machan	N/A	N/A	0
+137645	Nietzsche	INFLUENCED	6414	Nikolai Berdyaev	N/A	N/A	0
+137645	Nietzsche	INFLUENCED	32093	Stephen Hicks  Stephen Hicks  1	N/A	N/A	0
+138381	Hezbollah	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+139165	Historical Far Left	IDEOLOGY	14438	Republicanism	N/A	N/A	0
+139342	Hizb ut-Tahrir (Australia)	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+139342	Hizb ut-Tahrir (Australia)	IDEOLOGY	14473	Secularism	N/A	N/A	0
+139342	Hizb ut-Tahrir (Australia)	IDEOLOGY	18482	Anti-Zionism	N/A	N/A	0
+139342	Hizb ut-Tahrir (Australia)	IDEOLOGY	31065	Pan-Islamism	N/A	N/A	0
+139348	Hizb ut-Tahrir in Central Asia	IDEOLOGY	15329	Nationalism	N/A	N/A	0
+139348	Hizb ut-Tahrir in Central Asia	IDEOLOGY	139345	Jihadism	N/A	N/A	0
+139474	Hobbes	INFLUENCED	54970	Adriana Cavarero	64	0.000329	1
+139887	Hong Kong Canadians	RELIGION	35537	Mahayana	N/A	N/A	0
+139928	Hongkongers	RELIGION	185	Irreligion	N/A	N/A	0
+139991	Standard ML	INFLUENCED	98072	Elm (programming language)	21	0.002821	1
+141899	Hungarian Democratic Forum	IDEOLOGY	108493	Hungarian nationalism	N/A	N/A	0
+141945	Oscar Wilde	INFLUENCED	34233	Renzo Novatore	N/A	N/A	0
+141945	Oscar Wilde	INFLUENCED	100365	Jun Tsuji	N/A	N/A	0
+142100	Husserl	INFLUENCED	32112	Xavier Zubiri	N/A	N/A	0
+142100	Husserl	INFLUENCED	84577	Richard Kennington	61	0.000087	1
+142878	Iberian Communist Federation	IDEOLOGY	14397	Catalanism	N/A	N/A	0
+142996	Ibn Khaldun	INFLUENCED	15777	René Guénon	N/A	N/A	0
+142996	Ibn Khaldun	RELIGION	10155	Islam	N/A	N/A	0
+143226	ICV–EUiA	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+143226	ICV–EUiA	IDEOLOGY	19653	Eco-socialism	N/A	N/A	0
+143328	John Calvin	INFLUENCED	33639	Douglas Groothuis	7	0.006685	1
+143328	John Calvin	INFLUENCED	79065	Johann Georg Hamann	N/A	N/A	0
+143332	Identity Ireland	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+144411	Independent Democratic Pole	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+144427	Independent Greeks	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+144524	Indian diaspora in Southeast Africa	RELIGION	14138	Protestantism	N/A	N/A	0
+144524	Indian diaspora in Southeast Africa	RELIGION	14303	Jainism	N/A	N/A	0
+144542	Indian people	RELIGION	15763	Sikhism	N/A	N/A	0
+144570	Indians in France	RELIGION	10204	Buddhism	N/A	N/A	0
+144570	Indians in France	RELIGION	14303	Jainism	N/A	N/A	0
+144597	Indians in Tanzania	RELIGION	10155	Islam	N/A	N/A	0
+144601	Indians in the Netherlands	RELIGION	10155	Islam	N/A	N/A	0
+144604	Indians in Uganda	RELIGION	10155	Islam	N/A	N/A	0
+144649	Indo-Caribbeans	RELIGION	15763	Sikhism	N/A	N/A	0
+144684	Indonesian People's Da'wah Party	RELIGION	10153	Sunni Islam	N/A	N/A	0
+144696	Indo–Saint Lucian	RELIGION	10155	Islam	N/A	N/A	0
+144938	Ingrid van Engelshoven	ALMAMATER	11147	Bachelor of Laws	N/A	N/A	0
+145099	International Socialist Organisation (New Zealand)	IDEOLOGY	14395	Trotskyism	N/A	N/A	0
+145491	Iranian New Zealanders	RELIGION	11667	Judaism	N/A	N/A	0
+145497	Iranian Principlists	IDEOLOGY	19094	Guardianship of the Islamic Jurist	N/A	N/A	0
+145500	Iranians in Germany	RELIGION	11667	Judaism	N/A	N/A	0
+145512	Iranians in the Netherlands	RELIGION	10385	Christianity	N/A	N/A	0
+145512	Iranians in the Netherlands	RELIGION	11601	Atheism	N/A	N/A	0
+145542	Iraqi New Zealanders	RELIGION	50735	Mandaeism	N/A	N/A	0
+145561	Iraqis	RELIGION	50735	Mandaeism	N/A	N/A	0
+145561	Iraqis	RELIGION	145496	Yazidism	N/A	N/A	0
+145989	Maurice Allais	ALMAMATER	12163	University of Paris	N/A	N/A	0
+146793	Islamic Coalition Party	IDEOLOGY	15732	Islamism	N/A	N/A	0
+146830	Islamic Socialist Party	IDEOLOGY	29360	Islamic socialism	N/A	N/A	0
+146837	Islamic Supreme Council of Iraq	RELIGION	12158	Shia Islam	N/A	N/A	0
+147172	ML (programming language)	INFLUENCED	14486	C++	213	0.000000	1
+147172	ML (programming language)	INFLUENCED	52640	F Sharp (programming language)	40	0.001701	1
+147235	Italian Radical Party	IDEOLOGY	14473	Secularism	N/A	N/A	0
+151037	Jakob Böhme	INFLUENCED	9205	Dimitrije Mitrinović	N/A	N/A	0
+151179	Jamaat-e-Islami Pakistan	IDEOLOGY	15732	Islamism	N/A	N/A	0
+154333	Jamiat Ulema-e-Islam (F)	IDEOLOGY	31191	Religious nationalism	N/A	N/A	0
+155026	Janatha Vimukthi Peramuna  People's Liberation Front  1	IDEOLOGY	10233	Anti-imperialism	N/A	N/A	0
+155026	Janatha Vimukthi Peramuna  People's Liberation Front  1	IDEOLOGY	18523	Anti-revisionism	N/A	N/A	0
+156014	Japan First Party	IDEOLOGY	18514	Ultranationalism	N/A	N/A	0
+156029	Japanese Americans	RELIGION	1876	Shinto	N/A	N/A	0
+156032	Japanese Bolivians	RELIGION	11601	Atheism	N/A	N/A	0
+156033	Japanese Brazilians	RELIGION	1876	Shinto	N/A	N/A	0
+157321	Richard Cantillon	INFLUENCED	51955	François Quesnay	N/A	N/A	0
+161959	Jim Dine	FIELD	10746	Photography	N/A	N/A	0
+164843	Johann Jakob Bachofen	INFLUENCED	9997	Erich Fromm	119	0.000439	1
+169896	Wolfgang Stützel	FIELD	3804	Macroeconomics	N/A	N/A	0
+170268	Neil Wallace	FIELD	3805	Monetary economics	N/A	N/A	0
+170934	John R. Commons	ACADEMICSTUDENT	44151	Herbert A. Simon	N/A	N/A	0
+174012	Joop Wijn	ALMAMATER	11150	University of Amsterdam	N/A	N/A	0
+174418	Joris Voorhoeve	ALMAMATER	10680	Bachelor of Arts	N/A	N/A	0
+174418	Joris Voorhoeve	ALMAMATER	17243	Bachelor of Economics	N/A	N/A	0
+174513	National Synarchist Union	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+174513	National Synarchist Union	RELIGION	13264	Roman Catholicism	N/A	N/A	0
+180200	Justice and Development Party (Turkey)	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+181763	Kannada people	RELIGION	10204	Buddhism	N/A	N/A	0
+181763	Kannada people	RELIGION	14303	Jainism	N/A	N/A	0
+181788	Kant	INFLUENCED	32006	Eugene Thacker	N/A	N/A	0
+181788	Kant	INFLUENCED	54967	Carl Schmitt	290	0.000044	1
+182776	Thomas Carlyle	INFLUENCED	32013	George Fitzhugh	81	0.000569	1
+182801	Maurice Dobb	INFLUENCED	90458	Duncan K. Foley	N/A	N/A	0
+183353	Kataeb Party	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+188678	Kingdom of Iraq	RELIGION	145496	Yazidism	N/A	N/A	0
+189403	Know Nothing	IDEOLOGY	20728	American nationalism	N/A	N/A	0
+189403	Know Nothing	RELIGION	14138	Protestantism	N/A	N/A	0
+189605	Koichi Hamada	ALMAMATER	10681	Doctor of Philosophy	N/A	N/A	0
+189980	Three Principles of the Equality	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+191631	La Falange (1999)	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+191642	La Libertad Avanza	IDEOLOGY	14410	Right-libertarianism	N/A	N/A	0
+191720	Labour Party (New Caledonia)	IDEOLOGY	19064	Anti-colonialism	N/A	N/A	0
+191739	Labour Russia	IDEOLOGY	10222	Direct democracy	N/A	N/A	0
+191785	Wassily Leontief	DOCTORALSTUDENT	19874	Paul Samuelson	N/A	N/A	0
+191785	Wassily Leontief	DOCTORALSTUDENT	19875	Robert Solow	N/A	N/A	0
+192050	Lalit (Mauritius)	IDEOLOGY	10172	Socialism	N/A	N/A	0
+192050	Lalit (Mauritius)	IDEOLOGY	14610	Environmentalism	N/A	N/A	0
+192393	Laozi	INFLUENCED	70336	Zhao Tingyang	N/A	N/A	0
+193678	Laurens Jan Brinkhorst	ALMAMATER	10396	Columbia University	N/A	N/A	0
+194385	League of the South (France)	IDEOLOGY	1548	Souverainism	N/A	N/A	0
+194385	League of the South (France)	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+194512	Lebanese Social Democratic Party	IDEOLOGY	29360	Islamic socialism	N/A	N/A	0
+195125	Left and Secular Alliance	IDEOLOGY	10183	Liberalism	N/A	N/A	0
+195159	Left Party (Turkey)	IDEOLOGY	10281	Left-wing populism	N/A	N/A	0
+195169	Left Struggle	IDEOLOGY	300	Marxism–Leninism	N/A	N/A	0
+195169	Left Struggle	IDEOLOGY	10319	Communism	N/A	N/A	0
+196709	LEPEN (political party)	IDEOLOGY	16037	Opposition to immigration	N/A	N/A	0
+198153	Liberal Party (Brazil, 1831)  Liberal Party  1	IDEOLOGY	4467	Monarchism	N/A	N/A	0
+198241	Liberal Socialist Party (Angola)	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+198241	Liberal Socialist Party (Angola)	IDEOLOGY	14451	Liberal socialism	N/A	N/A	0
+198271	Liberation Front of Portuguese Guinea and Cape Verde	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+198295	Libertarian Party (Spain)	IDEOLOGY	14438	Republicanism	N/A	N/A	0
+198305	Libertarian Party of California	IDEOLOGY	3064	Fiscal conservatism	N/A	N/A	0
+198319	Libertarian Party of Maine	IDEOLOGY	54083	Laissez-faire	N/A	N/A	0
+198334	Libertarian Party of Oregon	IDEOLOGY	48679	Libertarianism in the United States	N/A	N/A	0
+198365	Liberty and Refoundation	IDEOLOGY	10281	Left-wing populism	N/A	N/A	0
+198365	Liberty and Refoundation	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+198378	Liberty Unification Party	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+199946	MDL (programming language)	INFLUENCED	14492	Java (programming language)	59	0.000843	1
+200345	Livy	INFLUENCED	76044	Niccolò Machiavelli	N/A	N/A	0
+200740	Localist groups (Hong Kong)	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+200740	Localist groups (Hong Kong)	IDEOLOGY	10225	Localism (politics)	N/A	N/A	0
+204167	Luso-Asians	RELIGION	10385	Christianity	N/A	N/A	0
+204696	Lysander Spooner	INFLUENCED	4944	Butler D. Shaffer	39	0.001397	1
+206348	Pierre Janet	INFLUENCED	16051	Carl Jung	30	0.000813	1
+206733	Malayan Union	RELIGION	10155	Islam	N/A	N/A	0
+206742	Malaysian Americans	RELIGION	10155	Islam	N/A	N/A	0
+206768	Malaysians of Indian descent in Penang	RELIGION	10417	Hinduism	N/A	N/A	0
+207429	Mangaloreans	RELIGION	10417	Hinduism	N/A	N/A	0
+208176	Marathi people	RELIGION	10385	Christianity	N/A	N/A	0
+213775	Martha Rosler	FIELD	10708	Video art	N/A	N/A	0
+213775	Martha Rosler	FIELD	10746	Photography	N/A	N/A	0
+216174	Masao Ogaki	FIELD	13096	International economics	N/A	N/A	0
+217903	Mauritian diaspora in the United Kingdom	RELIGION	10417	Hinduism	N/A	N/A	0
+220188	Mexican Democratic Party	IDEOLOGY	16036	Neo-fascism	N/A	N/A	0
+220188	Mexican Democratic Party	IDEOLOGY	50776	National syndicalism	N/A	N/A	0
+225406	Min Chinese speakers	RELIGION	10385	Christianity	N/A	N/A	0
+226483	Modula	INFLUENCED	5929	Go (programming language)	25	0.000588	1
+227947	Tocqueville	INFLUENCED	30208	Georges Sorel	N/A	N/A	0
+228827	Movement Against Illegal Immigration	IDEOLOGY	18517	Russian nationalism	N/A	N/A	0
+228830	Movement for a People's Party	IDEOLOGY	41411	Non-interventionism	N/A	N/A	0
+228862	Movement for Reconstruction of Poland	IDEOLOGY	18449	Atlanticism	N/A	N/A	0
+228886	Movement for the Social Evolution of Black Africa	IDEOLOGY	4467	Monarchism	N/A	N/A	0
+228904	Movement of Popular Participation	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+228911	Movement We Are Venezuela	IDEOLOGY	62461	Chavismo	N/A	N/A	0
+229001	Mru people	RELIGION	10204	Buddhism	N/A	N/A	0
+230108	Muslim Brotherhood	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+232036	Narodny Sobor	RELIGION	421	Russian Orthodox Church	N/A	N/A	0
+232067	Nashi (political party)	IDEOLOGY	14405	Regionalism (politics)	N/A	N/A	0
+232831	National Alliance (Lithuania)	RELIGION	13264	Roman Catholicism	N/A	N/A	0
+232865	National Bolshevik Front	IDEOLOGY	13111	Revolutionary socialism	N/A	N/A	0
+232896	National Congress Party (Sudan)  National Congress Party  1	IDEOLOGY	10262	Populism	N/A	N/A	0
+232896	National Congress Party (Sudan)  National Congress Party  1	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+232908	National Corps	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+232916	National Creation	IDEOLOGY	19075	Neoliberalism	N/A	N/A	0
+232932	National Democratic Alliance (Russia)	IDEOLOGY	20752	Anti-clericalism	N/A	N/A	0
+232959	National Democratic Party (United States)	IDEOLOGY	10182	Economic liberalism	N/A	N/A	0
+232977	National Democrats (Sweden)	IDEOLOGY	36	Third Position	N/A	N/A	0
+232994	National Force (Chile)	IDEOLOGY	41244	Patriotism	N/A	N/A	0
+233010	National Front (UK)	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+233010	National Front (UK)	IDEOLOGY	16036	Neo-fascism	N/A	N/A	0
+233012	National Front for the Salvation of Bulgaria	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+233033	National Initiative for Administration and Change in Syria	IDEOLOGY	10182	Economic liberalism	N/A	N/A	0
+233085	National List (Italy)	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+233120	National Party (South Africa)  National Party  1	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+233122	National Party (Syria)	IDEOLOGY	2971	Pan-Arabism	N/A	N/A	0
+233155	National Peasants' Party	IDEOLOGY	4467	Monarchism	N/A	N/A	0
+233163	National People's Power	IDEOLOGY	10172	Socialism	N/A	N/A	0
+233168	National Popular Consciousness	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+233168	National Popular Consciousness	IDEOLOGY	16037	Opposition to immigration	N/A	N/A	0
+233171	National Power Unity	IDEOLOGY	18514	Ultranationalism	N/A	N/A	0
+233187	National Radical Camp	IDEOLOGY	16036	Neo-fascism	N/A	N/A	0
+233199	National Religious Party	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+233200	National Renaissance Front	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+233208	National Republican Movement	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+233228	National Revival of Poland	IDEOLOGY	18482	Anti-Zionism	N/A	N/A	0
+233231	National Revolutionary Party (South Korea, 2021)  Liberty Unification Party  1	IDEOLOGY	31190	Islamophobia	N/A	N/A	0
+233256	National Socialist Liberation Front	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+233256	National Socialist Liberation Front	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+233258	National Socialist Movement (United States)	IDEOLOGY	15504	Anti-capitalism	N/A	N/A	0
+233343	National Unity Party (East Timor)	IDEOLOGY	10182	Economic liberalism	N/A	N/A	0
+233344	National Unity Party (Haiti)	IDEOLOGY	11639	Pan-Africanism	N/A	N/A	0
+233415	Native Indonesians	RELIGION	13417	Animism	N/A	N/A	0
+234760	New Communist Party of Britain	IDEOLOGY	10319	Communism	N/A	N/A	0
+234776	New Democracy (Sweden)	IDEOLOGY	10182	Economic liberalism	N/A	N/A	0
+234817	New Generation Party (Romania)	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+234856	New National Participation Party	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+234856	New National Participation Party	IDEOLOGY	144017	Ilminism	N/A	N/A	0
+234894	New Republic (Romania)	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+234899	New Right (Denmark)	IDEOLOGY	31190	Islamophobia	N/A	N/A	0
+234913	New Social Pact	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+234920	New Swedish Movement	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+234926	New Triumph Party	IDEOLOGY	20747	White supremacy	N/A	N/A	0
+236312	Revolutionary Mexicanist Action	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+236312	Revolutionary Mexicanist Action	IDEOLOGY	2978	Fascism	N/A	N/A	0
+236314	Nicolas Ruston	FIELD	10883	Sculpture	N/A	N/A	0
+236352	Nicole Bartelme	FIELD	3402	Performance	N/A	N/A	0
+236352	Nicole Bartelme	FIELD	10376	Painting	N/A	N/A	0
+236713	Nigerian Americans	RELIGION	366	Agnosticism	N/A	N/A	0
+238276	Nonpartisan League	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+238276	Nonpartisan League	IDEOLOGY	14261	Agrarianism	N/A	N/A	0
+238982	NOS (political party)	IDEOLOGY	4317	National liberalism	N/A	N/A	0
+239047	Noua Dreaptă	IDEOLOGY	37732	Criticism of Islam	N/A	N/A	0
+239047	Noua Dreaptă	IDEOLOGY	65085	Romanian nationalism	N/A	N/A	0
+240149	Right Sector	IDEOLOGY	2733	Anti-Western sentiment	N/A	N/A	0
+240149	Right Sector	IDEOLOGY	16036	Neo-fascism	N/A	N/A	0
+241015	One Israel	IDEOLOGY	10206	Big tent	N/A	N/A	0
+241242	Organization of Marxists	IDEOLOGY	22366	Maoism	N/A	N/A	0
+241246	Organization of Women's Freedom in Iraq	IDEOLOGY	10410	Feminism	N/A	N/A	0
+241249	Organized Socialist Party in Venezuela	IDEOLOGY	62461	Chavismo	N/A	N/A	0
+241771	Oswald Külpe	INFLUENCED	16175	Edith Stein	25	0.001250	1
+242194	Oultrejordain	RELIGION	10155	Islam	N/A	N/A	0
+242852	Pacific Islander Americans	RELIGION	14303	Jainism	N/A	N/A	0
+243042	Pakistan People's Party	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+243048	Pakistani Americans	RELIGION	185	Irreligion	N/A	N/A	0
+243048	Pakistani Americans	RELIGION	10153	Sunni Islam	N/A	N/A	0
+243050	Pakistani Canadians	RELIGION	185	Irreligion	N/A	N/A	0
+243467	Panhellenic Liberation Movement	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+244017	Parti Bumiputera Perkasa Malaysia	IDEOLOGY	4467	Monarchism	N/A	N/A	0
+244017	Parti Bumiputera Perkasa Malaysia	IDEOLOGY	15733	Religious conservatism	N/A	N/A	0
+244072	Partido Galeguista (1931)	IDEOLOGY	35765	Galician independence	N/A	N/A	0
+245534	Patriota	IDEOLOGY	26395	Green conservatism	N/A	N/A	0
+245539	Patriotic Alternative	IDEOLOGY	14423	White nationalism	N/A	N/A	0
+245539	Patriotic Alternative	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+245560	Patriotic People's Movement	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+248648	People's Democratic Party (Trinidad and Tobago)	IDEOLOGY	19069	Civic nationalism	N/A	N/A	0
+248648	People's Democratic Party (Trinidad and Tobago)	IDEOLOGY	29416	Labourism	N/A	N/A	0
+248664	People's Freedom Party (Russia)	IDEOLOGY	10183	Liberalism	N/A	N/A	0
+248664	People's Freedom Party (Russia)	IDEOLOGY	14438	Republicanism	N/A	N/A	0
+248680	People's Militia named after Minin and Pozharsky	IDEOLOGY	232038	Orthodox nationalism	N/A	N/A	0
+248716	People's Party (Iraq)	IDEOLOGY	10325	Reformism	N/A	N/A	0
+248793	People's Progressive Party/Civic	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+248842	Peoples' Democratic Party (Turkey)	IDEOLOGY	14405	Regionalism (politics)	N/A	N/A	0
+248893	Per Hüttner	FIELD	12555	Installation art	N/A	N/A	0
+249062	Perikatan Nasional  National Alliance  1	IDEOLOGY	15731	Islamic democracy	N/A	N/A	0
+249154	Persians	RELIGION	12158	Shia Islam	N/A	N/A	0
+249189	Peruvian Nationalist Party	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+249785	Peter Diamond	FIELD	31835	Behavioral economics	N/A	N/A	0
+253980	Pseudo-Dionysius	INFLUENCED	5743	John Scotus Eriugena  John Scotus Eriugena  1	N/A	N/A	0
+253986	Plural Left (Spain, 2011)  United Left–The Greens: The Plural Left  1	IDEOLOGY	15504	Anti-capitalism	N/A	N/A	0
+253986	Plural Left (Spain, 2011)  United Left–The Greens: The Plural Left  1	IDEOLOGY	19653	Eco-socialism	N/A	N/A	0
+254020	Podemos (Spanish political party)	IDEOLOGY	14414	Federalism	N/A	N/A	0
+254175	Polybius	INFLUENCED	15158	Joseph De Maistre	346	0.000067	1
+254175	Polybius	INFLUENCED	67095	Western philosophy	76	0.000434	1
+254419	Popular Alliance (Peru)	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+254443	Popular Front (Chile)	IDEOLOGY	10319	Communism	N/A	N/A	0
+254443	Popular Front (Chile)	IDEOLOGY	20752	Anti-clericalism	N/A	N/A	0
+254446	Popular Front (Spain)	IDEOLOGY	47079	Radicalism (historical)	N/A	N/A	0
+254475	Popular Orthodox Rally	IDEOLOGY	15733	Religious conservatism	N/A	N/A	0
+254481	Popular Resistance Association	IDEOLOGY	18517	Russian nationalism	N/A	N/A	0
+254555	Portuguese Brazilians	RELIGION	437	Pentecostalism	N/A	N/A	0
+254555	Portuguese Brazilians	RELIGION	14138	Protestantism	N/A	N/A	0
+254555	Portuguese Brazilians	RELIGION	35525	Japanese new religions	N/A	N/A	0
+255531	Progressistas	IDEOLOGY	14427	Conservative liberalism	N/A	N/A	0
+255532	Progressive Action Party	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+255594	Progressive Party (Chile)	IDEOLOGY	10410	Feminism	N/A	N/A	0
+255625	Progressive Reform Party (Suriname)	IDEOLOGY	19949	Third Way	N/A	N/A	0
+255709	Protestant People's Party	IDEOLOGY	5577	Anti-Catholicism	N/A	N/A	0
+255709	Protestant People's Party	IDEOLOGY	37076	Australian nationalism	N/A	N/A	0
+256052	Qajar Iran	RELIGION	12158	Shia Islam	N/A	N/A	0
+259565	Rassemblement bleu Marine	IDEOLOGY	921	Protectionism	N/A	N/A	0
+259565	Rassemblement bleu Marine	IDEOLOGY	19026	Anti-globalism	N/A	N/A	0
+259645	Ratniks	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+259651	Ratz (political party)	IDEOLOGY	31055	Two-state solution	N/A	N/A	0
+260389	Real Politics Union	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+260389	Real Politics Union	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+260636	Recreate Greece	IDEOLOGY	10267	Pro-Europeanism	N/A	N/A	0
+260636	Recreate Greece	IDEOLOGY	14427	Conservative liberalism	N/A	N/A	0
+260651	Red Guards (Italy)	IDEOLOGY	10319	Communism	N/A	N/A	0
+260760	Reform Party (Mandatory Palestine)	IDEOLOGY	10325	Reformism	N/A	N/A	0
+260768	Reform Party of Ontario	IDEOLOGY	10258	Libertarianism	N/A	N/A	0
+260768	Reform Party of Ontario	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+260953	Regionalist League of Catalonia	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+261132	Reload Bulgaria	IDEOLOGY	10242	Euroscepticism	N/A	N/A	0
+261597	Republican Alternative (Spain)	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+261609	Republican Fascist Party	IDEOLOGY	18504	Anti-liberalism	N/A	N/A	0
+261621	Republican Left of Catalonia	IDEOLOGY	14405	Regionalism (politics)	N/A	N/A	0
+261621	Republican Left of Catalonia	IDEOLOGY	14414	Federalism	N/A	N/A	0
+261687	Republican Sinn Féin	IDEOLOGY	18489	Irish nationalism	N/A	N/A	0
+261700	Republicans (Brazil)	IDEOLOGY	19027	Brazilian nationalism	N/A	N/A	0
+261702	Republicans for Bulgaria	IDEOLOGY	10267	Pro-Europeanism	N/A	N/A	0
+261749	Respect Party	IDEOLOGY	15504	Anti-capitalism	N/A	N/A	0
+261856	Revival Party	IDEOLOGY	15329	Nationalism	N/A	N/A	0
+261866	Revolutionary Action Party	IDEOLOGY	10262	Populism	N/A	N/A	0
+261911	Revolutionary Nationalist Movement	IDEOLOGY	10325	Reformism	N/A	N/A	0
+261932	Revolutionary Socialist Party (Netherlands)	IDEOLOGY	19663	Marxism	N/A	N/A	0
+262176	Rhodesian Front	RELIGION	10536	Anglicanism	N/A	N/A	0
+264962	Right Cause	IDEOLOGY	10267	Pro-Europeanism	N/A	N/A	0
+270838	Romanian Communist Party  Romanian Communist Party  1	IDEOLOGY	18523	Anti-revisionism	N/A	N/A	0
+270855	Romanian Socialist Party (2003)	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+271134	Ron Rocco	FIELD	15626	Performance art	N/A	N/A	0
+271771	Rosa Luxemburg	INFLUENCED	4637	Christopher Hitchens	N/A	N/A	0
+271771	Rosa Luxemburg	INFLUENCED	30173	Richard D. Wolff	22	0.002580	1
+271771	Rosa Luxemburg	INFLUENCED	34193	Ady Jean-Gardy	N/A	N/A	0
+271771	Rosa Luxemburg	INFLUENCED	98791	György Lukács	N/A	N/A	0
+271771	Rosa Luxemburg	INFLUENCED	110359	Michał Kalecki	N/A	N/A	0
+272908	Rudolf de Korte	ALMAMATER	10549	Leiden University	N/A	N/A	0
+273539	Russian All-National Union	IDEOLOGY	51054	Pan-Slavism	N/A	N/A	0
+273557	Russian Fascist Party	IDEOLOGY	2978	Fascism	N/A	N/A	0
+273557	Russian Fascist Party	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+276490	Samagi Jana Balawegaya	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+278214	Sanjukta Morcha	IDEOLOGY	14473	Secularism	N/A	N/A	0
+279740	Scania Party	IDEOLOGY	10321	Separatism	N/A	N/A	0
+279775	Schopenhauer	INFLUENCED	10761	Ludwig Wittgenstein	N/A	N/A	0
+279775	Schopenhauer	INFLUENCED	32006	Eugene Thacker	63	0.000542	1
+279775	Schopenhauer	INFLUENCED	34201	Emil Cioran	226	0.000064	1
+280230	Scottish Democratic Fascist Party	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+280247	Scottish Protestant League	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+280622	Sección Femenina	IDEOLOGY	70105	Francoist Spain	N/A	N/A	0
+280977	Senate 2001	IDEOLOGY	10258	Libertarianism	N/A	N/A	0
+280977	Senate 2001	IDEOLOGY	14427	Conservative liberalism	N/A	N/A	0
+282474	Shandong people	RELIGION	10204	Buddhism	N/A	N/A	0
+285250	Sikh Empire	RELIGION	10385	Christianity	N/A	N/A	0
+285250	Sikh Empire	RELIGION	10417	Hinduism	N/A	N/A	0
+285937	Sindh National Front	IDEOLOGY	14451	Liberal socialism	N/A	N/A	0
+285937	Sindh National Front	RELIGION	14473	Secularism	N/A	N/A	0
+285977	Singaporean Americans	RELIGION	10155	Islam	N/A	N/A	0
+285977	Singaporean Americans	RELIGION	10385	Christianity	N/A	N/A	0
+285978	Singaporean Australians	RELIGION	10155	Islam	N/A	N/A	0
+285983	Singaporeans in the United Kingdom	RELIGION	10417	Hinduism	N/A	N/A	0
+285984	Singaporeans	RELIGION	10155	Islam	N/A	N/A	0
+286609	Slovenian People's Party	IDEOLOGY	10309	Christian democracy	N/A	N/A	0
+286783	Social Democratic Party (Romania)	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+286880	Social Republican Party	IDEOLOGY	341	Cultural conservatism	N/A	N/A	0
+286880	Social Republican Party	IDEOLOGY	14438	Republicanism	N/A	N/A	0
+286880	Social Republican Party	IDEOLOGY	53773	Authoritarianism	N/A	N/A	0
+286890	Socialist Action (Canada)	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+286898	Socialist Alternative (Australia)  Socialist Alternative  1	IDEOLOGY	13111	Revolutionary socialism	N/A	N/A	0
+286900	Socialist Alternative (England, Wales & Scotland)	IDEOLOGY	13111	Revolutionary socialism	N/A	N/A	0
+286907	Socialist Alternative (Russia)	IDEOLOGY	10172	Socialism	N/A	N/A	0
+286907	Socialist Alternative (Russia)	IDEOLOGY	14395	Trotskyism	N/A	N/A	0
+287051	Socialist Party of Uruguay	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+287060	Socialist People's Front	IDEOLOGY	10172	Socialism	N/A	N/A	0
+287084	Socialist Students Union	IDEOLOGY	10233	Anti-imperialism	N/A	N/A	0
+287114	Socialisti.sk	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+287359	Solidarity (Czech Republic)	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+287360	Solidarity (Ireland)	IDEOLOGY	14395	Trotskyism	N/A	N/A	0
+287373	Solidarity Party of Afghanistan	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+288110	Sortu	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+288110	Sortu	IDEOLOGY	13115	Basque nationalism	N/A	N/A	0
+288206	South Asian people in Ireland	RELIGION	10417	Hinduism	N/A	N/A	0
+288207	South Asians in Hong Kong	RELIGION	10204	Buddhism	N/A	N/A	0
+288207	South Asians in Hong Kong	RELIGION	14286	Zoroastrianism	N/A	N/A	0
+288231	South Tyrolean People's Party	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+288414	Spinoza	INFLUENCED	76062	T. K. Seung	N/A	N/A	0
+289714	Stalin Bloc – For the USSR	IDEOLOGY	10319	Communism	N/A	N/A	0
+289805	Stand Up.BG! We are coming!	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+289805	Stand Up.BG! We are coming!	IDEOLOGY	11613	Liberal conservatism	N/A	N/A	0
+290228	State of Justice Coalition	IDEOLOGY	18448	Anti-corruption	N/A	N/A	0
+291718	Sterling Ruby	FIELD	10424	Drawing	N/A	N/A	0
+293261	Sudanese Socialist Union	IDEOLOGY	2970	Nasserism	N/A	N/A	0
+293834	Sumar (electoral platform)	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+295507	Swedish Iranians	RELIGION	10153	Sunni Islam	N/A	N/A	0
+295507	Swedish Iranians	RELIGION	12209	Baháʼí Faith	N/A	N/A	0
+296021	Synaspismos	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+296058	Syrian Revolutionary Left Current	IDEOLOGY	10251	Participatory democracy	N/A	N/A	0
+296058	Syrian Revolutionary Left Current	IDEOLOGY	14473	Secularism	N/A	N/A	0
+296076	Syrians in Norway	RELIGION	14227	Catholicism	N/A	N/A	0
+297514	Tanzanians in the United Kingdom	RELIGION	437	Pentecostalism	N/A	N/A	0
+297514	Tanzanians in the United Kingdom	RELIGION	14227	Catholicism	N/A	N/A	0
+299536	The Left (Slovenia)	IDEOLOGY	10226	Progressivism	N/A	N/A	0
+299544	The List of the People	IDEOLOGY	10249	Anti-establishment	N/A	N/A	0
+299582	The Other Russia (coalition)	IDEOLOGY	10228	Social democracy	N/A	N/A	0
+303768	Together for Catalonia (2020)  Together for Catalonia  1	IDEOLOGY	1548	Souverainism	N/A	N/A	0
+303784	Tōhōkai	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+303784	Tōhōkai	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+305763	Trade Union of Russian Citizens	IDEOLOGY	14404	Conservatism	N/A	N/A	0
+305769	Traditionalist Worker Party	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+306517	Tudeh Party of Iran	IDEOLOGY	300	Marxism–Leninism	N/A	N/A	0
+306517	Tudeh Party of Iran	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+307227	Ukrainian People's Party	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+307227	Ukrainian People's Party	IDEOLOGY	10310	Social conservatism	N/A	N/A	0
+307381	Ulster Protestants	RELIGION	14138	Protestantism	N/A	N/A	0
+307579	Unidas Podemos	IDEOLOGY	10222	Direct democracy	N/A	N/A	0
+307579	Unidas Podemos	IDEOLOGY	10329	Democratic socialism	N/A	N/A	0
+307579	Unidas Podemos	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+307647	Union of Bulgarian National Legions	IDEOLOGY	13574	Antisemitism	N/A	N/A	0
+307667	Union of Communists	IDEOLOGY	162	Marxism-Leninism	N/A	N/A	0
+307692	Union of Orthodox Banner-Bearers	IDEOLOGY	11673	Christian fundamentalism	N/A	N/A	0
+307754	Union Solidarity and Development Party	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+307891	United Left (Spain)	IDEOLOGY	14473	Secularism	N/A	N/A	0
+307894	United Left Extremadura	IDEOLOGY	10172	Socialism	N/A	N/A	0
+307894	United Left Extremadura	IDEOLOGY	10410	Feminism	N/A	N/A	0
+307895	United Left La Rioja	IDEOLOGY	15504	Anti-capitalism	N/A	N/A	0
+307896	United Left of Aragon	IDEOLOGY	14398	Republicanism in Spain	N/A	N/A	0
+307898	United Left of Cantabria	IDEOLOGY	10410	Feminism	N/A	N/A	0
+307905	United Left/The Greens–Assembly for Andalusia	IDEOLOGY	10172	Socialism	N/A	N/A	0
+307925	United National Workers' Party	IDEOLOGY	11639	Pan-Africanism	N/A	N/A	0
+307941	United Patriots	IDEOLOGY	921	Protectionism	N/A	N/A	0
+308287	Uruguayan Americans	RELIGION	11601	Atheism	N/A	N/A	0
+308287	Uruguayan Americans	RELIGION	13264	Roman Catholicism	N/A	N/A	0
+308858	Valencian Left	IDEOLOGY	10250	Left-wing nationalism	N/A	N/A	0
+308866	Valencian Socialist Party	IDEOLOGY	69882	Països Catalans	N/A	N/A	0
+309919	Venezuelan Popular Unity	IDEOLOGY	10319	Communism	N/A	N/A	0
+309924	Venezuelans	RELIGION	13895	Muslim	N/A	N/A	0
+310954	Victory Party (Turkey)	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+311003	Vietnamese Australians	RELIGION	14298	Taoism	N/A	N/A	0
+311003	Vietnamese Australians	RELIGION	27623	Confucianism	N/A	N/A	0
+312185	Vision NZ	IDEOLOGY	11674	Christian right	N/A	N/A	0
+312514	Vlaamsch Nationaal Verbond	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+313108	Volya Movement	IDEOLOGY	52117	Bulgarian nationalism	N/A	N/A	0
+315771	Wenzhou people	RELIGION	27623	Confucianism	N/A	N/A	0
+316039	White Americans	RELIGION	14138	Protestantism	N/A	N/A	0
+321175	Workers' Front (Croatia)	IDEOLOGY	10281	Left-wing populism	N/A	N/A	0
+321175	Workers' Front (Croatia)	IDEOLOGY	45288	Socialist feminism	N/A	N/A	0
+321203	Workers' Party of Social Justice	IDEOLOGY	14411	Right-wing populism	N/A	N/A	0
+321213	Workers' Revolutionary Organization (Spain)	IDEOLOGY	14414	Federalism	N/A	N/A	0
+321247	World Union of National Socialists	IDEOLOGY	177	Anti-communism	N/A	N/A	0
+321247	World Union of National Socialists	IDEOLOGY	18503	Anti-immigration	N/A	N/A	0
+321247	World Union of National Socialists	IDEOLOGY	31062	Anti-LGBT	N/A	N/A	0
+321585	Xaviera Simmons	FIELD	10376	Painting	N/A	N/A	0
+321955	Yachad (political party)	IDEOLOGY	20743	Orthodox Judaism	N/A	N/A	0
+322847	Yesh Atid–Telem	IDEOLOGY	83121	Zionism	N/A	N/A	0
+323555	Young Left (Austria)	IDEOLOGY	10410	Feminism	N/A	N/A	0
+323555	Young Left (Austria)	IDEOLOGY	15504	Anti-capitalism	N/A	N/A	0
+323798	Yugoslav Action	IDEOLOGY	2188	National conservatism	N/A	N/A	0
+323803	Yugoslav National Movement	IDEOLOGY	2978	Fascism	N/A	N/A	0
+325735	Zimbabwe African National Union	IDEOLOGY	278	African nationalism	N/A	N/A	0
+325770	Zionist Union	IDEOLOGY	31055	Two-state solution	N/A	N/A	0

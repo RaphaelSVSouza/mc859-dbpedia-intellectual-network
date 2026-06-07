@@ -22,3 +22,6 @@ venv/
 .vscode/
 .idea/
 *.swp
+neo4j/test_edges.tsv
+neo4j/ppr_metrics.txt
+neo4j/pagerank_scores.tsv

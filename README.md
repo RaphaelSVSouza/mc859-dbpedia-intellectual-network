@@ -18,6 +18,14 @@ e detecção de comunidades por **Louvain** sobre o grafo, executados no Neo4j.
 Disciplina: **MC859 — Projeto em Teoria da Computação** · UNICAMP · 2026
 Professor: Ruben Interian Kovaliova
 
+## Requisitos
+
+Instale as dependências do Python antes de executar a pipeline:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
 ## Sumário do grafo
 
 | Métrica                                | Valor       |
@@ -111,9 +119,20 @@ sort -u rede_intelectual_reoriented.nt > rede_intelectual_final.nt
 
 ### 5. Converter para GEXF
 
+A maneira recomendada é usar o wrapper de pipeline:
+
 ```bash
-python pipeline/nt_to_gexf.py rede_intelectual_final.nt rede_intelectual.gexf
+python pipeline/run_pipeline.py rede_intelectual_final.nt rede_intelectual.gexf \
+    --graphml rede_intelectual.graphml
 ```
+
+Isso gera `rede_intelectual.gexf` e, opcionalmente, `rede_intelectual.graphml`.
+
+> Se preferir, o comando direto ainda funciona:
+>
+> ```bash
+> python pipeline/nt_to_gexf.py rede_intelectual_final.nt rede_intelectual.gexf
+> ```
 
 O script imprime contagens por predicado como sanity check.
 
@@ -127,6 +146,37 @@ de tamanhos de SCCs):
 pip install networkx matplotlib
 python analysis/analise_graph.py rede_intelectual.gexf
 ```
+
+## Integração Neo4j (Fase 2 — completa)
+
+O repositório inclui uma integração com Neo4j para executar análises de PageRank
+e Personalized PageRank (PPR). Os scripts relacionados estão em `neo4j/` e
+fornecem etapas para carregar o grafo, gerar um split treino/teste, executar
+PageRank e avaliar PPR para predição de arestas.
+
+Exemplo (Unix/macOS):
+
+```bash
+export NEO4J_PASSWORD="<SUA_SENHA>"
+python neo4j/workflow.py --data-path data/rede_intelectual_final.nt \
+  --password "$NEO4J_PASSWORD" --db neo4j
+```
+
+Exemplo (PowerShell):
+
+```powershell
+$env:NEO4J_PASSWORD = "<SUA_SENHA>"
+python neo4j/workflow.py --data-path data/rede_intelectual_final.nt --password $env:NEO4J_PASSWORD --db neo4j
+```
+
+Saídas importantes (geradas em `neo4j/`):
+- `pagerank_scores.tsv` — scores de PageRank
+- `ppr_predictions.tsv` — previsões do PPR para o conjunto de teste
+- `ppr_metrics.txt` — métricas de avaliação (Precision@k, MRR)
+
+Requisitos específicos:
+- Neo4j v5.x (compatível com a dependência `neo4j>=5.0` do `requirements.txt`).
+- Configure o banco Neo4j localmente antes de executar o `workflow.py`.
 
 Saídas:
 - `metricas.txt`
@@ -182,7 +232,8 @@ rede-intelectual-mc859/
 ├── .gitignore
 ├── pipeline/
 │   ├── preds.txt              # 11 predicados temáticos (grep -F -f)
-│   └── nt_to_gexf.py          # .nt → .gexf
+│   ├── nt_to_gexf.py          # .nt → .gexf
+│   └── run_pipeline.py        # wrapper de conversão e exportação de GraphML
 ├── analysis/
 │   ├── analise_graph.py       # métricas + gráficos da entrega parcial
 │   └── diag_filters.py        # diagnóstico didático dos filtros
