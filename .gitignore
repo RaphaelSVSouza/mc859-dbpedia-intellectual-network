@@ -25,3 +25,7 @@ venv/
 neo4j/test_edges.tsv
 neo4j/ppr_metrics.txt
 neo4j/pagerank_scores.tsv
+analysis/pagerank_evaluation.txt
+neo4j/ppr_predictions.tsv
+neo4j/ppr_predictions.tsv
+neo4j/ppr_predictions.tsv
