@@ -178,6 +178,56 @@ Requisitos específicos:
 - Neo4j v5.x (compatível com a dependência `neo4j>=5.0` do `requirements.txt`).
 - Configure o banco Neo4j localmente antes de executar o `workflow.py`.
 
+### Neo4j local com Docker
+
+A configuração recomendada para desenvolvimento está em `compose.yaml`. Ela
+usa Neo4j 5.26 LTS, persiste os dados em volumes Docker e instala os plugins
+APOC e Graph Data Science (GDS), necessários pelos scripts de análise.
+
+Crie a configuração local da senha e inicie o banco:
+
+```bash
+cp .env.example .env
+# Edite NEO4J_PASSWORD no arquivo .env antes de continuar.
+docker compose up -d
+docker compose logs -f neo4j
+```
+
+Quando o log indicar que o servidor está disponível:
+
+- Neo4j Browser: <http://localhost:7474>
+- URI Bolt usada pelos scripts: `neo4j://127.0.0.1:7687`
+- Usuário: `neo4j`
+- Senha: o valor definido em `.env`
+- Database: `neo4j`
+
+Verifique o servidor e o plugin GDS pelo terminal:
+
+```bash
+docker compose exec neo4j cypher-shell \
+  -u neo4j -p "$(sed -n 's/^NEO4J_PASSWORD=//p' .env)" \
+  "RETURN gds.version() AS gdsVersion"
+```
+
+Para parar ou reiniciar:
+
+```bash
+docker compose stop
+docker compose restart
+```
+
+`docker compose down` remove o contêiner, mas preserva os volumes. Use
+`docker compose down -v` somente quando quiser apagar também todo o banco.
+
+No VS Code, instale a extensão **Neo4j for VS Code**
+(`neo4j-extensions.neo4j-for-vscode`) e crie uma conexão com os mesmos dados
+acima. Arquivos `.cypher` passam a ter autocomplete, execução de consultas e
+visualização de resultados.
+
+```bash
+code --install-extension neo4j-extensions.neo4j-for-vscode
+```
+
 Saídas:
 - `metricas.txt`
 - `grafico_distribuicao_graus.png`
