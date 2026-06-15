@@ -151,22 +151,22 @@ class PageRankComputer:
                 
                 # For each node, compute new PageRank based on incoming edges
                 session.run(
-                    f"""
+                    """
                     MATCH (n:Resource)
                     SET n.pageRankNew = (1.0 - $damping) / $node_count + $damping *
                         (
                             REDUCE(
                                 s = 0.0,
-                                rel IN [(m)-[]->(n) WHERE m:Resource] |
-                                s + m.pageRank / apoc.node.degree(m, '>')
+                                m IN [(m)-[]->(n) WHERE m:Resource] |
+                                s + m.pageRank / CASE WHEN size((m)-[]->()) = 0 THEN 1.0 ELSE size((m)-[]->()) END
                             )
                         )
-                    WITH $node_count as nc
-                    MATCH (m:Resource)
-                    SET m.pageRank = m.pageRankNew
                     """,
                     damping=damping_factor,
                     node_count=node_count,
+                )
+                session.run(
+                    "MATCH (n:Resource) SET n.pageRank = n.pageRankNew"
                 )
             
             # Clean up temporary property

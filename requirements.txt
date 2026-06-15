@@ -3,5 +3,7 @@ matplotlib>=3.7
 python-igraph>=0.10
 neo4j>=5.0
 rdflib>=6.0
+python-louvain>=0.16
+scikit-learn>=1.4
 tqdm>=4.0
 python-dotenv>=1.0

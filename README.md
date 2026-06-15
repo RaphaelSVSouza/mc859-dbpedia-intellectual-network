@@ -228,6 +228,30 @@ visualização de resultados.
 code --install-extension neo4j-extensions.neo4j-for-vscode
 ```
 
+Observação: a validação de PPR neste repositório é realizada via avaliação
+estrutural (Link Prediction sobre arestas ocultas em `neo4j/test_edges.tsv`) e
+não por comparação semântica com WordNet.
+
+## Avaliação de algoritmos
+
+A fase de avaliação inclui scripts para análise de PageRank, comunidades e verificação de sanidade:
+
+- `python analysis/evaluate_pagerank.py --predictions neo4j/pagerank_scores.tsv --graph data/rede_intelectual.gexf`
+  - compara os scores de `neo4j/pagerank_scores.tsv` com um PageRank interno calculado por `networkx` sobre `data/rede_intelectual.gexf`
+  - métricas geradas: correlação de Spearman e overlap Top‑k (grava em `analysis/pagerank_evaluation.txt`)
+
+- `python analysis/evaluate_sanity.py --graph data/rede_intelectual.gexf --neo4j-scores neo4j/pagerank_scores.tsv`
+  - sanity check simples (Top‑10 overlap entre Neo4j e PageRank interno)
+
+- `python neo4j/ppr.py --test-edges neo4j/test_edges.tsv --output neo4j/ppr_predictions.tsv --metrics-output neo4j/ppr_metrics.txt`
+  - PPR é usado para predição de arestas (ocultação), e as métricas reportadas são `Precision@k`, `MRR` e `coverage` (grava em `neo4j/ppr_metrics.txt`)
+
+Requisitos adicionais para avaliação:
+- `python-louvain` (comunidades)
+- `scikit-learn` (NMI)
+
+Esses pacotes já estão incluídos em `requirements.txt`.
+
 Saídas:
 - `metricas.txt`
 - `grafico_distribuicao_graus.png`

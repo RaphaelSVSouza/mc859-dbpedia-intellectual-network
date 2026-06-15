@@ -105,7 +105,7 @@ def main():
             "--test-ratio", "0.1",
             "--output", str(script_dir / "test_edges.tsv"),
         ]
-        commands.append((cmd, "Divisão de arestas (treino/teste 99/1)"))
+        commands.append((cmd, "Divisão de arestas (treino/teste 90/10)"))
     
     # Step 3: Compute PageRank
     if not args.skip_pagerank:
