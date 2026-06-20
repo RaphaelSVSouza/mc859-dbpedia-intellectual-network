@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 import argparse
 import hashlib
+import os
 import re
 import time
 import unicodedata
+from collections import defaultdict
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -47,6 +50,11 @@ COMMON_WORDS = {
     "with",
     "world",
 }
+
+
+_PRIMARY_PATTERN: re.Pattern | None = None
+_PRIMARY_CANDIDATES: dict[str, list[tuple[int, str]]] = {}
+_SECONDARY_PATTERNS: dict[int, list[tuple[str, re.Pattern]]] = {}
 
 
 def normalize_text(text: str) -> str:
@@ -185,6 +193,100 @@ def compile_candidate_patterns(
     return patterns
 
 
+def initialize_match_worker(
+    aliases_by_index: dict[int, dict[str, list[str]]],
+) -> None:
+    """Compile the matching structures once in each worker process."""
+    global _PRIMARY_PATTERN, _PRIMARY_CANDIDATES, _SECONDARY_PATTERNS
+
+    _PRIMARY_CANDIDATES = defaultdict(list)
+    _SECONDARY_PATTERNS = {}
+    primary_aliases = set()
+
+    for candidate_idx, groups in aliases_by_index.items():
+        for alias in groups["primary"]:
+            alias_norm = normalize_text(alias)
+            primary_aliases.add(alias_norm)
+            _PRIMARY_CANDIDATES[alias_norm.casefold()].append(
+                (candidate_idx, alias)
+            )
+
+        secondary_patterns = []
+        for alias in groups["secondary"]:
+            alias_norm = normalize_text(alias)
+            pattern = (
+                r"(?<![A-Za-z])"
+                + re.escape(alias_norm)
+                + r"(?![A-Za-z])"
+            )
+            secondary_patterns.append(
+                (alias, re.compile(pattern, flags=re.IGNORECASE))
+            )
+
+        _SECONDARY_PATTERNS[candidate_idx] = secondary_patterns
+
+    if not primary_aliases:
+        _PRIMARY_PATTERN = None
+        return
+
+    alternatives = "|".join(
+        re.escape(alias)
+        for alias in sorted(primary_aliases, key=lambda value: (-len(value), value))
+    )
+    _PRIMARY_PATTERN = re.compile(
+        rf"(?<![A-Za-z])(?:{alternatives})(?![A-Za-z])",
+        flags=re.IGNORECASE,
+    )
+
+
+def analyze_cached_entry(
+    task: tuple[int, int, str, str],
+) -> tuple[int, str, list[tuple[int, int, tuple[str, ...]]]]:
+    """Analyze one cached SEP entry and return its candidate matches."""
+    entry_idx, _, url, cache_path = task
+    html = Path(cache_path).read_text(encoding="utf-8", errors="ignore")
+    text = html_to_text(html)
+
+    if _PRIMARY_PATTERN is None:
+        return entry_idx, url, []
+
+    primary_hits = defaultdict(int)
+    aliases_found = defaultdict(set)
+
+    for match in _PRIMARY_PATTERN.finditer(text):
+        alias_key = normalize_text(match.group(0)).casefold()
+
+        for candidate_idx, alias in _PRIMARY_CANDIDATES.get(alias_key, []):
+            primary_hits[candidate_idx] += 1
+            aliases_found[candidate_idx].add(alias)
+
+    if not primary_hits:
+        return entry_idx, url, []
+
+    secondary_text = _PRIMARY_PATTERN.sub(" ", text)
+    matches = []
+
+    for candidate_idx, hit_count in primary_hits.items():
+        total_hits = hit_count
+
+        for alias, pattern in _SECONDARY_PATTERNS[candidate_idx]:
+            secondary_hits = len(pattern.findall(secondary_text))
+
+            if secondary_hits:
+                total_hits += secondary_hits
+                aliases_found[candidate_idx].add(alias)
+
+        matches.append(
+            (
+                candidate_idx,
+                total_hits,
+                tuple(sorted(aliases_found[candidate_idx])),
+            )
+        )
+
+    return entry_idx, url, matches
+
+
 def cache_path_for_url(url: str, cache_dir: Path) -> Path:
     digest = hashlib.sha1(url.encode("utf-8")).hexdigest()
     return cache_dir / f"{digest}.html"
@@ -213,6 +315,16 @@ def fetch_url(url: str, cache_dir: Path, delay: float) -> str:
     time.sleep(delay)
 
     return html
+
+
+def ensure_url_cached(url: str, cache_dir: Path, delay: float) -> Path:
+    """Download a URL only when needed and return its cache path."""
+    path = cache_path_for_url(url, cache_dir)
+
+    if not path.exists():
+        fetch_url(url, cache_dir, delay)
+
+    return path
 
 
 def get_sep_entry_urls(contents_url: str, cache_dir: Path, delay: float) -> list[str]:
@@ -252,12 +364,11 @@ def count_sep_citations(
     cache_dir: Path,
     delay: float,
     max_entries: int | None = None,
+    workers: int = 1,
 ) -> pd.DataFrame:
     labels = candidates["label"].fillna("").astype(str).tolist()
 
     aliases_by_index = build_candidate_aliases(labels)
-    patterns_by_index = compile_candidate_patterns(aliases_by_index)
-
     entry_urls = get_sep_entry_urls(contents_url, cache_dir, delay)
 
     if max_entries is not None:
@@ -265,56 +376,56 @@ def count_sep_citations(
 
     print(f"Entradas SEP encontradas: {len(entry_urls)}")
     print(f"Candidatos carregados: {len(candidates)}")
+    print(f"Processos de análise: {workers}")
 
     sep_entry_citations = [0 for _ in range(len(candidates))]
     sep_raw_hits = [0 for _ in range(len(candidates))]
     matched_aliases = [set() for _ in range(len(candidates))]
     example_entries = [[] for _ in range(len(candidates))]
 
+    tasks = []
+    total_entries = len(entry_urls)
+
     for entry_idx, url in enumerate(entry_urls, start=1):
-        print(f"[{entry_idx}/{len(entry_urls)}] {url}")
+        print(f"[cache {entry_idx}/{total_entries}] {url}")
 
         try:
-            html = fetch_url(url, cache_dir, delay)
+            cache_path = ensure_url_cached(url, cache_dir, delay)
         except Exception as exc:
             print(f"  erro ao baixar {url}: {exc}")
             continue
 
-        text = html_to_text(html)
+        tasks.append((entry_idx, total_entries, url, str(cache_path)))
 
-        for candidate_idx in range(len(candidates)):
-            groups = patterns_by_index[candidate_idx]
-            primary_hits = 0
-            aliases_found = set()
-            secondary_text = text
+    with ProcessPoolExecutor(
+        max_workers=workers,
+        initializer=initialize_match_worker,
+        initargs=(aliases_by_index,),
+    ) as executor:
+        futures = {
+            executor.submit(analyze_cached_entry, task): task
+            for task in tasks
+        }
+        completed = 0
 
-            for alias, pattern in groups["primary"]:
-                hits = pattern.findall(text)
+        for future in as_completed(futures):
+            entry_idx, url, matches = future.result()
+            completed += 1
 
-                if hits:
-                    primary_hits += len(hits)
-                    aliases_found.add(alias)
-                    secondary_text = pattern.sub(" ", secondary_text)
+            for candidate_idx, total_hits, aliases in matches:
+                sep_entry_citations[candidate_idx] += 1
+                sep_raw_hits[candidate_idx] += total_hits
+                matched_aliases[candidate_idx].update(aliases)
 
-            # A surname alone is too ambiguous to identify a person.
-            if primary_hits == 0:
-                continue
+                if len(example_entries[candidate_idx]) < 5:
+                    example_entries[candidate_idx].append((entry_idx, url))
 
-            secondary_hits = 0
-            for alias, pattern in groups["secondary"]:
-                hits = pattern.findall(secondary_text)
+            print(f"[análise {completed}/{len(tasks)}] {url}")
 
-                if hits:
-                    secondary_hits += len(hits)
-                    aliases_found.add(alias)
-
-            total_hits_in_entry = primary_hits + secondary_hits
-            sep_entry_citations[candidate_idx] += 1
-            sep_raw_hits[candidate_idx] += total_hits_in_entry
-            matched_aliases[candidate_idx].update(aliases_found)
-
-            if len(example_entries[candidate_idx]) < 5:
-                example_entries[candidate_idx].append(url)
+    example_entries = [
+        [url for _, url in sorted(entries)[:5]]
+        for entries in example_entries
+    ]
 
     result = candidates.copy()
 
@@ -391,6 +502,13 @@ def parse_args() -> argparse.Namespace:
         help="Usar só as primeiras N entradas da SEP. Útil para teste.",
     )
 
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=os.process_cpu_count() or 1,
+        help="Processos paralelos para análise local (padrão: todos os CPUs disponíveis).",
+    )
+
     return parser.parse_args()
 
 
@@ -402,6 +520,9 @@ def main() -> None:
     cache_dir = Path(args.cache_dir)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if args.workers < 1:
+        raise ValueError("--workers deve ser pelo menos 1")
 
     if not candidates_path.is_file():
         raise FileNotFoundError(f"Arquivo de candidatos não encontrado: {candidates_path}")
@@ -427,6 +548,7 @@ def main() -> None:
         cache_dir=cache_dir,
         delay=args.delay,
         max_entries=args.max_entries,
+        workers=args.workers,
     )
 
     result.to_csv(output_path, sep="\t", index=False)
