@@ -35,3 +35,6 @@ analysis/pagerank_evaluation.txt
 analysis/community_evaluation.txt
 analysis/sanity_pagerank.txt
 neo4j/ppr_predictions.tsv
+analysis/.sep_cache/
+analysis/.dbpedia_person_cache.json
+analysis/sep_citation_ranking_test.tsv
