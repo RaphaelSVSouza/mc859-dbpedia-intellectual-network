@@ -172,7 +172,7 @@ python neo4j/workflow.py --data-path data/rede_intelectual_final.nt --password $
 Saídas importantes (geradas em `neo4j/`):
 - `pagerank_scores.tsv` — scores de PageRank
 - `ppr_predictions.tsv` — previsões do PPR para o conjunto de teste
-- `ppr_metrics.txt` — métricas de avaliação (Precision@k, MRR)
+- `ppr_metrics.txt` — métricas de avaliação (HitRate@k, MRR)
 
 Requisitos específicos:
 - Neo4j v5.x (compatível com a dependência `neo4j>=5.0` do `requirements.txt`).

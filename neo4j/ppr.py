@@ -1,6 +1,6 @@
 """
 Compute Personalized PageRank (PPR) for Link Prediction evaluation.
-Versão Otimizada - Redução drástica de memória RAM e processamento em lote nativo.
+Versão Otimizada - Redução drástica de memória RAM, processamento em lote nativo e prevenção de Data Leakage.
 """
 
 import argparse
@@ -80,10 +80,11 @@ class PPRPredictor:
         iterations: int = 20,
         damping_factor: float = 0.85,
         top_k: int = 100,
-        batch_size: int = 20  # Reduzido ligeiramente para evitar picos de Heap
+        batch_size: int = 20,
+        train_filter: str = None
     ) -> tuple[dict, dict]:
         """
-        Compute Personalized PageRank usando otimizações de memória agressivas.
+        Compute Personalized PageRank usando otimizações de memória agressivas e prevenindo Data Leakage.
         """
         test_edges = self.load_test_edges(test_edges_path)
         predictions = {}
@@ -98,38 +99,56 @@ class PPRPredictor:
             sources_list = list(sources_set)
             
             with self.driver.session(database=self.database) as session:
-                # 1. Limpa projeções antigas (Corrigido com YIELD)
+                # 1. Limpa projeções antigas
                 try:
                     session.run("CALL gds.graph.drop($graph_name, false) YIELD graphName", graph_name=graph_name)
                 except Exception:
                     pass
                 
-                # 2. Cria a projeção incluindo a propriedade 'label' indexada na memória RAM do GDS
+                # 2. Cria a projeção (com ou sem filtro de treino para evitar vazamento de dados)
                 print(f"\n-> Projetando grafo em memória para: '{rel_type}'")
                 
-                node_config = {
-                    "Resource": {}
-                }
-                relationship_config = {
-                    rel_type: {
-                        "type": rel_type,
-                        "orientation": "NATURAL"  # Mude para UNDIRECTED apenas se estritamente necessário
+                if train_filter:
+                    # Cypher Projection: Carrega apenas arestas que passam no filtro (ex: r.split = 'train')
+                    print(f"   [!] Usando Cypher Projection com filtro: {train_filter}")
+                    node_query = "MATCH (n:Resource) RETURN id(n) AS id, n.label AS labels"
+                    rel_query = f"MATCH (s:Resource)-[r:`{rel_type}`]->(t:Resource) WHERE {train_filter} RETURN id(s) AS source, id(t) AS target"
+                    
+                    session.run(
+                        """
+                        CALL gds.graph.project.cypher(
+                            $graph_name,
+                            $node_query,
+                            $rel_query
+                        ) YIELD graphName, nodeCount, relationshipCount
+                        """,
+                        graph_name=graph_name,
+                        node_query=node_query,
+                        rel_query=rel_query
+                    )
+                else:
+                    # Native Projection: Carrega todas as arestas (Use apenas se as arestas de teste NÃO estiverem no DB)
+                    print("   [!] Usando Native Projection (Atenção: Garanta que as arestas de teste não estão no banco para evitar vazamento!)")
+                    node_config = {"Resource": {}}
+                    relationship_config = {
+                        rel_type: {
+                            "type": rel_type,
+                            "orientation": "NATURAL"
+                        }
                     }
-                }
-                
-                # (Corrigido com YIELD obrigatório nas versões novas do GDS)
-                session.run(
-                    """
-                    CALL gds.graph.project(
-                        $graph_name,
-                        $node_config,
-                        $rel_config
-                    ) YIELD graphName, nodeCount, relationshipCount
-                    """,
-                    graph_name=graph_name,
-                    node_config=node_config,
-                    rel_config=relationship_config
-                )
+                    
+                    session.run(
+                        """
+                        CALL gds.graph.project(
+                            $graph_name,
+                            $node_config,
+                            $rel_config
+                        ) YIELD graphName, nodeCount, relationshipCount
+                        """,
+                        graph_name=graph_name,
+                        node_config=node_config,
+                        rel_config=relationship_config
+                    )
                 
                 print(f" -> Computando PPR de forma otimizada para {len(sources_list):,} nós...")
                 
@@ -153,7 +172,6 @@ class PPRPredictor:
                     for node_info in nodes_to_process:
                         source_id = node_info["original_id"]
                         source_internal = node_info["internal_id"]
-                        src_label = node_info["label"]
                         
                         if all(isinstance(x, int) for x, _, _ in test_edges.keys()):
                             target_id_expr = "id(targetNode)"
@@ -200,7 +218,7 @@ class PPRPredictor:
                     processed = min(i + batch_size, len(sources_list))
                     print(f"    Progresso ({rel_type}): {processed}/{len(sources_list)} nós de origem processados")
 
-                # 4. Desaloca o grafo imediatamente (Corrigido com YIELD)
+                # 4. Desaloca o grafo imediatamente
                 try:
                     session.run("CALL gds.graph.drop($graph_name, false) YIELD graphName", graph_name=graph_name)
                     print(f"✓ Projeção '{graph_name}' liberada da memória")
@@ -210,11 +228,11 @@ class PPRPredictor:
         return predictions, test_edges
     
     def evaluate_predictions(self, predictions: dict, test_edges: dict, k_values: list = None) -> dict:
-        """Evaluate link prediction using Precision@k and MRR."""
+        """Evaluate link prediction using HitRate@k and MRR."""
         if k_values is None:
             k_values = [1, 5, 10, 20]
         
-        precisions_at_k = defaultdict(list)
+        hit_rates_at_k = defaultdict(list)
         mrrs = []
         found_count = 0
         total_count = 0
@@ -225,7 +243,7 @@ class PPRPredictor:
             
             if key not in predictions:
                 for k in k_values:
-                    precisions_at_k[k].append(0.0)
+                    hit_rates_at_k[k].append(0.0)
                 continue
             
             pred_list = predictions[key]
@@ -237,20 +255,20 @@ class PPRPredictor:
                 mrrs.append(1.0 / rank)
                 
                 for k in k_values:
-                    precisions_at_k[k].append(1.0 if rank <= k else 0.0)
+                    hit_rates_at_k[k].append(1.0 if rank <= k else 0.0)
             else:
                 for k in k_values:
-                    precisions_at_k[k].append(0.0)
+                    hit_rates_at_k[k].append(0.0)
         
         metrics = {
             "coverage": found_count / total_count if total_count > 0 else 0.0,
             "found": found_count,
             "total": total_count,
-            "mrr": sum(mrrs) / len(mrrs) if mrrs else 0.0,
+            "mrr": sum(mrrs) / total_count if total_count > 0 else 0.0,
         }
         
         for k in k_values:
-            metrics[f"precision@{k}"] = sum(precisions_at_k[k]) / len(precisions_at_k[k]) if precisions_at_k[k] else 0.0
+            metrics[f"hit_rate@{k}"] = sum(hit_rates_at_k[k]) / total_count if total_count > 0 else 0.0
             
         return metrics
     
@@ -305,7 +323,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--top-k", type=int, default=500, help="Top-K predições por nó")
     parser.add_argument("--output", default="neo4j/ppr_predictions.tsv", help="Arquivo para salvar predições")
     parser.add_argument("--metrics-output", default="neo4j/ppr_metrics.txt", help="Arquivo para salvar métricas")
-    parser.add_argument("--batch-size", type=int, default=50, help="Tamanho do lote de nós processados em sequência (padrão: 50)")
+    parser.add_argument("--batch-size", type=int, default=50, help="Tamanho do lote de nós processados em sequência")
+    parser.add_argument("--train-filter", default=None, help="Ex: \"r.split = 'train'\". Filtro Cypher para evitar Data Leakage durante a projeção.")
     return parser.parse_args()
 
 
@@ -321,7 +340,8 @@ def main():
             iterations=args.iterations,
             damping_factor=args.damping_factor,
             top_k=args.top_k,
-            batch_size=args.batch_size
+            batch_size=args.batch_size,
+            train_filter=args.train_filter
         )
         
         print("\nAvaliando predições e consolidando métricas...")
@@ -333,10 +353,10 @@ def main():
         print(f"Arestas de teste totais: {metrics['total']}")
         print(f"Arestas encontradas no top-{args.top_k}: {metrics['found']} ({metrics['coverage']:.2%})")
         print(f"Mean Reciprocal Rank (MRR): {metrics['mrr']:.6f}")
-        print(f"Precision@1:         {metrics['precision@1']:.6f}")
-        print(f"Precision@5:         {metrics['precision@5']:.6f}")
-        print(f"Precision@10:        {metrics['precision@10']:.6f}")
-        print(f"Precision@20:        {metrics['precision@20']:.6f}")
+        print(f"HitRate@1:           {metrics['hit_rate@1']:.6f}")
+        print(f"HitRate@5:           {metrics['hit_rate@5']:.6f}")
+        print(f"HitRate@10:          {metrics['hit_rate@10']:.6f}")
+        print(f"HitRate@20:          {metrics['hit_rate@20']:.6f}")
         
         metrics_dir = os.path.dirname(args.metrics_output)
         if metrics_dir:
@@ -346,10 +366,10 @@ def main():
             f.write(f"Arestas de teste:    {metrics['total']}\n")
             f.write(f"Arestas encontradas: {metrics['found']} ({metrics['coverage']:.2%})\n")
             f.write(f"Mean Reciprocal Rank: {metrics['mrr']:.6f}\n")
-            f.write(f"Precision@1:         {metrics['precision@1']:.6f}\n")
-            f.write(f"Precision@5:         {metrics['precision@5']:.6f}\n")
-            f.write(f"Precision@10:        {metrics['precision@10']:.6f}\n")
-            f.write(f"Precision@20:        {metrics['precision@20']:.6f}\n")
+            f.write(f"HitRate@1:           {metrics['hit_rate@1']:.6f}\n")
+            f.write(f"HitRate@5:           {metrics['hit_rate@5']:.6f}\n")
+            f.write(f"HitRate@10:          {metrics['hit_rate@10']:.6f}\n")
+            f.write(f"HitRate@20:          {metrics['hit_rate@20']:.6f}\n")
         
         print(f"\n✓ Arquivo de relatório gerado em: {args.metrics_output}")
         
