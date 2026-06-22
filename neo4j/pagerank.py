@@ -41,7 +41,7 @@ class PageRankComputer:
         self,
         iterations: int = 20,
         damping_factor: float = 0.85,
-        relationship_types: list = None,
+        experiment: str = 'baseline',
     ):
         """
         Compute PageRank using Neo4j Graph Data Science library.
@@ -49,13 +49,15 @@ class PageRankComputer:
         Args:
             iterations: Number of iterations
             damping_factor: Damping factor (probability of following a link)
-            relationship_types: List of relationship types to include (None = all)
+            experiment: 'baseline', 'pessoas', or 'institucional'
         """
-        if relationship_types is None:
-            rel_str = "*"
+        if experiment == 'pessoas':
+            rel_config = "{INFLUENCED: {orientation: 'REVERSE'}, DOCTORALSTUDENT: {orientation: 'REVERSE'}, ACADEMICSTUDENT: {orientation: 'REVERSE'}}"
+        elif experiment == 'institucional':
+            rel_config = "['INFLUENCED', 'DOCTORALSTUDENT', 'ACADEMICSTUDENT', 'ALMAMATER']"
         else:
-            rel_str = "|".join(relationship_types)
-        
+            rel_config = "'*'"
+            
         with self.driver.session(database=self.database) as session:
             # Check if GDS library is installed
             try:
@@ -69,13 +71,13 @@ class PageRankComputer:
             
             try:
                 # Create a projection of the graph
-                print("Criando projeção do grafo...")
+                print(f"Criando projeção do grafo (experimento: {experiment})...")
                 session.run(
                     f"""
                     CALL gds.graph.project(
                         'pr-graph',
                         'Resource',
-                        '{rel_str}',
+                        {rel_config},
                         {{readConcurrency: 4}}
                     )
                     YIELD graphName, nodeCount, relationshipCount
@@ -262,9 +264,15 @@ def parse_args() -> argparse.Namespace:
         help="Fator de amortecimento (padrão: 0.85)",
     )
     parser.add_argument(
+        "--experiment",
+        choices=['baseline', 'pessoas', 'institucional'],
+        default='baseline',
+        help="Tipo de experimento para a projeção do grafo (padrão: baseline)",
+    )
+    parser.add_argument(
         "--output",
-        default="neo4j/pagerank_scores.tsv",
-        help="Arquivo para salvar resultados (padrão: neo4j/pagerank_scores.tsv)",
+        default=None,
+        help="Arquivo para salvar resultados (padrão automático baseado no experimento)",
     )
     parser.add_argument(
         "--top", type=int, default=100, help="Mostrar top N resultados (padrão: 100)"
@@ -278,8 +286,11 @@ def main():
     try:
         computer = PageRankComputer(args.uri, args.user, args.password, args.db)
         
+        # Determine output file automatically if not provided
+        output_file = args.output if args.output else f"neo4j/pagerank_{args.experiment}.tsv"
+        
         # Compute PageRank
-        computer.compute_pagerank(args.iterations, args.damping_factor)
+        computer.compute_pagerank(args.iterations, args.damping_factor, args.experiment)
         
         # Get statistics
         stats = computer.get_stats()
@@ -299,7 +310,7 @@ def main():
                 print(f"{i:3d}. {record['label']:<50s} {record['score']:>10.6f}")
             
             # Save results
-            computer.save_pagerank_to_file(args.output)
+            computer.save_pagerank_to_file(output_file)
         else:
             print("⚠ Nenhum score de PageRank encontrado")
         

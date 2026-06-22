@@ -1,0 +1,61 @@
+============================================================
+RELATÓRIO DE COMPARAÇÃO DE VARIANTES DO PAGERANK
+============================================================
+
+PARTE 1: FILÓSOFOS E INTELECTUAIS (vs. Stanford Encyclopedia of Philosophy)
+------------------------------------------------------------
+PageRank Baseline:
+  - Spearman Correlation: 0.230920
+  - Overlap@20:          0.00%
+  - Overlap@50:          4.00%
+
+PageRank Reverso (Pessoas):
+  - Spearman Correlation: 0.499841
+  - Overlap@20:          35.00%
+  - Overlap@50:          40.00%
+
+Top 10 Filosofos - PageRank Reverso:
+   1. Immanuel Kant                            (58.0966)
+   2. Aristotle                                (50.1809)
+   3. Plato                                    (40.7841)
+   4. Gottfried Wilhelm Leibniz                (27.3950)
+   5. Pythagoras                               (27.2734)
+   6. Ferdinand von Lindemann                  (25.6811)
+   7. Parmenides                               (23.4694)
+   8. Heraclitus                               (23.0318)
+   9. Bertrand Russell                         (20.3374)
+  10. David Hume                               (19.7355)
+
+PARTE 2: UNIVERSIDADES (vs. CWUR 2026 Top 20 Global)
+------------------------------------------------------------
+PageRank Baseline:
+  - Precision@10 (Elite): 100.00%
+  - Precision@20 (Elite): 65.00%
+  - Spearman Correlation (Top 20): 0.545865
+
+PageRank Direto (Institucional):
+  - Precision@10 (Elite): 90.00%
+  - Precision@20 (Elite): 65.00%
+  - Spearman Correlation (Top 20): 0.526316
+
+Top 20 Universidades - PageRank Institucional:
+   1. Harvard University                       (318.0176)
+   2. University of Michigan                   (288.3303)
+   3. Princeton University                     (244.0913)
+   4. Yale University                          (220.1037)
+   5. Columbia University                      (189.7218)
+   6. University of Chicago                    (146.7403)
+   7. University of Cambridge                  (141.6175)
+   8. University of California, Berkeley       (138.6354)
+   9. Stanford University                      (135.5410)
+  10. Hebrew University of Jerusalem           (129.1625)
+  11. Massachusetts Institute of Technology    (129.1522)
+  12. University of Pennsylvania               (126.2971)
+  13. University of Oxford                     (112.9312)
+  14. Cornell University                       (110.2580)
+  15. New York University                      (104.9438)
+  16. University of Colorado, Boulder          (99.5090)
+  17. University of Edinburgh                  (95.9651)
+  18. Trinity College, Cambridge               (87.7321)
+  19. University of Belgrade                   (78.4342)
+  20. University of Calcutta                   (78.2951)

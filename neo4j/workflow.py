@@ -107,20 +107,27 @@ def main():
         ]
         commands.append((cmd, "Divisão de arestas (treino/teste 90/10)"))
     
-    # Step 3: Compute PageRank
+    # Step 3: Compute PageRank (3 Variações)
     if not args.skip_pagerank:
-        cmd = [
-            sys.executable,
-            str(script_dir / "pagerank.py"),
-            "--uri", args.uri,
-            "--user", args.user,
-            "--password", args.password,
-            "--db", args.db,
-            "--iterations", "20",
-            "--damping-factor", "0.85",
-            "--output", str(script_dir / "pagerank_scores.tsv"),
+        experiments = [
+            ("baseline", "pagerank_scores.tsv", "Cálculo de PageRank (Baseline)"),
+            ("pessoas", "pagerank_pessoas.tsv", "Cálculo de PageRank Reverso (Pessoas)"),
+            ("institucional", "pagerank_institucional.tsv", "Cálculo de PageRank Direto (Institucional)")
         ]
-        commands.append((cmd, "Cálculo de PageRank"))
+        for exp, out_file, desc in experiments:
+            cmd = [
+                sys.executable,
+                str(script_dir / "pagerank.py"),
+                "--uri", args.uri,
+                "--user", args.user,
+                "--password", args.password,
+                "--db", args.db,
+                "--iterations", "20",
+                "--damping-factor", "0.85",
+                "--experiment", exp,
+                "--output", str(script_dir / out_file),
+            ]
+            commands.append((cmd, desc))
     
     # Step 4: Compute Personalized PageRank
     if not args.skip_ppr:
@@ -165,7 +172,9 @@ def main():
     else:
         print(f"✓ Todas as {len(commands)} etapas foram concluídas com sucesso!")
         print(f"\nArquivos de saída gerados em: {script_dir}/")
-        print(f"  - pagerank_scores.tsv")
+        print(f"  - pagerank_scores.tsv (baseline)")
+        print(f"  - pagerank_pessoas.tsv")
+        print(f"  - pagerank_institucional.tsv")
         print(f"  - ppr_predictions.tsv")
         print(f"  - ppr_metrics.txt")
         print(f"  - test_edges.tsv")
