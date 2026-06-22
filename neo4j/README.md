@@ -47,7 +47,12 @@ O script garante que os nós envolvidos em arestas de teste permanecem conectado
 
 ## 3. Executar PageRank
 
-O script `pagerank.py` calcula PageRank no grafo completo. Ele tenta usar o Neo4j Graph Data Science (GDS) e recai para uma implementação manual se o GDS não estiver disponível.
+O script `pagerank.py` calcula PageRank no grafo. Ele tenta usar o Neo4j Graph Data Science (GDS) e recai para uma implementação manual se o GDS não estiver disponível.
+Ele suporta a execução de três variações ou **experimentos** diferentes, projetando subgrafos distintos na memória via GDS:
+
+- `baseline`: Roda no grafo completo com todas as arestas na direção original.
+- `pessoas`: Roda com as relações interpessoais e acadêmicas **invertidas** (útil para encontrar filósofos mais influentes).
+- `institucional`: Roda apenas com relações de afiliação e emprego na direção original (útil para ranquear universidades).
 
 ```bash
 python neo4j/pagerank.py \
@@ -57,6 +62,7 @@ python neo4j/pagerank.py \
   --db neo4j \
   --iterations 20 \
   --damping-factor 0.85 \
+  --experiment baseline \
   --output neo4j/pagerank_scores.tsv
 ```
 
@@ -93,13 +99,14 @@ Use as flags `--skip-load`, `--skip-split`, `--skip-pagerank` ou `--skip-ppr` se
 
 ## 6. Scripts de avaliação adicionais
 
+- `analysis/evaluate_custom_pagerank.py`: avalia as três diferentes variantes de PageRank contra referências externas (SEP e CWUR 2026).
 - `analysis/evaluate_pagerank.py`: compara PageRank Neo4j com referência ou com PageRank interno calculado via `networkx`.
 - `analysis/evaluate_communities.py`: calcula modularidade e NMI usando Louvain.
 - `analysis/evaluate_sanity.py`: sanity check de PageRank comparando neo4j vs PageRank interno.
 
 ## Output esperado
 
-- `neo4j/pagerank_scores.tsv`
+- `neo4j/pagerank_scores.tsv` (e as variantes `_pessoas.tsv` e `_institucional.tsv`)
 - `neo4j/test_edges.tsv`
 - `neo4j/ppr_predictions.tsv`
 - `neo4j/ppr_metrics.txt`

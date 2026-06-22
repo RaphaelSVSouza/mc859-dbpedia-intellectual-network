@@ -170,7 +170,7 @@ python neo4j/workflow.py --data-path data/rede_intelectual_final.nt --password $
 ```
 
 Saídas importantes (geradas em `neo4j/`):
-- `pagerank_scores.tsv` — scores de PageRank
+- `pagerank_scores.tsv` (Baseline), `pagerank_pessoas.tsv` (Reverso) e `pagerank_institucional.tsv` (Direto) — scores das três variantes de PageRank
 - `ppr_predictions.tsv` — previsões do PPR para o conjunto de teste
 - `ppr_metrics.txt` — métricas de avaliação (HitRate@k, MRR)
 
@@ -178,46 +178,44 @@ Requisitos específicos:
 - Neo4j v5.x (compatível com a dependência `neo4j>=5.0` do `requirements.txt`).
 - Configure o banco Neo4j localmente antes de executar o `workflow.py`.
 
-### Neo4j local com Docker
+### Neo4j local com Docker (Enterprise Edition)
 
-A configuração recomendada para desenvolvimento está em `compose.yaml`. Ela
-usa Neo4j 5.26 LTS, persiste os dados em volumes Docker e instala os plugins
-APOC e Graph Data Science (GDS), necessários pelos scripts de análise.
+A configuração recomendada para desenvolvimento está em [compose.yaml](file:///home/raphael/Desktop/faculdade/mc859-dbpedia-intellectual-network/compose.yaml). Ela usa a **Enterprise Edition** do Neo4j (necessária para aceitar o formato de armazenamento `Block format` dos dumps do Neo4j Desktop), persiste os dados em volumes Docker e configura os plugins APOC e Graph Data Science (GDS).
 
-Crie a configuração local da senha e inicie o banco:
+#### Importação Automática de Dumps
+O ambiente está configurado para **carregar automaticamente um dump do banco** na primeira inicialização (quando os volumes estiverem limpos).
+1. Certifique-se de que o seu dump esteja localizado em `backups/neo4j.dump`.
+2. Configure a senha inicial no `.env` (copiando do `.env.example`).
+3. Inicie o banco do zero:
+   ```bash
+   docker compose down -v
+   docker compose up -d
+   ```
+4. Acompanhe os logs para ver a importação e a instalação automática do GDS:
+   ```bash
+   docker compose logs -f neo4j
+   ```
+*(O script [load_dump.sh](file:///home/raphael/Desktop/faculdade/mc859-dbpedia-intellectual-network/neo4j/load_dump.sh) detecta se o banco já possui dados em reinicializações futuras e pula a importação para proteger seu estado de trabalho).*
 
-```bash
-cp .env.example .env
-# Edite NEO4J_PASSWORD no arquivo .env antes de continuar.
-docker compose up -d
-docker compose logs -f neo4j
-```
-
+#### Acesso ao Banco
 Quando o log indicar que o servidor está disponível:
-
 - Neo4j Browser: <http://localhost:7474>
 - URI Bolt usada pelos scripts: `neo4j://127.0.0.1:7687`
 - Usuário: `neo4j`
-- Senha: o valor definido em `.env`
+- Senha: o valor definido em `.env` (padrão do projeto: `pagerank`)
 - Database: `neo4j`
 
 Verifique o servidor e o plugin GDS pelo terminal:
-
 ```bash
 docker compose exec neo4j cypher-shell \
   -u neo4j -p "$(sed -n 's/^NEO4J_PASSWORD=//p' .env)" \
   "RETURN gds.version() AS gdsVersion"
 ```
 
-Para parar ou reiniciar:
-
-```bash
-docker compose stop
-docker compose restart
-```
-
-`docker compose down` remove o contêiner, mas preserva os volumes. Use
-`docker compose down -v` somente quando quiser apagar também todo o banco.
+#### Comandos Úteis
+- **Parar os containers** (preservando os dados): `docker compose down` ou `docker compose stop`
+- **Subir os containers** (retomando de onde parou): `docker compose up -d`
+- **Limpar tudo e forçar re-importação do dump**: `docker compose down -v && docker compose up -d`
 
 No VS Code, instale a extensão **Neo4j for VS Code**
 (`neo4j-extensions.neo4j-for-vscode`) e crie uma conexão com os mesmos dados
@@ -235,6 +233,10 @@ não por comparação semântica com WordNet.
 ## Avaliação de algoritmos
 
 A fase de avaliação inclui scripts para análise de PageRank, comunidades e verificação de sanidade:
+
+- `python analysis/evaluate_custom_pagerank.py`
+  - avalia as três variações de PageRank (Baseline, Pessoas e Institucional) comparando-as com bases de referência externas (Stanford Encyclopedia of Philosophy e ranking CWUR 2026).
+  - gera `analysis/pagerank_comparison_report.txt` com as correlações de Spearman e Precision@k.
 
 - `python analysis/evaluate_pagerank.py --predictions neo4j/pagerank_scores.tsv --graph data/rede_intelectual.gexf`
   - compara os scores de `neo4j/pagerank_scores.tsv` com um PageRank interno calculado por `networkx` sobre `data/rede_intelectual.gexf`
