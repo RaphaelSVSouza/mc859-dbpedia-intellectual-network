@@ -94,7 +94,7 @@ Grafos de conhecimento representam entidades como vértices e relações semânt
 
 Este trabalho construiu uma rede intelectual a partir da DBpedia, concentrando-se em relações de influência, orientação acadêmica, formação, áreas de atuação, obras, religião e ideologia. A hipótese investigada é que a estrutura dessas relações contém sinais capazes de distinguir entidades relevantes e de recuperar parte da organização semântica presente no domínio. Em vez de considerar toda a DBpedia, foi produzido um subgrafo temático direcionado, adequado à execução de algoritmos de centralidade em hardware acadêmico convencional.
 
-A análise foi dividida em três partes. Primeiro, estudaram-se propriedades estruturais do grafo, como distribuição de graus e componentes fortemente conexas. Em seguida, aplicou-se PageRank para produzir rankings globais em três projeções distintas: o grafo completo, uma projeção voltada a pessoas e uma projeção institucional. Por fim, o Personalized PageRank foi empregado em um experimento de predição de arestas.
+A análise foi dividida em três partes. Primeiro, estudaram-se propriedades estruturais do grafo, como distribuição de graus e componentes fortemente conexas. Em seguida, aplicou-se PageRank ao grafo de treino em três projeções distintas: um baseline heterogêneo, uma projeção voltada a pessoas e uma projeção institucional. Por fim, o Personalized PageRank foi empregado em um experimento de predição de arestas.
 
 \subsection{Objetivo geral}
 
@@ -289,30 +289,28 @@ Como o Neo4j Browser renderiza no máximo 1.000 nós por padrão~\cite{neo4j-bro
 
 \subsection{Fundamentação}
 
-O PageRank foi proposto originalmente para estimar a importância de páginas da Web a partir da estrutura de hiperlinks~\cite{pagerank}. A ideia central é recursiva: um vértice recebe maior pontuação quando é apontado por vértices que também possuem alta pontuação. Em um grafo direcionado $G=(V,E)$, a atualização utilizada pode ser expressa por:
+O PageRank foi proposto originalmente para estimar a importância de páginas da Web a partir da estrutura de hiperlinks~\cite{pagerank}. A ideia central é recursiva: um vértice recebe maior pontuação quando é apontado por vértices que também possuem alta pontuação. Na convenção não normalizada utilizada pelo Neo4j GDS, para um grafo direcionado $G=(V,E)$, a recorrência pode ser expressa por:
 
 \begin{equation}
-PR(v)=\frac{1-d}{|V|}
-+d\sum_{u\in Pred(v)}\frac{PR(u)}{\operatorname{outdeg}(u)},
+PR^{(i+1)}(v)=(1-d)
++d\sum_{u\in Pred(v)}\frac{PR^{(i)}(u)}{\operatorname{outdeg}(u)},
 \label{eq:pagerank}
 \end{equation}
 
-onde $Pred(v)$ é o conjunto de predecessores de $v$, $\operatorname{outdeg}(u)$ é o grau de saída de $u$ e $d$ é o fator de amortecimento. O termo de teletransporte representa a possibilidade de abandonar a caminhada atual e reiniciá-la em outro vértice, reduzindo o efeito de sumidouros e ciclos fechados.
+onde $Pred(v)$ é o conjunto de predecessores de $v$, $\operatorname{outdeg}(u)$ é o grau de saída de $u$ e $d$ é o fator de amortecimento. O termo $(1-d)$ injeta uma pontuação básica em cada vértice a cada iteração. Diferentemente da formulação probabilística que utiliza $(1-d)/|V|$, o GDS retorna por padrão escores brutos não normalizados; essa diferença de escala não altera a ordenação dos vértices~\cite{neo4j-pagerank}.
 
-Os experimentos utilizaram a implementação do Neo4j GDS, com fator de amortecimento $d=0{,}85$ e limite de 20 iterações. Esses valores também correspondem aos padrões documentados pela biblioteca~\cite{neo4j-pagerank}. As arestas foram tratadas como não ponderadas. O GDS produz escores que não precisam somar 1; como a análise utiliza a ordem relativa, essa escala não altera os rankings.
+Os experimentos utilizaram a implementação do Neo4j GDS, com fator de amortecimento $d=0{,}85$ e limite de 20 iterações. Esses valores também correspondem aos padrões documentados pela biblioteca~\cite{neo4j-pagerank}. As arestas foram tratadas como não ponderadas e nenhum escalonador foi configurado. Como a análise utiliza a ordem relativa, a ausência de normalização não altera os rankings.
 
 \subsection{Pseudocódigo}
 
 \begin{lstlisting}[caption={Pseudocódigo do PageRank iterativo.},label={lst:pagerank}]
 função PageRank(Grafo G, real d, inteiro maxIterações):
-    N <- quantidade de vértices de G
-
     para cada vértice v de G:
-        PR[v] <- 1 / N
+        PR[v] <- 1
 
     para iteração <- 1 até maxIterações:
         para cada vértice v de G:
-            novoPR[v] <- (1 - d) / N
+            novoPR[v] <- 1 - d
 
         para cada vértice u de G:
             se grauSaída(u) > 0:
@@ -320,24 +318,26 @@ função PageRank(Grafo G, real d, inteiro maxIterações):
                 para cada vizinho de saída v de u:
                     novoPR[v] <- novoPR[v] + parcela
             senão:
-                distribuir d * PR[u] / N entre todos os vértices
+                u não produz contribuição de saída nesta iteração
 
         PR <- novoPR
 
     retornar PR
 \end{lstlisting}
 
-Na execução efetiva, a iteração e o tratamento de vértices sem saída são realizados internamente por \texttt{gds.pageRank}. O script \texttt{neo4j/pagerank.py} é responsável por criar a projeção apropriada, executar o algoritmo, gravar os escores na propriedade \texttt{pageRank} e exportar o ranking para TSV.
+Na execução efetiva, a iteração e o tratamento de vértices sem saída são realizados internamente por \texttt{gds.pageRank}. O script \texttt{neo4j/pagerank.py} é responsável por criar a projeção apropriada, executar o algoritmo, gravar os escores na propriedade \texttt{pageRank} e exportar o ranking para TSV. O pseudocódigo explicita a recorrência dos escores brutos adotada pelo GDS, sem aplicar normalização posterior.
 
 \subsection{Projeções avaliadas}
 
-O primeiro experimento executou o PageRank sobre o grafo completo, preservando a orientação natural das relações. Esperava-se encontrar, nas primeiras posições, figuras semelhantes às observadas no núcleo exploratório da Figura~\ref{fig:nucleo}, como Immanuel Kant, Leo Strauss e Karl Marx. O ranking obtido, entretanto, foi bastante diferente: além de instituições, religiões e áreas do conhecimento, sua primeira posição geral foi ocupada por Vaklush Tolev, figura búlgara associada à religião e à teologia~\cite{vaklush-dbpedia}, com escore 488,2684.
+No fluxo integrado dos experimentos, o conjunto de teste é selecionado e removido antes da execução dos três cenários de PageRank, conforme detalhado na Subseção~\ref{subsec:split}. Assim, as projeções são construídas sobre $G_{treino}=G\setminus E_{teste}$, que preserva todos os vértices e contém as relações não ocultadas. Neste relatório, \emph{baseline} designa a projeção heterogênea com todos os nove tipos de relacionamento disponíveis em $G_{treino}$, e não o grafo original antes da separação entre treino e teste.
+
+O primeiro experimento executou o PageRank sobre esse baseline, preservando a orientação natural das relações. Esperava-se encontrar, nas primeiras posições, figuras semelhantes às observadas no núcleo exploratório da Figura~\ref{fig:nucleo}, como Immanuel Kant, Leo Strauss e Karl Marx. O ranking obtido, entretanto, foi bastante diferente: além de instituições, religiões e áreas do conhecimento, sua primeira posição geral foi ocupada por Vaklush Tolev, figura búlgara associada à religião e à teologia~\cite{vaklush-dbpedia}, com escore 488,2684.
 
 A investigação desse resultado mostrou que o PageRank não mede diretamente notoriedade histórica ou grau no núcleo visualizado. Ele modela um fluxo de prestígio que percorre as arestas na direção projetada, de modo que tanto o tipo quanto a orientação de uma relação determinam onde a pontuação se acumula. No subgrafo, Tolev recebe arestas \texttt{INFLUENCED} de oito tradições religiosas ou mitológicas. Entre elas, \textit{Islam} possui 3.004 arestas de entrada, PageRank 302,2443 e apenas uma aresta de saída; \textit{Christianity} possui 2.617 arestas de entrada, PageRank 223,9322 e também apenas uma saída. Como essas saídas apontam para Tolev, os dois vértices transferem a ele, respectivamente, cerca de 256,91 e 190,34 pontos após a aplicação do fator de amortecimento. Forma-se, assim, um funil no qual a centralidade acumulada por conceitos religiosos é quase integralmente direcionada a uma única pessoa.
 
 Esse diagnóstico motivou a criação de projeções específicas e o teste da inversão das relações pessoais. Foram definidos três cenários para investigar o efeito da seleção e da orientação das arestas.
 
-\textbf{Baseline.} A projeção inclui os nove tipos finais de relacionamento, em suas orientações naturais. Esse experimento mede centralidade global no grafo heterogêneo e serve como referência para as demais configurações.
+\textbf{Baseline.} A projeção inclui os nove tipos finais de relacionamento presentes no grafo de treino, em suas orientações naturais. Esse experimento mede centralidade global no grafo heterogêneo remanescente e serve como referência para as demais configurações.
 
 \textbf{Pessoas.} A projeção inclui somente \texttt{INFLUENCED}, \texttt{DOCTORALSTUDENT} e \texttt{ACADEMICSTUDENT}, todos com orientação invertida pelo GDS. No arquivo final, essas relações apontam do mentor para o discípulo. Para o PageRank, porém, essa direção transfere pontuação ao discípulo. A inversão faz a caminhada seguir do discípulo para o mentor, permitindo interpretar o escore como prestígio recebido de pessoas influenciadas ou orientadas. No caso de Tolev, as arestas passam a sair dele em direção aos conceitos religiosos, eliminando o funil observado no baseline e aproximando o ranking da interpretação desejada de influência intelectual.
 
@@ -506,7 +506,7 @@ Para universidades, o baseline obteve Precision@10 de 100\%, enquanto a projeç�
   \end{tabular}
 \end{table}
 
-A projeção institucional concentrou as primeiras posições em universidades reconhecidas, demonstrando que \texttt{ALMAMATER} oferece um sinal relevante de prestígio. Entretanto, ela não superou o baseline segundo as métricas adotadas. Isso sugere que as demais relações do grafo completo também carregam informação útil para instituições ou que a composição institucional escolhida ainda preserva ruído suficiente para alterar as primeiras posições.
+A projeção institucional concentrou as primeiras posições em universidades reconhecidas, demonstrando que \texttt{ALMAMATER} oferece um sinal relevante de prestígio. Entretanto, ela não superou o baseline segundo as métricas adotadas. Isso sugere que as demais relações da projeção heterogênea de treino também carregam informação útil para instituições ou que a composição institucional escolhida ainda preserva ruído suficiente para alterar as primeiras posições.
 
 Os resultados mostram que uma projeção especializada não é automaticamente superior. No caso de pessoas, a direção original contrariava o fluxo de prestígio desejado e sua inversão produziu ganho expressivo. No caso institucional, \texttt{ALMAMATER} já possuía a direção adequada, e a restrição do conjunto de relações não trouxe melhora mensurável. A seleção das arestas deve, portanto, ser fundamentada na semântica de cada relação e validada empiricamente.
 
@@ -524,6 +524,7 @@ O Personalized PageRank (PPR) modifica o mecanismo de teletransporte do PageRank
 Valores elevados de $\pi_s(t)$ indicam que $t$ é estruturalmente alcançável e relevante a partir de $s$. O PPR não avalia diretamente o significado textual das entidades: ele mede proximidade topológica condicionada à orientação e aos tipos de aresta. Por essa razão, a comparação com similaridade lexical da WordNet, prevista na proposta inicial, foi substituída por uma avaliação de predição de ligações. Esse protocolo testa diretamente se a estrutura conhecida é capaz de recuperar relações reais deliberadamente ocultadas.
 
 \subsection{Construção dos conjuntos de treino e teste}
+\label{subsec:split}
 
 O script \texttt{neo4j/split\_edges.py} parte das 426.617 arestas e calcula iterativamente o núcleo de ordem 5 do grafo não direcionado subjacente. Permanecem nesse núcleo 2.698 vértices e 14.233 arestas. O filtro é usado apenas para definir quais arestas podem ser ocultadas; as regiões periféricas continuam disponíveis no grafo de treino.
 
@@ -535,7 +536,7 @@ As arestas escolhidas são registradas em \texttt{neo4j/test\_edges.tsv}, marcad
 
 O script \texttt{neo4j/ppr.py} agrupa as arestas de teste por tipo de relação. Para cada tipo $r$, cria-se uma projeção GDS contendo somente relações desse tipo em orientação natural. Em seguida, para cada origem distinta $s$ presente no gabarito, executa-se \texttt{gds.pageRank.stream} com $s$ como \texttt{sourceNode}, fator de amortecimento 0,85, limite de 20 iterações e retenção dos 500 destinos de maior escore, excluindo a própria origem. As fontes são processadas em lotes de 50 e cada projeção é descartada após o término do respectivo tipo, reduzindo o consumo de memória.
 
-Para uma aresta oculta $(s,r,t)$, o ranking produzido a partir de $(s,r)$ é interpretado como uma lista de destinos candidatos. A predição é considerada recuperada quando $t$ aparece nessa lista. O procedimento completo é sintetizado no pseudocódigo a seguir.
+Para uma aresta oculta $(s,r,t)$, o ranking produzido a partir de $(s,r)$ é interpretado como uma lista de destinos candidatos. A predição é considerada recuperada quando $t$ aparece nessa lista. A avaliação é não filtrada: o script exclui a própria origem, mas não remove da lista os destinos que já possuem uma ligação observada do tipo $r$ com $s$ em $G_{treino}$. Essas ligações conhecidas podem ocupar posições no Top-$K$, tornando a avaliação mais conservadora, mas não provocam vazamento da aresta de teste, que foi removida antes da projeção. O procedimento completo é sintetizado no pseudocódigo a seguir.
 
 \begin{lstlisting}[caption={Pseudocódigo da avaliação do PPR por predição de ligações.},label={lst:ppr}]
 função AvaliarPPR(G, k=5, proporçãoTeste=0.10, K=500):
