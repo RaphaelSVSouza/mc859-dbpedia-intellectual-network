@@ -45,8 +45,7 @@ gráficos da entrega parcial em [`docs/figuras/`](docs/figuras/).
 
 ## Onde estão os dados
 
-Os artefatos volumosos da pipeline **não** estão neste repositório — estão
-hospedados no **Mendeley Data** sob DOI permanente:
+Os artefatos volumosos da pipeline **não** estão neste repositório — estão hospedados no **Mendeley Data** sob DOI permanente:
 
 | Arquivo                                       | Descrição                                | Tamanho |
 | --------------------------------------------- | ---------------------------------------- | ------- |
@@ -54,8 +53,10 @@ hospedados no **Mendeley Data** sob DOI permanente:
 | `rede_intelectual_final.nt`                   | Triplas filtradas, reorientadas e únicas | ~58 MB  |
 | `rede_intelectual.gexf`                       | Grafo direcionado em GEXF                | ~47 MB  |
 | `rede_intelectual.graphml`                    | Grafo direcionado em GraphML             | ~82 MB  |
+| `neo4j.dump`                                  | Dump de importação do banco Neo4j        | ~310 MB |
 
-> **DOI:** `[a ser preenchido]`
+> **DOI (Em processo de revisão):** [10.17632/mx25zmdxg2.1](https://doi.org/10.17632/mx25zmdxg2.1)
+> **Link do Dataset:** [Mendeley Data - Antology-Graph](https://data.mendeley.com/datasets/mx25zmdxg2/1)
 
 ## Como reproduzir o grafo
 
@@ -184,19 +185,20 @@ A configuração recomendada para desenvolvimento está em [compose.yaml](file:/
 
 #### Importação Automática de Dumps
 O ambiente está configurado para **carregar automaticamente um dump do banco** na primeira inicialização (quando os volumes estiverem limpos).
-1. Coloque o dump em `backups/neo4j.dump`.
-2. Configure a senha inicial no `.env` (copiando do `.env.example`).
-3. Inicie o banco do zero:
+1. Baixe o arquivo de dump na pasta compartilhada do [Google Drive](https://drive.google.com/drive/folders/1s8zgb1wgWI-WAhUEZvB0qDljOAyWN4BZ?usp=sharing).
+2. Salve o arquivo no diretório `backups/` com o nome exato: `neo4j.dump`.
+3. Configure a senha inicial no `.env` (copiando do `.env.example`).
+4. Inicie o banco do zero:
    ```bash
    docker compose down -v
    docker compose up -d
    ```
-4. Acompanhe os logs para ver a importação e a instalação automática do GDS:
+5. Acompanhe os logs para ver a importação e a instalação automática do GDS:
    ```bash
    docker compose logs -f neo4j
    ```
 
-O script [neo4j/load_dump.sh](neo4j/load_dump.sh) detecta se o banco já possui dados em reinicializações futuras e pula a importação automática para preservar seu estado de trabalho.
+O script [neo4j/load_dump.sh](file:///home/raphael/Desktop/faculdade/mc859-dbpedia-intellectual-network/neo4j/load_dump.sh) detecta se o banco já possui dados em reinicializações futuras e pula a importação automática para preservar seu estado de trabalho.
 
 #### Restore manual de backup Neo4j
 Se você já tem um backup Neo4j (`.dump`), há duas formas de restaurá-lo:
@@ -351,12 +353,12 @@ Se este trabalho for útil em pesquisa ou ensino, por favor cite o dataset:
 ```bibtex
 @dataset{souza_felix_2026_rede_intelectual,
   author    = {Souza, Raphael Salles Vitor de and Félix, Lucas},
-  title     = {Rede Intelectual: subgrafo direcionado da DBpedia
-               (mappingbased-objects, lang=en) com 11 predicados temáticos},
+  title     = {Antology-Graph},
   year      = {2026},
   publisher = {Mendeley Data},
   version   = {V1},
-  doi       = {[a ser preenchido]},
+  doi       = {10.17632/mx25zmdxg2.1},
+  url       = {https://data.mendeley.com/datasets/mx25zmdxg2/1},
   note      = {Disciplina MC859 — Projeto em Teoria da Computação, UNICAMP.
                Predicados: influenced, doctoralStudent, academicStudent,
                almaMater, knownFor, notableWork, field, religion, ideology
