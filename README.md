@@ -184,7 +184,7 @@ A configuração recomendada para desenvolvimento está em [compose.yaml](file:/
 
 #### Importação Automática de Dumps
 O ambiente está configurado para **carregar automaticamente um dump do banco** na primeira inicialização (quando os volumes estiverem limpos).
-1. Certifique-se de que o seu dump esteja localizado em `backups/neo4j.dump`.
+1. Coloque o dump em `backups/neo4j.dump`.
 2. Configure a senha inicial no `.env` (copiando do `.env.example`).
 3. Inicie o banco do zero:
    ```bash
@@ -195,7 +195,21 @@ O ambiente está configurado para **carregar automaticamente um dump do banco** 
    ```bash
    docker compose logs -f neo4j
    ```
-*(O script [load_dump.sh](file:///home/raphael/Desktop/faculdade/mc859-dbpedia-intellectual-network/neo4j/load_dump.sh) detecta se o banco já possui dados em reinicializações futuras e pula a importação para proteger seu estado de trabalho).*
+
+O script [neo4j/load_dump.sh](neo4j/load_dump.sh) detecta se o banco já possui dados em reinicializações futuras e pula a importação automática para preservar seu estado de trabalho.
+
+#### Restore manual de backup Neo4j
+Se você já tem um backup Neo4j (`.dump`), há duas formas de restaurá-lo:
+
+- **Via Docker**: coloque o arquivo em `backups/neo4j.dump` e reinicie o ambiente com `docker compose down -v && docker compose up -d`.
+- **Via Neo4j Desktop**: crie uma nova instância, informe a senha, use “Load from .dump, .backup or .tar” para selecionar o arquivo e, depois que o banco estiver pronto, instale o plugin Graph Data Science.
+
+Após restaurar o dump, você pode executar os scripts de análise Neo4j normalmente, por exemplo:
+
+```powershell
+$env:NEO4J_PASSWORD = "<SUA_SENHA>"
+python neo4j/workflow.py --data-path data/rede_intelectual_final.nt --password $env:NEO4J_PASSWORD --db neo4j
+```
 
 #### Acesso ao Banco
 Quando o log indicar que o servidor está disponível:
