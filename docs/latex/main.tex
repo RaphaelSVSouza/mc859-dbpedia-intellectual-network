@@ -12,6 +12,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{enumitem}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{csquotes}
@@ -31,12 +32,16 @@
   keepspaces=true,
   showstringspaces=false,
   breaklines=true,
+  inputencoding=utf8,
+  extendedchars=true,
   literate=
     {á}{{\'a}}1 {à}{{\`a}}1 {ã}{{\~a}}1 {â}{{\^a}}1
     {é}{{\'e}}1 {ê}{{\^e}}1 {í}{{\'i}}1
     {ó}{{\'o}}1 {õ}{{\~o}}1 {ô}{{\^o}}1
     {ú}{{\'u}}1 {ç}{{\c c}}1
-    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1
+    {Á}{{\'A}}1 {À}{{\`A}}1 {Ã}{{\~A}}1 {Â}{{\^A}}1
+    {É}{{\'E}}1 {Ê}{{\^E}}1 {Í}{{\'I}}1
+    {Ó}{{\'O}}1 {Õ}{{\~O}}1 {Ô}{{\^O}}1
     {Ú}{{\'U}}1 {Ç}{{\c C}}1
 }
 
@@ -89,7 +94,7 @@ Grafos de conhecimento representam entidades como vértices e relações semânt
 
 Este trabalho construiu uma rede intelectual a partir da DBpedia, concentrando-se em relações de influência, orientação acadêmica, formação, áreas de atuação, obras, religião e ideologia. A hipótese investigada é que a estrutura dessas relações contém sinais capazes de distinguir entidades relevantes e de recuperar parte da organização semântica presente no domínio. Em vez de considerar toda a DBpedia, foi produzido um subgrafo temático direcionado, adequado à execução de algoritmos de centralidade em hardware acadêmico convencional.
 
-A análise foi dividida em três partes. Primeiro, estudaram-se propriedades estruturais do grafo, como distribuição de graus e componentes fortemente conexas. Em seguida, aplicou-se PageRank para produzir rankings globais em três projeções distintas: o grafo completo, uma projeção voltada a pessoas e uma projeção institucional. Por fim, o Personalized PageRank foi empregado em um experimento de predição de arestas. Esta última etapa será apresentada na continuação do relatório.
+A análise foi dividida em três partes. Primeiro, estudaram-se propriedades estruturais do grafo, como distribuição de graus e componentes fortemente conexas. Em seguida, aplicou-se PageRank para produzir rankings globais em três projeções distintas: o grafo completo, uma projeção voltada a pessoas e uma projeção institucional. Por fim, o Personalized PageRank foi empregado em um experimento de predição de arestas.
 
 \subsection{Objetivo geral}
 
@@ -235,12 +240,7 @@ A fragmentação é coerente com a semântica temporal e hierárquica de parte d
 
 Para produzir uma visualização legível, foi extraído um subgrafo em três etapas: seleção dos 500 vértices de maior grau no grafo completo, remoção dos vértices com grau inferior a 2 dentro desse subconjunto e escolha da maior componente fracamente conexa remanescente. O resultado contém 19 vértices e 60 arestas. A redução não foi utilizada no cálculo dos rankings; sua finalidade foi exclusivamente exploratória e visual.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.92\linewidth]{grafo_rede_intelectual.png}
-  \caption{Núcleo estrutural obtido a partir dos vértices de maior grau. O tamanho dos vértices é proporcional ao grau total e as cores representam comunidades identificadas por Louvain.}
-  \label{fig:nucleo}
-\end{figure}
+O núcleo resultante é apresentado na Figura~\ref{fig:nucleo}, em conjunto com a amostra global produzida posteriormente no Neo4j Browser.
 
 \section{Instanciação no Neo4j}
 
@@ -263,6 +263,27 @@ O banco pode ser preparado de duas maneiras. Na primeira, utiliza-se o Neo4j Des
 O mesmo dump pode ser utilizado pelo ambiente Docker, que o restaura automaticamente na primeira inicialização. A imagem Enterprise foi utilizada porque o dump está armazenado no formato \texttt{block}. O arquivo \texttt{compose.yaml} também instala os plugins APOC e Graph Data Science. Como o dump possui aproximadamente 325~MB e excede o limite de tamanho de arquivo do GitHub, ele foi disponibilizado em uma \href{https://drive.google.com/drive/folders/1s8zgb1wgWI-WAhUEZvB0qDljOAyWN4BZ?usp=sharing}{pasta externa no Google Drive}, acessível ao professor e aos autores do projeto.
 
 Após a carga, o GDS cria projeções em memória com os tipos e orientações de relacionamentos definidos para cada experimento. Essas projeções não alteram a topologia armazenada no banco. Os escores calculados, entretanto, são gravados na propriedade \texttt{pageRank} dos vértices e exportados para arquivos TSV.
+
+Como o Neo4j Browser renderiza no máximo 1.000 nós por padrão~\cite{neo4j-browser-settings}, não é possível representar simultaneamente os 326.270 vértices do grafo. A Figura~\ref{fig:neo4j-global} apresenta uma amostra global centrada nos 20 vértices de maior grau, limitada a 40 relações incidentes por vértice. A imagem não representa uma componente isolada nem a totalidade da rede; seu objetivo é mostrar a heterogeneidade dos principais hubs e de suas vizinhanças.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.25\textheight,keepaspectratio]{grafo_rede_intelectual.png}
+    \caption{Núcleo estrutural com 19 vértices e 60 arestas.}
+    \label{fig:nucleo}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.25\textheight,keepaspectratio]{neo4j_visao_global.pdf}
+    \caption{Amostra centrada nos 20 vértices de maior grau.}
+    \label{fig:neo4j-global}
+  \end{subfigure}
+  \caption{Duas visualizações complementares da rede. Em (a), o núcleo denso usado na análise exploratória, com tamanho proporcional ao grau e cores definidas por Louvain. Em (b), a amostra global do Neo4j Browser, limitada a 40 relações incidentes por vértice e a no máximo 800 relações.}
+  \label{fig:visoes-gerais}
+\end{figure}
 
 \section{PageRank}
 
@@ -336,6 +357,34 @@ Esse diagnóstico motivou a criação de projeções específicas e o teste da i
     \bottomrule
   \end{tabularx}
 \end{table}
+
+A Figura~\ref{fig:neo4j-segmentos} apresenta os três recortes utilizados para inspecionar visualmente os experimentos. As setas exibem a orientação armazenada no banco; no painel de pessoas, portanto, ainda não está aplicada a inversão realizada somente na projeção em memória do GDS.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}{0.58\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{neo4j_funil_baseline.pdf}
+    \caption{Funil do baseline em torno de Vaklush Tolev.}
+    \label{fig:neo4j-funil}
+  \end{subfigure}
+
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{neo4j_segmento_pessoas.pdf}
+    \caption{Relações de influência e orientação em torno de figuras do núcleo estrutural.}
+    \label{fig:neo4j-pessoas}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{neo4j_segmento_institucional.pdf}
+    \caption{Universidades selecionadas e seus ex-alunos de maior grau.}
+    \label{fig:neo4j-institucional}
+  \end{subfigure}
+  \caption{Recortes do grafo produzidos no Neo4j Browser para examinar os três cenários de PageRank. Em (a), arestas \texttt{RELIGION} alimentam tradições que apontam para Tolev por \texttt{INFLUENCED}; em (b), são mostradas as direções originais das relações pessoais; em (c), \texttt{ALMAMATER} aponta dos ex-alunos para as instituições.}
+  \label{fig:neo4j-segmentos}
+\end{figure}
 
 \section{Avaliação do PageRank}
 
@@ -460,6 +509,168 @@ Para universidades, o baseline obteve Precision@10 de 100\%, enquanto a projeç�
 A projeção institucional concentrou as primeiras posições em universidades reconhecidas, demonstrando que \texttt{ALMAMATER} oferece um sinal relevante de prestígio. Entretanto, ela não superou o baseline segundo as métricas adotadas. Isso sugere que as demais relações do grafo completo também carregam informação útil para instituições ou que a composição institucional escolhida ainda preserva ruído suficiente para alterar as primeiras posições.
 
 Os resultados mostram que uma projeção especializada não é automaticamente superior. No caso de pessoas, a direção original contrariava o fluxo de prestígio desejado e sua inversão produziu ganho expressivo. No caso institucional, \texttt{ALMAMATER} já possuía a direção adequada, e a restrição do conjunto de relações não trouxe melhora mensurável. A seleção das arestas deve, portanto, ser fundamentada na semântica de cada relação e validada empiricamente.
+
+\section{Personalized PageRank e predição de ligações}
+
+\subsection{Motivação e formulação}
+
+O Personalized PageRank (PPR) modifica o mecanismo de teletransporte do PageRank. Em vez de reiniciar a caminhada aleatória uniformemente em qualquer vértice, concentra-se a probabilidade de reinício em um vértice fonte $s$. Seja $P$ a matriz de transição do grafo, $\mathbf{e}_s$ o vetor que vale 1 em $s$ e 0 nos demais vértices e $d$ o fator de amortecimento. O vetor personalizado é obtido iterativamente por
+
+\begin{equation}
+\boldsymbol{\pi}_s^{(i+1)}=(1-d)\mathbf{e}_s+dP^{\mathsf{T}}\boldsymbol{\pi}_s^{(i)}.
+\label{eq:ppr}
+\end{equation}
+
+Valores elevados de $\pi_s(t)$ indicam que $t$ é estruturalmente alcançável e relevante a partir de $s$. O PPR não avalia diretamente o significado textual das entidades: ele mede proximidade topológica condicionada à orientação e aos tipos de aresta. Por essa razão, a comparação com similaridade lexical da WordNet, prevista na proposta inicial, foi substituída por uma avaliação de predição de ligações. Esse protocolo testa diretamente se a estrutura conhecida é capaz de recuperar relações reais deliberadamente ocultadas.
+
+\subsection{Construção dos conjuntos de treino e teste}
+
+O script \texttt{neo4j/split\_edges.py} parte das 426.617 arestas e calcula iterativamente o núcleo de ordem 5 do grafo não direcionado subjacente. Permanecem nesse núcleo 2.698 vértices e 14.233 arestas. O filtro é usado apenas para definir quais arestas podem ser ocultadas; as regiões periféricas continuam disponíveis no grafo de treino.
+
+Com semente pseudoaleatória 42, selecionam-se 10\% das arestas elegíveis, resultando em 1.423 casos de teste. Uma aresta $(s,r,t)$ só pode ser removida se, após sua retirada, a origem mantiver ao menos duas saídas, o destino mantiver ao menos uma entrada e ambos preservarem grau total mínimo 3 dentro do núcleo. Essas restrições evitam casos triviais em que a própria ocultação isola os vértices avaliados.
+
+As arestas escolhidas são registradas em \texttt{neo4j/test\_edges.tsv}, marcadas temporariamente no banco e então removidas fisicamente. O grafo restante constitui $G_{treino}$ e o TSV funciona como gabarito $E_{teste}$. Como as ligações avaliadas não participam das projeções do GDS, o algoritmo não pode utilizar a resposta durante o cálculo, prevenindo vazamento de dados.
+
+\subsection{Execução do PPR}
+
+O script \texttt{neo4j/ppr.py} agrupa as arestas de teste por tipo de relação. Para cada tipo $r$, cria-se uma projeção GDS contendo somente relações desse tipo em orientação natural. Em seguida, para cada origem distinta $s$ presente no gabarito, executa-se \texttt{gds.pageRank.stream} com $s$ como \texttt{sourceNode}, fator de amortecimento 0,85, limite de 20 iterações e retenção dos 500 destinos de maior escore, excluindo a própria origem. As fontes são processadas em lotes de 50 e cada projeção é descartada após o término do respectivo tipo, reduzindo o consumo de memória.
+
+Para uma aresta oculta $(s,r,t)$, o ranking produzido a partir de $(s,r)$ é interpretado como uma lista de destinos candidatos. A predição é considerada recuperada quando $t$ aparece nessa lista. O procedimento completo é sintetizado no pseudocódigo a seguir.
+
+\begin{lstlisting}[caption={Pseudocódigo da avaliação do PPR por predição de ligações.},label={lst:ppr}]
+função AvaliarPPR(G, k=5, proporçãoTeste=0.10, K=500):
+    C <- k-core de ordem k do grafo subjacente de G
+    E_teste <- selecionar arestas de C preservando graus mínimos
+    G_treino <- G sem E_teste
+
+    para cada tipo de relação r presente em E_teste:
+        G_r <- projetar em G_treino somente as relações do tipo r
+
+        para cada origem distinta s das arestas (s, r, t):
+            ranking[s, r] <- Top-K do PPR(G_r, fonte=s)
+
+        descartar G_r
+
+    para cada aresta (s, r, t) em E_teste:
+        rank[s, r, t] <- posição de t em ranking[s, r]
+
+    retornar HitRate@K, MRR e recuperação no Top-500
+\end{lstlisting}
+
+\subsection{Métricas}
+
+O HitRate@$k$ mede a proporção de arestas ocultadas cujo destino verdadeiro aparece entre os $k$ primeiros candidatos. Para cada caso há um destino de teste específico; por isso, HitRate é mais apropriado que Precision, que dividiria o número de itens relevantes recuperados pelo total de $k$ recomendações:
+
+\begin{equation}
+HitRate@k=\frac{1}{|E_{teste}|}
+\sum_{(s,r,t)\in E_{teste}}
+\mathbb{1}\!\left[t\in Top_k(s,r)\right].
+\label{eq:hitrate}
+\end{equation}
+
+O Mean Reciprocal Rank (MRR) considera também a posição do destino correto. Acertos nas primeiras posições recebem maior peso, enquanto arestas não recuperadas contribuem com zero:
+
+\begin{equation}
+MRR=\frac{1}{|E_{teste}|}
+\sum_{(s,r,t)\in E_{teste}}
+\begin{cases}
+1/\operatorname{rank}_{s,r}(t), & \text{se }t\text{ foi recuperado};\\
+0, & \text{caso contrário}.
+\end{cases}
+\label{eq:mrr}
+\end{equation}
+
+O código denomina \textit{coverage} a fração de arestas encontradas no Top-500. No relatório, essa medida é chamada de taxa de recuperação no Top-500 para distingui-la da noção tradicional de cobertura de usuários ou itens em sistemas de recomendação.
+
+\subsection{Resultados e interpretação}
+
+As métricas foram recalculadas diretamente a partir das 1.423 linhas do artefato final \path{neo4j/ppr_predictions.tsv}. O PPR recuperou 439 destinos no Top-500, equivalentes a 30,85\% do conjunto de teste. Entretanto, apenas 4,22\% das arestas apareceram nas vinte primeiras posições, e o MRR foi 0,011418. A Tabela~\ref{tab:ppr-resultados} resume os resultados.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Resultados do PPR na tarefa de predição de ligações.}
+  \label{tab:ppr-resultados}
+  \begin{tabular}{lr@{\qquad}lr}
+    \toprule
+    Métrica & Valor & Métrica & Valor \\
+    \midrule
+    Arestas de teste & 1.423 & Recuperadas no Top-500 & 439 (30,85\%) \\
+    HitRate@1 & 0,002811 & HitRate@5 & 0,011947 \\
+    HitRate@10 & 0,021082 & HitRate@20 & 0,042164 \\
+    MRR & 0,011418 & & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+O desempenho varia fortemente entre os tipos de relacionamento. Das 736 arestas \texttt{INFLUENCED} avaliadas, 436 foram encontradas no Top-500, uma taxa de 59,24\%. Para \texttt{IDEOLOGY}, houve 3 acertos em 462 casos; nos demais 225 casos, distribuídos entre \texttt{RELIGION}, \texttt{ALMAMATER}, \texttt{FIELD}, \texttt{DOCTORALSTUDENT}, \texttt{ACADEMICSTUDENT} e \texttt{KNOWNFOR}, não houve recuperação.
+
+Essa diferença é explicada pela topologia das projeções. \texttt{INFLUENCED} forma cadeias direcionadas nas quais pessoas podem atuar simultaneamente como origem e destino, oferecendo caminhos alternativos até uma ligação ocultada. Relações como \texttt{ALMAMATER}, \texttt{RELIGION} e \texttt{FIELD} são predominantemente bipartidas: pessoas apontam para instituições, religiões ou áreas que raramente possuem saídas do mesmo tipo. Quando a aresta direta é removida, o destino tende a se tornar inalcançável naquela projeção. Assim, a taxa global de 30,85\% é concentrada quase inteiramente na rede de influência.
+
+Os valores baixos de HitRate nos primeiros cortes e de MRR mostram ainda que muitos dos destinos recuperados aparecem longe do topo. O experimento confirma que o PPR captura proximidade estrutural quando existem caminhos direcionados alternativos, mas não substitui informação semântica ausente. Projeções não direcionadas, combinações de diferentes tipos de relação ou pesos específicos poderiam ampliar a conectividade, porém constituiriam hipóteses distintas e exigiriam nova validação para evitar que o ganho decorresse apenas da introdução artificial de caminhos.
+
+\section{Uso de inteligência artificial generativa}
+
+Ferramentas de IA generativa foram utilizadas como apoio à análise exploratória, à programação, à infraestrutura e à redação técnica. Nos estágios iniciais, elas auxiliaram a inspecionar o dump da DBpedia, que contém milhões de triplas, e a identificar predicados e padrões compatíveis com o recorte intelectual proposto. Também apoiaram a elaboração e a revisão dos scripts de filtragem, cálculo de métricas, raspagem da SEP, consultas Cypher e automação do ambiente com Docker Compose.
+
+O Antigravity foi empregado principalmente como copiloto de infraestrutura. A ferramenta auxiliou no diagnóstico de conflitos entre o Neo4j Desktop e o Docker, incluindo portas ocupadas, volumes bloqueados, permissões de arquivos e problemas de DNS e IPv6 na JVM. Também apoiou a identificação da incompatibilidade entre o formato \texttt{block} do dump e a edição Community, a migração da composição para Neo4j Enterprise e a criação do \texttt{load\_dump.sh}, responsável por restaurar automaticamente o banco sem sobrescrever volumes já inicializados.
+
+O Codex, da OpenAI, foi utilizado para inspecionar o repositório e cruzar documentação, código e artefatos; formalizar as métricas e os pseudocódigos; revisar a interpretação dos experimentos; elaborar consultas Cypher para as visualizações; estruturar o relatório em LaTeX e verificar sua compilação e paginação. Em particular, a ferramenta ajudou a detectar divergências entre execuções do PPR, razão pela qual as métricas finais foram recalculadas diretamente a partir do TSV de predições.
+
+Todas as sugestões foram avaliadas pelos autores. A definição do problema, a escolha dos dados e experimentos, a execução dos programas, a inspeção dos resultados e a decisão de aceitar, modificar ou rejeitar cada proposta permaneceram sob responsabilidade de Raphael Salles Vitor de Souza e Lucas Félix. Os valores apresentados no relatório foram produzidos pelos scripts e artefatos do projeto, e não estimados pelos modelos generativos.
+
+\section{Conclusão}
+
+Este trabalho transformou um dump de 22,8 milhões de triplas da DBpedia em uma rede intelectual direcionada, reproduzível e adequada à análise em Neo4j. A seleção e a normalização de 11 predicados resultaram em 326.270 vértices e 426.617 arestas. A rede apresentou forte heterogeneidade de graus e elevada fragmentação dirigida: 99,97\% das componentes fortemente conexas são unitárias. Essas propriedades não são apenas descritivas, pois condicionam diretamente o funcionamento dos algoritmos de caminhada aleatória.
+
+Os experimentos de PageRank mostraram que a semântica e a orientação das arestas são determinantes. A projeção invertida de pessoas elevou a correlação de Spearman com a SEP de 0,230920 para 0,499841 e o Overlap@50 de 4\% para 40\%. Já a projeção institucional não superou o baseline, indicando que restringir relações não garante melhoria automática. O caso de Vaklush Tolev evidenciou como hubs religiosos e arestas orientadas podem criar funis de prestígio inesperados.
+
+Na predição de ligações, o PPR recuperou 30,85\% das arestas ocultadas no Top-500, mas obteve HitRate@20 de apenas 4,22\% e MRR de 0,011418. Quase todos os acertos vieram de \texttt{INFLUENCED}, cuja topologia oferece caminhos alternativos; relações bipartidas, como \texttt{ALMAMATER} e \texttt{RELIGION}, tornaram seus destinos inalcançáveis após a ocultação da ligação direta. Conclui-se que a topologia contém sinal útil de influência, mas proximidade estrutural e proximidade semântica não são equivalentes. Trabalhos futuros podem investigar projeções heterogêneas ponderadas, informação textual e validações temporais, preservando um protocolo sem vazamento de dados.
+
+\clearpage
+\appendix
+\section{Consultas Cypher das visualizações}
+
+As consultas a seguir foram executadas no Neo4j Browser para produzir os SVGs das Figuras~\ref{fig:neo4j-global} e~\ref{fig:neo4j-segmentos}. Os limites fazem parte do protocolo de visualização e evitam ultrapassar a capacidade de renderização da ferramenta. O arquivo executável completo está disponível em \texttt{docs/latex/neo4j\_visualizations.cypher}.
+
+\lstinputlisting[
+  firstline=1,
+  lastline=20,
+  basicstyle=\ttfamily\tiny,
+  numbers=left,
+  numberstyle=\tiny,
+  caption={Consulta da amostra global representativa.},
+  label={lst:neo4j-global}
+]{neo4j_visualizations.cypher}
+
+\lstinputlisting[
+  firstline=23,
+  lastline=40,
+  basicstyle=\ttfamily\tiny,
+  numbers=left,
+  numberstyle=\tiny,
+  caption={Consulta do funil do baseline em torno de Vaklush Tolev.},
+  label={lst:neo4j-funil}
+]{neo4j_visualizations.cypher}
+
+\lstinputlisting[
+  firstline=43,
+  lastline=66,
+  basicstyle=\ttfamily\tiny,
+  numbers=left,
+  numberstyle=\tiny,
+  caption={Consulta do segmento de pessoas.},
+  label={lst:neo4j-pessoas}
+]{neo4j_visualizations.cypher}
+
+\lstinputlisting[
+  firstline=69,
+  lastline=97,
+  basicstyle=\ttfamily\tiny,
+  numbers=left,
+  numberstyle=\tiny,
+  caption={Consulta do segmento institucional.},
+  label={lst:neo4j-institucional}
+]{neo4j_visualizations.cypher}
 
 \printbibliography[title={Referências}]
 
